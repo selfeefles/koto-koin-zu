@@ -1,8 +1,61 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>皇統皇胤図</title><meta name="description" content="皇統・皇胤の系譜を可視化した個人の自由研究です。"><link rel="stylesheet" href="./assets/site.css"></head><body>
-<header><h1>皇統皇胤図</h1><p class="subtitle">皇統・皇胤の系譜を可視化した図</p></header>
-<main><section class="hero"><p>神話・伝承の時代から現在まで、記紀・系譜史料・歴史資料・研究文献などに示される皇統・皇胤の系譜上の関係を、一定の作図規則に基づいて可視化した個人の自由研究です。</p>
-<p>古代には伝承的な系譜を含み、また後世についても史料上の確実性には差があります。歴史学上の確定を主張するものではなく、判断が難しい系譜はなるべく保留しています。</p>
-<div class="actions"><a class="button primary" href="./full.html">完全図を見る</a><a class="button secondary" href="./docs/about.html">この図について</a></div></section>
-<section class="section"><h2>公開ページの見方</h2><nav><ul><li><a href="./full.html">完全図</a></li><li><a href="./docs/about.html">この図について</a></li><li><a href="./docs/sources.html">主な情報源</a></li><li><a href="./docs/holds.html">保留中の系譜</a></li><li><a href="./docs/changelog.html">更新履歴</a></li></ul></nav></section>
-<section class="section warning"><h2>公開前の差し替え</h2><p>同梱の <code>full.html</code> は仮ページです。Juliaで生成した公開用完全図HTMLに差し替えてください。</p></section></main>
-<footer><p>皇統皇胤図 — 個人の趣味・自由研究</p></footer></body></html>
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>皇統皇胤図 v4.2.8</title>
+  <meta name="description" content="神話・伝承の時代から現在までの皇統・皇胤の系譜上の関係を可視化した個人の自由研究です。">
+  <link rel="stylesheet" href="./assets/site.css">
+</head>
+<body>
+<header>
+  <h1>皇統皇胤図</h1>
+  <p class="subtitle">v4.2.8 — Initial Public Release / 2026-08-15</p>
+</header>
+<main>
+  <section class="hero">
+    <p>神話・伝承の時代から現在まで、記紀・系譜史料・歴史資料・研究文献などに示される皇統・皇胤の系譜上の関係を、一定の作図規則に基づいて可視化した個人の自由研究です。</p>
+    <p>古代には伝承的な系譜を含み、後世についても史料上の確実性には差があります。歴史学上の確定を主張するものではなく、不確実・不詳・異説のある事項は可能な限り区別して扱っています。</p>
+    <p>本図は、現行制度上の皇位継承資格、皇族身分、家格その他の法的・制度的地位を示すものではありません。</p>
+    <div class="actions">
+      <a class="button primary" href="./full.html">完全図を見る</a>
+      <a class="button secondary" href="./docs/about.html">この図について</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>公開ページ</h2>
+    <nav>
+      <ul>
+        <li><a href="./full.html">完全図</a></li>
+        <li><a href="./docs/about.html">この図について</a></li>
+        <li><a href="./docs/sources.html">主な情報源・史料の扱い</a></li>
+        <li><a href="./docs/holds.html">保留中の系譜</a></li>
+        <li><a href="./docs/changelog.html">更新履歴</a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <section class="section">
+    <h2>v4.2.8 公開状態</h2>
+    <p>公開直前のデータ検査結果は <strong>エラー 0件・警告 0件</strong> です。</p>
+    <p><a href="./docs/validation_report_v4_2_8.txt">validation report を見る</a></p>
+    <p class="muted">v4.2.8 は初回公開版として固定し、今後の訂正・追加は新しいバージョン番号で行います。</p>
+  </section>
+
+  <section class="section">
+    <h2>データと生成コード</h2>
+    <p>人物・関係データと Julia 生成スクリプトも公開しています。</p>
+    <nav>
+      <ul>
+        <li><a href="./data/nodes_v4_2_8.csv">nodes_v4_2_8.csv</a></li>
+        <li><a href="./data/edges_v4_2_8.csv">edges_v4_2_8.csv</a></li>
+        <li><a href="./src/generate_diagram_v4_2_8.jl">generate_diagram_v4_2_8.jl</a></li>
+        <li><a href="./docs/v4_2_8_public_legend.md">公開用凡例</a></li>
+      </ul>
+    </nav>
+  </section>
+</main>
+<footer><p>皇統皇胤図 — 個人の趣味・自由研究</p></footer>
+</body>
+</html>

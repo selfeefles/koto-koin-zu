@@ -1,0 +1,569 @@
+id,name,alias,type,sex,lineage_scope,birth_year,death_year,traditional_life_years,date_quality,date_quality_detail,date_note,display_note,note
+t001,1 神武天皇,神日本磐余彦尊,tenno,male,imperial,,,前711–前585,T_traditional,nihon_shoki_based;chronology_conversion;legendary_era,『日本書紀』系の伝承紀年。神武紀元に基づく年代で史実上の生没年とは扱わない,初代天皇,初代天皇
+n_ahiratsuhime,吾平津媛,阿比良比売,civil_princess,female,non_imperial,,,,U_undated,legendary_or_mythic;genealogical_tradition,記紀神話・伝承にみえる神武天皇の日向時代の妃。『日本書紀』では吾平津媛とし、手研耳命の母とする。生没年不詳で、史実上の絶対年代は設定しない。,神武天皇の日向時代の妃・手研耳命の母,神武天皇の日向時代の妃・手研耳命の母
+u_jimmu_ahiratsuhime,,,marriage,,,,,,,,,神武天皇・吾平津媛の婚姻等関係節点,神武天皇・吾平津媛の婚姻等関係節点
+p_tagishimimi,手研耳命,多芸志美美命,prince,male,imperial,,,,U_undated,legendary_or_mythic;genealogical_tradition,記紀神話・伝承にみえる神武天皇皇子。神武天皇没後に綏靖天皇・神八井耳命を害そうとして逆に討たれたとされる。生没年不詳で、史実上の絶対年代は設定しない。,神武天皇皇子・綏靖天皇の異母兄,神武天皇皇子・綏靖天皇の異母兄
+n_isuzuhime,媛蹈鞴五十鈴媛命,伊須気余理比売命,civil_princess,female,non_imperial,,,,U_undated,legendary_or_mythic;genealogical_tradition;source_conflict_uncertain,記紀神話・伝承にみえる神武天皇皇后。『日本書紀』では事代主神の娘、『古事記』では大物主神の娘とし、神八井耳命・綏靖天皇の母とする。生没年不詳。,神武天皇皇后・綏靖天皇および神八井耳命の母,神武天皇皇后・綏靖天皇および神八井耳命の母
+u_jimmu_isuzuhime,,,marriage,,,,,,,,,神武天皇・媛蹈鞴五十鈴媛命の婚姻等関係節点,神武天皇・媛蹈鞴五十鈴媛命の婚姻等関係節点
+p_hikoyai,日子八井命,,prince,male,imperial,,,,U_undated,legendary_or_mythic;genealogical_tradition;source_conflict_uncertain,『古事記』神武天皇段にみえる皇子。『日本書紀』本文にはみえないため、系譜伝承上の人物として扱う。生没年不詳。,『古事記』所見・神武天皇皇子,古事記に見える神武天皇皇子・日本書紀には見えない
+p_kamuyai_mimi,神八井耳命,,prince,male,imperial,,,,U_undated,legendary_or_mythic;genealogical_tradition,記紀神話・伝承にみえる神武天皇皇子。神武天皇没後の手研耳命討伐伝承に登場し、皇位を弟の綏靖天皇に譲ったとされる。生没年不詳。,神武天皇皇子・綏靖天皇の同母兄,神武天皇皇子・綏靖天皇の同母兄
+t002,2 綏靖天皇,神渟名川耳尊,tenno,male,imperial,,,前632–前549,T_traditional,nihon_shoki_based;chronology_conversion;kesshi_hachidai;legendary_era,『日本書紀』系の伝承紀年。欠史八代,欠史八代,欠史八代
+n_isuzuyori,五十鈴依媛命,河俣毘売,civil_princess,female,non_imperial,,,,U_undated,legendary_or_mythic;genealogical_tradition;source_conflict_uncertain,記紀神話・伝承にみえる綏靖天皇皇后。『日本書紀』では五十鈴依媛命、『古事記』では河俣毘売とする。安寧天皇の母とされる。生没年不詳。,綏靖天皇皇后・安寧天皇の母,綏靖天皇皇后・安寧天皇の母。日本書紀は五十鈴依媛命、古事記は河俣毘売とする
+u_suizei_isuzuyori,,,marriage,,,,,,,,,綏靖天皇・五十鈴依媛命の婚姻等関係節点,綏靖天皇・五十鈴依媛命の婚姻等関係節点
+t003,3 安寧天皇,磯城津彦玉手看尊,tenno,male,imperial,,,前577–前511,T_traditional,nihon_shoki_based;chronology_conversion;kesshi_hachidai;legendary_era,『日本書紀』系の伝承紀年。欠史八代,欠史八代,欠史八代
+n_nunasoko,渟名底仲媛命,阿久斗比売,civil_princess,female,non_imperial,,,,U_undated,legendary_or_mythic;genealogical_tradition;source_conflict_uncertain,記紀神話・伝承にみえる安寧天皇皇后。『日本書紀』では渟名底仲媛命、『古事記』では阿久斗比売とする。生没年不詳。,安寧天皇皇后,安寧天皇皇后。日本書紀は渟名底仲媛命、古事記は阿久斗比売とする
+u_annei_nunasoko,,,marriage,,,,,,,,,安寧天皇・渟名底仲媛命の婚姻等関係節点,安寧天皇・渟名底仲媛命の婚姻等関係節点
+p_okisomimi,息石耳命,常津彦命,prince,male,imperial,,,,U_undated,legendary_or_mythic;genealogical_tradition,記紀系譜にみえる安寧天皇皇子。懿徳天皇皇后・天豊津媛命の父とされる。生没年不詳で、欠史八代周辺の系譜伝承として扱う。,安寧天皇第一皇子・天豊津媛命の父,安寧天皇第一皇子・天豊津媛命の父
+p_shikitsuhiko,磯城津彦命,師木津日子命,prince,male,imperial,,,,U_undated,legendary_or_mythic;genealogical_tradition;source_conflict_uncertain,『日本書紀』安寧天皇紀の一書にみえる皇子。本文系譜との差があるため異伝所見の人物として扱う。生没年不詳。,安寧天皇皇子（『日本書紀』一書所見）,安寧天皇皇子。日本書紀の一書に見える
+p_amatoyotsuhime,天豊津媛命,賦登麻和訶比売命,princess,female,imperial,,,,U_undated,legendary_or_mythic;genealogical_tradition,記紀系譜にみえる懿徳天皇皇后。息石耳命の娘で、孝昭天皇の母とされる。生没年不詳で、欠史八代周辺の系譜伝承として扱う。,息石耳命の娘・懿徳天皇皇后・孝昭天皇の母,息石耳命の娘・懿徳天皇皇后・孝昭天皇の母
+t004,4 懿徳天皇,大日本彦耜友尊,tenno,male,imperial,,,前553–前477,T_traditional,nihon_shoki_based;chronology_conversion;kesshi_hachidai;legendary_era,『日本書紀』系の伝承紀年。欠史八代,欠史八代,欠史八代
+u_itoku_amatoyotsuhime,,,marriage,,,,,,,,,懿徳天皇・天豊津媛命の婚姻等関係節点,懿徳天皇・天豊津媛命の婚姻等関係節点
+p_takeshihiko,武石彦奇友背命,多芸志比古命,prince,male,imperial,,,,U_undated,legendary_or_mythic;genealogical_tradition,記紀系譜にみえる懿徳天皇皇子。孝昭天皇の同母弟とされる。生没年不詳で、欠史八代周辺の系譜伝承として扱う。,懿徳天皇皇子・孝昭天皇の同母弟とされる,懿徳天皇皇子・孝昭天皇の同母弟とされる
+t005,5 孝昭天皇,観松彦香殖稲尊,tenno,male,imperial,,,前506–前393,T_traditional,nihon_shoki_based;chronology_conversion;kesshi_hachidai;legendary_era,『日本書紀』系の伝承紀年。欠史八代,欠史八代,欠史八代
+n_yosotarashi,世襲足媛,余曽多本毘売命,civil_princess,female,non_imperial,,,,U_undated,legendary_or_mythic;genealogical_tradition,記紀系譜にみえる孝昭天皇皇后。天足彦国押人命・孝安天皇の母とされる。生没年不詳で、欠史八代周辺の系譜伝承として扱う。,孝昭天皇皇后・孝安天皇の母,孝昭天皇皇后・天足彦国押人命および孝安天皇の母
+u_kosho_yosotarashi,,,marriage,,,,,,,,,孝昭天皇・世襲足媛の婚姻等関係節点,孝昭天皇・世襲足媛の婚姻等関係節点
+p_ameoshitarashi,天足彦国押人命,天押帯日子命,prince,male,imperial,,,,U_undated,legendary_or_mythic;genealogical_tradition,記紀系譜にみえる孝昭天皇皇子。孝安天皇の同母兄で、押媛の父とされる。生没年不詳で、欠史八代周辺の系譜伝承として扱う。,孝昭天皇第一皇子・孝安天皇の同母兄,孝昭天皇第一皇子・孝安天皇の同母兄
+t006,6 孝安天皇,日本足彦国押人尊,tenno,male,imperial,,,前427–前291,T_traditional,nihon_shoki_based;chronology_conversion;kesshi_hachidai;legendary_era,『日本書紀』系の伝承紀年。欠史八代,欠史八代,欠史八代
+p_oshihime,押媛,忍鹿比売命,princess,female,imperial,,,,U_undated,legendary_or_mythic;genealogical_tradition,記紀系譜にみえる孝安天皇皇后。天足彦国押人命の娘で、孝霊天皇の母とされる。生没年不詳で、欠史八代周辺の系譜伝承として扱う。,天足彦国押人命娘・孝霊天皇の母,天足彦国押人命の娘・孝安天皇皇后・孝霊天皇の母
+u_koan_oshihime,,,marriage,,,,,,,,,孝安天皇・押媛の婚姻等関係節点,孝安天皇・押媛の婚姻等関係節点
+p_okibi_morosusume,大吉備諸進命,,prince,male,imperial,,,,U_undated,legendary_or_mythic;genealogical_tradition,記紀系譜にみえる孝安天皇皇子。孝霊天皇の同母兄とされる。生没年不詳で、欠史八代周辺の系譜伝承として扱う。,孝安天皇皇子・孝霊天皇の同母兄とされる,孝安天皇皇子・孝霊天皇の同母兄とされる
+t007,7 孝霊天皇,大日本根子彦太瓊尊,tenno,male,imperial,,,前342–前215,T_traditional,nihon_shoki_based;chronology_conversion;kesshi_hachidai;legendary_era,『日本書紀』系の伝承紀年。欠史八代,欠史八代,欠史八代
+n_hosohime,細媛命,細比売命,civil_princess,female,non_imperial,,,,U_undated,legendary_or_mythic;genealogical_tradition,記紀系譜にみえる孝霊天皇皇后。孝元天皇の母とされる。生没年不詳で、欠史八代周辺の系譜伝承として扱う。,孝霊天皇皇后・孝元天皇の母,孝霊天皇皇后・孝元天皇の母
+u_korei_hosohime,,,marriage,,,,,,,,,孝霊天皇・細媛命の婚姻等関係節点,孝霊天皇・細媛命の婚姻等関係節点
+t008,8 孝元天皇,大日本根子彦国牽尊,tenno,male,imperial,,,前273–前158,T_traditional,nihon_shoki_based;chronology_conversion;kesshi_hachidai;legendary_era,『日本書紀』系の伝承紀年。欠史八代,欠史八代,欠史八代
+n_utsushikome,鬱色謎命,内色許売命,civil_princess,female,non_imperial,,,,U_undated,genealogical_tradition,記紀にみえる孝元天皇皇后。大彦命・開化天皇らの母とされ、『古事記』では内色許売命。生没年不詳。,孝元天皇皇后・大彦命および開化天皇の母,孝元天皇皇后・大彦命および開化天皇の母
+u_kogen_utsushikome,,,marriage,,,,,,,,,孝元天皇・鬱色謎命の婚姻等関係節点,孝元天皇・鬱色謎命の婚姻等関係節点
+p_ohiko,大彦命,大毘古命,prince,male,imperial,,,,U_undated,genealogical_tradition;chronicle_activity_only;external_source_contact,記紀にみえる孝元天皇皇子で、開化天皇の同母兄。『日本書紀』崇神10年条で四道将軍の一人として北陸へ派遣されたとされる。稲荷山古墳鉄剣銘の「意富比垝」を大彦命に比定する可能性が論じられており、考古資料との接点を持つが同一人物と確定はしない。生没年不詳。,孝元天皇皇子・開化天皇同母兄,孝元天皇皇子・開化天皇の同母兄・四道将軍の一人とされる
+p_mimakihime,御間城姫,御真津比売命,princess,female,imperial,,,,U_undated,genealogical_tradition;chronicle_activity_only,記紀にみえる崇神天皇皇后。大彦命の娘で、垂仁天皇らの母とされる。『日本書紀』では崇神元年に立后。生没年不詳で、立后年次は伝承上の年次として扱う。,大彦命の娘・崇神天皇皇后・垂仁天皇の母,大彦命の娘・崇神天皇皇后・垂仁天皇の母
+u_sujin_mimakihime,,,marriage,,,,,,,,,崇神天皇・御間城姫の婚姻等関係節点,崇神天皇・御間城姫の婚姻等関係節点
+t009,9 開化天皇,稚日本根子彦大日日尊,tenno,male,imperial,,,前208–前98,T_traditional,nihon_shoki_based;chronology_conversion;kesshi_hachidai;legendary_era,『日本書紀』系の伝承紀年。欠史八代,欠史八代最後の天皇,欠史八代最後の天皇
+p_hikoimasu,彦坐王,日子坐王,prince,male,imperial,,,,U_undated,genealogical_tradition;chronicle_activity_only,記・紀にみえる開化天皇皇子。『日本書紀』開化6年条に出生系譜、垂仁5年条で丹波道主命の父として現れる。生没年不詳。,開化天皇皇子,開化天皇皇子・丹波道主命・山代之大筒木真若王らの父
+p_tanbamichinushi,丹波道主命,丹波道主王,prince,male,imperial,,,,U_undated,genealogical_tradition;chronicle_activity_only,記・紀にみえる開化天皇孫・彦坐王の子。『日本書紀』崇神10年条で四道将軍の一人として丹波へ派遣され、垂仁5年条で日葉酢媛命らの父として現れる。生没年不詳。,彦坐王の子・日葉酢媛命の父,彦坐王の子・日葉酢媛命の父
+p_hibasuhime,日葉酢媛命,日葉洲媛命,princess,female,imperial,,,?–3,T_traditional,nihon_shoki_based;chronology_conversion;uncertain_birth,記・紀にみえる垂仁天皇皇后。『日本書紀』では垂仁15年8月に立后し、同32年7月に死去。垂仁天皇の伝承紀年（元年=前29年）に換算すると没年は西暦3年に相当するため、?–3を伝承紀年として収録する。生年不詳で、史実上の絶対年代とは扱わない。,丹波道主命の娘・垂仁天皇皇后・景行天皇の母,丹波道主命の娘・垂仁天皇皇后・景行天皇の母
+u_suinin_hibasuhime,,,marriage,,,,,,,,,垂仁天皇・日葉酢媛命の婚姻等関係節点,垂仁天皇・日葉酢媛命の婚姻等関係節点
+n_ikagashikome,伊香色謎命,伊迦賀色許売命,civil_princess,female,non_imperial,,,,U_undated,genealogical_tradition,記紀にみえる皇后。孝元天皇の妃となったのち開化天皇の皇后となり、崇神天皇を生んだと伝える。『古事記』では伊迦賀色許売命。生没年不詳。,開化天皇皇后・崇神天皇の母,開化天皇皇后・崇神天皇の母。孝元天皇の妃でもあったと伝わる
+u_kaika_ikagashikome,,,marriage,,,,,,,,,開化天皇・伊香色謎命の婚姻等関係節点,開化天皇・伊香色謎命の婚姻等関係節点
+n_hahatsuhime,姥津媛命,意祁都比売命,civil_princess,female,non_imperial,,,,U_undated,genealogical_tradition;chronicle_activity_only,『日本書紀』開化6年条にみえる開化天皇妃で、彦坐王の母。和珥氏の遠祖姥津命の妹とされる。生没年不詳。,開化天皇妃・彦坐王の母とする日本書紀系の伝承,開化天皇妃・彦坐王の母とする日本書紀系の伝承
+u_kaika_hahatsuhime,,,marriage,,,,,,,,,開化天皇・姥津媛命の婚姻等関係節点,開化天皇・姥津媛命の婚姻等関係節点
+p_yamashiro,山代之大筒木真若王,,prince,male,imperial,,,,U_undated,genealogical_tradition,『古事記』開化天皇段にみえる彦坐王の子。丹波能阿治佐波毘売との間に迦邇米雷王をもうける。生没年不詳。,彦坐王皇子・迦邇米雷王の父,『古事記』開化天皇段にみえる彦坐王の皇子・迦邇米雷王の父
+p_kaname,迦邇米雷王,迦爾米雷王,prince,male,imperial,,,,U_undated,genealogical_tradition,『古事記』開化天皇段にみえる山代之大筒木真若王の子。高材比売との間に息長宿禰王をもうける。生没年不詳。,山代之大筒木真若王の皇子・息長宿禰王の父,『古事記』開化天皇段にみえる山代之大筒木真若王の皇子・息長宿禰王の父
+p_okinaga,息長宿禰王,気長宿禰王,prince,male,imperial,,,,U_undated,genealogical_tradition;source_conflict_uncertain,『古事記』では彦坐王―山代之大筒木真若王―迦邇米雷王を経る開化天皇4世孫で、神功皇后の父。『日本書紀』神功皇后紀は神功皇后を開化天皇の曾孫とするため、両書で系譜の世代数が一致しない。生没年不詳。,古事記系譜で開化天皇4世孫・神功皇后の父,『古事記』では迦邇米雷王の皇子で開化天皇4世孫・神功皇后の父。『日本書紀』では気長宿禰王と表記。
+t010,10 崇神天皇,御間城入彦五十瓊殖尊,tenno,male,imperial,,,前148–前30,T_traditional,nihon_shoki_based;chronology_conversion;historicity_debated,『日本書紀』系の伝承紀年。紀年論上、史実年代とはみなさない,実在性が論じられる最初期の天皇,実在性が論じられる最初期の天皇
+t011,11 垂仁天皇,活目入彦五十狭茅尊,tenno,male,imperial,,,前69–70,T_traditional,nihon_shoki_based;chronology_conversion;historicity_debated,『日本書紀』系の伝承紀年。紀年論上、史実年代とはみなさない,,
+p_iwatsukuwake,磐衝別命,石衝別王,prince,male,imperial,,,,U_undated,genealogical_tradition;chronicle_activity_only,記紀にみえる垂仁天皇皇子。『日本書紀』垂仁34年条では綺戸辺との間に生まれ、三尾君の祖とされる。『上宮記』逸文では継体天皇母・振媛へ至る母系祖先として接続される。生没年不詳。,垂仁天皇皇子・『上宮記』逸文では振媛母系祖先,垂仁天皇皇子・『上宮記』逸文では振媛母系祖先
+p_iwakiwake,磐城別,伊波智和希,prince,male,imperial,,,,U_undated,genealogical_tradition;chronicle_activity_only,『日本書紀』にみえる垂仁天皇孫で、磐衝別命の子。『国造本紀』では雄略天皇期の羽咋国造に関係する伝承がある。『上宮記』逸文の継体系譜にも接続される。生没年不詳。,磐衝別命の子・『上宮記』逸文所伝,磐衝別命の子・『上宮記』逸文所伝
+p_iwakoriwake,磐凝別,伊波己里和氣,prince,male,imperial,,,,U_undated,genealogical_tradition,『上宮記』逸文に伝わる継体天皇母系の祖先で、磐城別の子とされる。独立した生没年資料は確認しにくいため、系譜伝承上の人物として扱う。,磐城別の子・『上宮記』逸文所伝,磐城別の子・『上宮記』逸文所伝
+p_mawakake,真稚介,麻和加介,prince,male,imperial,,,,U_undated,genealogical_tradition,『上宮記』逸文に伝わる継体天皇母系の祖先で、磐凝別の子とされる。独立した生没年資料は確認しにくいため、系譜伝承上の人物として扱う。,磐凝別の子・『上宮記』逸文所伝,磐凝別の子・『上宮記』逸文所伝
+p_akahachikimi,赤蜂君,阿加波智君,prince,male,imperial,,,,U_undated,genealogical_tradition,『上宮記』逸文に伝わる継体天皇母系の祖先で、真稚介の子とされる。独立した生没年資料は確認しにくいため、系譜伝承上の人物として扱う。,真稚介の子・『上宮記』逸文所伝,真稚介の子・『上宮記』逸文所伝
+p_obachikimi,小蜂君,乎波智君,prince,male,imperial,,,,U_undated,genealogical_tradition,『上宮記』逸文に伝わる継体天皇母系の人物で、赤蜂君の子・振媛の父とされる。独立した生没年資料は確認しにくいため、系譜伝承上の人物として扱う。,赤蜂君の子・振媛の父・『上宮記』逸文所伝,赤蜂君の子・振媛の父・『上宮記』逸文所伝
+p_furuhime,振媛,布利比彌命,princess,female,imperial,,,,U_undated,historical_period_known;genealogical_tradition,生没年不詳。人物辞典では5世紀末の人物。彦主人王の妃・継体天皇の母とされる。,小蜂君娘・継体天皇の母・『上宮記』逸文所伝,小蜂君の娘・彦主人王妃・継体天皇の母・『上宮記』逸文所伝
+u_hikoushino_furuhime,,,marriage,,,,,,,,,彦主人王・振媛の婚姻等関係節点,彦主人王・振媛の婚姻等関係節点
+t012,12 景行天皇,大足彦忍代別尊,tenno,male,imperial,,,前13–130,T_traditional,nihon_shoki_based;chronology_conversion;historicity_debated,『日本書紀』系の伝承紀年。紀年論上、史実年代とはみなさない,,
+p_yasakairihiko,八坂入彦命,八坂之入日子命,prince,male,imperial,,,,U_undated,genealogical_tradition;chronicle_activity_only,記・紀にみえる崇神天皇皇子。『日本書紀』景行4年条で、娘の八坂入媛が景行天皇の妃となる系譜に現れる。生没年不詳。,崇神天皇皇子・八坂入媛命の父,崇神天皇皇子・八坂入媛命の父
+p_yasakairihime,八坂入媛命,八尺之入日売命,princess,female,imperial,,,,U_undated,genealogical_tradition;chronicle_activity_only,記・紀にみえる景行天皇妃・皇后。『日本書紀』では景行52年に皇后、成務2年に皇太后となったとされる。生没年不詳で、これらの年次は記紀の伝承紀年として扱う。,八坂入彦命娘・五百城入彦皇子の母,八坂入彦命の娘・景行天皇皇后・五百城入彦皇子らの母
+u_keiko_yasakairihime,,,marriage,,,,,,,,,景行天皇・八坂入媛命の婚姻等関係節点,景行天皇・八坂入媛命の婚姻等関係節点
+p_iokiirihiko,五百城入彦皇子,五百木之入日子命,prince,male,imperial,,,,U_undated,genealogical_tradition,記・紀にみえる景行天皇皇子。母は八坂入媛。『古事記』では品陀真若王の父とされる。生没年不詳。,景行天皇皇子・母は八坂入媛命・品陀真若王の父,景行天皇皇子・母は八坂入媛命・品陀真若王の父
+p_hondamawaka,品陀真若王,,prince,male,imperial,,,,U_undated,genealogical_tradition;source_conflict_uncertain,『古事記』にみえる景行天皇孫。五百木之入日子命（五百城入彦皇子）の子で、娘3人を応神天皇の妃とし、次女中日売命が仁徳天皇を生んだとする。生没年不詳。王統をつなぐための系譜構成とみる見解もある。,五百城入彦皇子の子・仲姫命の父,五百城入彦皇子の子・仲姫命の父
+p_nakatsuhime,仲姫命,中日売命,princess,female,imperial,,,,U_undated,genealogical_tradition;chronicle_activity_only,記・紀にみえる応神天皇皇后。品陀真若王の次女。『日本書紀』では応神2年に皇后となり、仁徳天皇らを生んだとされる。生没年不詳。,品陀真若王の娘・応神天皇皇后・仁徳天皇の母,品陀真若王の娘・応神天皇皇后・仁徳天皇の母
+u_ojin_nakatsuhime,,,marriage,,,,,,,,,応神天皇・仲姫命の婚姻等関係節点,応神天皇・仲姫命の婚姻等関係節点
+p_yamatotakeru,日本武尊,小碓尊,prince,male,imperial,,,,U_undated,legendary_or_mythic;genealogical_tradition,生没年不詳。記紀による伝説的英雄で、景行天皇皇子とされる。絶対年代を生没年として採用しない。,景行天皇皇子・東征・西征伝承,景行天皇皇子・東征・西征伝承
+p_futajinoirihime,両道入姫命,石衝毘売命,princess,female,imperial,,,,U_undated,genealogical_tradition,記紀にみえる垂仁天皇皇女。『日本書紀』では日本武尊の妃となり、仲哀天皇らを生んだとされる。『古事記』では布多遅能伊理毘売命。生没年不詳。,垂仁天皇皇女・日本武尊妃・仲哀天皇の母,垂仁天皇皇女・日本武尊妃・仲哀天皇の母
+u_yamatotakeru_futajinoirihime,,,marriage,,,,,,,,,日本武尊・両道入姫命の婚姻等関係節点,日本武尊・両道入姫命の婚姻等関係節点
+t013,13 成務天皇,稚足彦尊,tenno,male,imperial,,,84–190,T_traditional,nihon_shoki_based;chronology_conversion;historicity_debated,『日本書紀』系の伝承紀年。実在性・年代には議論がある,景行天皇の皇子（日本武尊の異母弟）,景行天皇皇子（日本武尊の異母弟）
+t014,14 仲哀天皇,足仲彦尊,tenno,male,imperial,,,149?–200,T_traditional,nihon_shoki_based;chronology_conversion;uncertain_birth;historicity_debated,『日本書紀』系の伝承紀年。生年換算に不確実性。実在性にも議論がある,日本武尊第二男子・景行天皇孫,景行天皇孫（日本武尊第二皇子・実在性に疑問符あり）
+u_chuai_jingu,,,marriage,,,,,,,,,仲哀天皇・神功皇后の婚姻等関係節点,仲哀天皇・神功皇后の婚姻等関係節点
+p_jingu,神功皇后,気長足姫尊,princess,female,imperial,,,170–269,T_traditional,nihon_shoki_based;chronology_conversion;historicity_debated,『日本書紀』系の伝承紀年。成務天皇40年（170）生・神功皇后摂政69年（269）没とされる。記紀伝承上の人物で、実在性・絶対年代には大きな問題がある。 『日本書紀』は神功皇后を開化天皇の曾孫と記す一方、『古事記』は彦坐王―山代之大筒木真若王―迦邇米雷王―息長宿禰王を経る系譜を載せ、世代数に差がある。,摂政・旧来は歴代天皇に列す,摂政（準・女性天皇枠/実在や事績に諸説あり）・明治時代までは歴代天皇の一人とされた
+t015,15 応神天皇,誉田別尊,tenno,male,imperial,,,200–310,T_traditional,nihon_shoki_based;chronology_conversion;historicity_debated,『日本書紀』系の伝承紀年。応神紀の絶対年代には紀年論上の問題がある,,
+p_wakasako,稚野毛二派皇子,若沼毛二俣王・若野毛二俣王,prince,male,imperial,,,,U_undated,genealogical_tradition,生没年不詳。記紀にみえる応神天皇皇子。『上宮記』系譜では継体天皇へ続く父系祖先に位置づけられる。,応神天皇皇子・継体の5代祖,応神天皇皇子・継体の5代祖
+p_ohoji,意富富杼王,大郎子,prince,male,imperial,,,,U_undated,genealogical_tradition,生没年不詳。『古事記』および『上宮記』系譜にみえる王で、稚野毛二派皇子の子・乎非王の父とされる。絶対年代は採用しない。,2世孫,2世孫
+p_oshi,乎非王,,prince,male,imperial,,,,U_undated,genealogical_tradition,生没年不詳。『上宮記』逸文にみえる系譜上の王で、意富富杼王の子・彦主人王の父とされる。絶対年代は採用しない。,3世孫,3世孫
+p_hikoushino,彦主人王,汗斯王,prince,male,imperial,,,,U_undated,historical_period_known;genealogical_tradition,生没年不詳。『日本書紀』では継体天皇の父。人物辞典では5世紀末の人物とされ、継体天皇幼年時に没したと伝える。,4世孫,4世孫
+t026,26 継体天皇,男大跡王,tenno,male,imperial,,,450?–531?/534?,T_traditional,nihon_shoki_based;chronology_conversion;uncertain_birth;disputed_death_t,『日本書紀』系の伝承紀年。継体天皇の没年は531年・534年など異説があり確定しない,応神天皇5世孫・出自・皇位継承に諸説あり,応神天皇5世孫・出自・皇位継承に諸説あり
+t016,16 仁徳天皇,大鷦鷯尊,tenno,male,imperial,,,257–399,T_traditional,nihon_shoki_based;chronology_conversion;historicity_debated,『日本書紀』系の伝承年譜。史実上の絶対年代とは扱わない,,
+t017,17 履中天皇,大兄去来穂別尊,tenno,male,imperial,,,336?–405,T_traditional,nihon_shoki_based;chronology_conversion;uncertain_birth,『日本書紀』系の伝承年譜。生年換算に不確実性,仁徳天皇第一皇子,仁徳天皇第一皇子
+t018,18 反正天皇,多遅比瑞歯別尊,tenno,male,imperial,,,336?–410,T_traditional,nihon_shoki_based;chronology_conversion;uncertain_birth;historicity_debated,伝承年譜上の換算値。日本大百科全書では生没年不詳とするため確定値ではない,仁徳天皇第三皇子（履中天皇の同母弟）,仁徳天皇第三皇子（履中天皇の同母弟）
+t019,19 允恭天皇,雄朝津間稚子宿禰尊,tenno,male,imperial,,,376?–453,T_traditional,nihon_shoki_based;chronology_conversion;uncertain_birth,『日本書紀』系の伝承年譜。5世紀前半の天皇とされる,仁徳天皇第四皇子（反正天皇の同母弟）,仁徳天皇第四皇子（反正天皇の同母弟）
+t020,20 安康天皇,穴穂尊,tenno,male,imperial,,,401?–456,T_traditional,nihon_shoki_based;chronology_conversion;uncertain_birth,『日本書紀』系の伝承年譜。生年換算に不確実性,允恭天皇第二皇子（雄略天皇の同母兄）,允恭天皇第二皇子（雄略天皇の同母兄）
+t021,21 雄略天皇,大泊瀬幼武尊,tenno,male,imperial,,,418–479,T_traditional,nihon_shoki_based;chronology_conversion;external_source_contact_t,『日本書紀』系の紀年。雄略天皇は倭王武への比定が有力だが、生年そのものは記紀紀年に基づく,ワカタケル大王・允恭天皇第五皇子,ワカタケル大王・允恭天皇第五皇子
+p_kasuga_oiratsume,春日大娘皇女,春日大娘女,princess,female,imperial,,,,U_undated,genealogical_tradition,生没年不詳。記紀にみえる雄略天皇皇女・仁賢天皇皇后。手白香皇女・橘仲皇女・武烈天皇らの母とされる。,雄略天皇皇女・仁賢天皇皇后・手白香皇女の母,雄略天皇皇女・仁賢天皇皇后・手白香皇女の母
+p_tachibana_nakatsuhime,橘仲皇女,橘之中比売命,princess,female,imperial,,,,U_undated,historical_period_known;chronicle_activity_only,生没年不詳。人物辞典では6世紀の人物。『日本書紀』では宣化天皇元年（536）に皇后となったとされる。,仁賢天皇皇女・石姫皇女の母,仁賢天皇皇女・母は春日大娘皇女・宣化天皇皇后・石姫皇女の母
+u_senka_tachibana,,,marriage,,,,,,,,,宣化天皇・橘仲皇女の婚姻等関係節点,宣化天皇・橘仲皇女の婚姻等関係節点
+u_ninken_kasuga,,,marriage,,,,,,,,,仁賢天皇・春日大娘皇女の婚姻等関係節点,仁賢天皇・春日大娘皇女の婚姻等関係節点
+t022,22 清寧天皇,白髪大倭根子命,tenno,male,imperial,,,444?–484,T_traditional,nihon_shoki_based;chronology_conversion;uncertain_birth;historicity_debated,『日本書紀』系の伝承年譜。日本大百科全書では生没年不詳,雄略天皇皇子・皇子女なし,雄略天皇皇子・皇子女なし・皇位継承の危機
+p_ichinobe,磐坂市辺押磐皇子,市辺之忍歯王,prince,male,imperial,,,,U_undated,historical_period_known;genealogical_tradition,生没年不詳。日本大百科全書では5世紀中ごろの有力王族。『日本書紀』では雄略天皇に射殺されたと伝える。,履中天皇第一皇子（雄略天皇に殺害される）,履中天皇第一皇子（雄略天皇に殺害される）
+t023,23 顕宗天皇,弘計尊,tenno,male,imperial,,,450–487,T_traditional,nihon_shoki_based;chronology_conversion,『日本書紀』系の伝承年譜,市辺押磐皇子第二男子,市辺押磐皇子第二男子（兄と共に逃亡後、発見され即位）
+t024,24 仁賢天皇,億計尊,tenno,male,imperial,,,449–498,T_traditional,nihon_shoki_based;chronology_conversion,『日本書紀』系の伝承年譜,市辺押磐皇子第一男子（顕宗天皇の兄）,市辺押磐皇子第一男子（顕宗天皇の兄）
+t025,25 武烈天皇,小泊瀬稚鷦鷯尊,tenno,male,imperial,,,489?–506,T_traditional,nihon_shoki_based;chronology_conversion;uncertain_birth,『日本書紀』系の伝承年譜。生年は仁賢天皇2年からの換算,仁賢天皇皇子・皇子女なし,仁賢天皇皇子・皇子女なし・仁徳天皇の男系血統はここで途絶える
+p_tashiraka,手白香皇女,手白髪郎女,princess,female,imperial,,,,U_undated,historical_period_known;genealogical_tradition,生没年不詳。人物辞典では6世紀前半の人物。仁賢天皇皇女・継体天皇皇后・欽明天皇の母とされる。,仁賢天皇皇女,仁賢天皇皇女
+u_keitai_tashiraka,,,marriage,,,,,,,,,継体・手白香の婚姻等関係節点,継体・手白香の婚姻等関係節点
+t027,27 安閑天皇,勾大兄広国押武金日尊,tenno,male,imperial,,,466?–536?,T_traditional,nihon_shoki_based;chronology_conversion;uncertain_birth;disputed_death_t,『日本書紀』系の伝承紀年。生没年・在位期間には諸説,継体天皇第一皇子,継体天皇第一皇子
+t028,28 宣化天皇,桧隈高田皇子,tenno,male,imperial,,,467?–539?,T_traditional,nihon_shoki_based;chronology_conversion;uncertain_birth;disputed_death_t,『日本書紀』系の伝承紀年。辞典では生没年不詳とするものもある,継体天皇第二皇子,継体天皇第二皇子
+t029,29 欽明天皇,天国排開広庭天皇,tenno,male,imperial,510,571,,B_partial_or_disputed,disputed_birth,Kotobank『欽明天皇』は510–571。509年説もあるため典拠差に注意,継体天皇・手白香皇女皇子,継体天皇・手白香皇女皇子
+p_sakurai,桜井皇子,,prince,male,imperial,,,,U_undated,historical_period_known;genealogical_tradition,6世紀の皇族。欽明天皇と蘇我堅塩媛の皇子で、吉備姫王の父。生没年不詳。『古事記』では桜井之玄王と記す。,欽明天皇皇子・吉備姫王の父,欽明天皇皇子・吉備姫王の父
+p_kibihime,吉備姫王,吉備嶋皇祖母命,princess,female,imperial,,643,,B_partial_or_disputed,birth_unrecorded,飛鳥時代の皇族。桜井皇子の王女で、茅渟王との間に皇極・斉明天皇と孝徳天皇をもうけた。皇極2年（643）9月11日死去。生年不詳。,桜井皇子王女・皇極・孝徳天皇の母,桜井皇子王女・茅渟王妃・皇極・斉明天皇および孝徳天皇の母
+u_chinu_kibihime,,,marriage,,,,,,,,,茅渟王・吉備姫王の婚姻等関係節点,茅渟王・吉備姫王の婚姻等関係節点
+p_ishihime,石姫皇女,石比売命,princess,female,imperial,,,,U_undated,historical_period_known;chronicle_activity_only;genealogical_tradition,6世紀の皇族。宣化天皇皇女で欽明天皇皇后、敏達天皇の母。敏達元年（572）に皇太后となる。生没年不詳。,宣化天皇皇女・欽明天皇皇后・敏達天皇の母,宣化天皇皇女・欽明天皇皇后・敏達天皇の母
+u_kinmei_ishihime,,,marriage,,,,,,,,,欽明天皇・石姫皇女の婚姻等関係節点,欽明天皇・石姫皇女の婚姻等関係節点
+t030,30 敏達天皇,訳語田渟中倉太珠敷尊,tenno,male,imperial,,585,,B_partial_or_disputed,birth_unrecorded,Kotobank『敏達天皇』：生年不詳・没年585,欽明天皇第二皇子,欽明天皇第二皇子
+t031,31 用明天皇,橘豊日尊,tenno,male,imperial,,587,,B_partial_or_disputed,birth_unrecorded,Kotobank『用明天皇』：生年不詳・没年587,欽明天皇第四皇子（聖徳太子の父）,欽明天皇第四皇子（聖徳太子の父）
+t032,32 崇峻天皇,泊瀬部皇子,tenno,male,imperial,,592,,B_partial_or_disputed,birth_unrecorded,Kotobank『崇峻天皇』：生年不詳・没年592,欽明天皇第十二皇子,欽明天皇第十二皇子（蘇我馬子に暗殺される）
+t033,33 推古天皇,額田部皇女,female_tenno,female,imperial,554,628,,A_standard,,Kotobank『推古天皇』：554–628,最初の女性天皇・欽明天皇皇女,最初の女性天皇・欽明天皇皇女
+p_oshisaka,押坂彦人大兄皇子,忍坂日子人太子・麻呂古王,prince,male,imperial,,,,U_undated,historical_period_known;genealogical_tradition;source_conflict_uncertain,6世紀後半頃の皇族。敏達天皇皇子で、舒明天皇の父。生没年不詳。用明天皇没後の皇位継承をめぐる情勢に関わったとされ、没時期についても諸説がある。,敏達天皇第一皇子（舒明天皇・茅渟王の父）,敏達天皇第一皇子（舒明天皇・茅渟王の父）
+p_nukatehime,糠手姫皇女,田村皇女,princess,female,imperial,,664,,B_partial_or_disputed,birth_unrecorded,飛鳥時代の皇族。敏達天皇皇女で、押坂彦人大兄皇子の妃、舒明天皇の母。天智3年（664）6月死去。生年不詳。,敏達天皇皇女・舒明天皇の母,敏達天皇皇女・押坂彦人大兄皇子妃・舒明天皇の母
+u_oshisaka_nukatehime,,,marriage,,,,,,,,,押坂彦人大兄皇子・糠手姫皇女の婚姻等関係節点,押坂彦人大兄皇子・糠手姫皇女の婚姻等関係節点
+p_chinu,茅渟王,知奴王,prince,male,imperial,,,,U_undated,historical_period_known;genealogical_tradition,飛鳥時代前期の皇族。押坂彦人大兄皇子の皇子で、吉備姫王との間に皇極・斉明天皇と孝徳天皇をもうけた。生没年は確定できないため空欄を維持する。,押坂彦人大兄皇子の皇子（皇極・孝徳の父）,押坂彦人大兄皇子の皇子（皇極・孝徳の父）
+t034,34 舒明天皇,息長足日広額天皇,tenno,male,imperial,,641,,B_partial_or_disputed,birth_unrecorded;disputed_birth,Kotobank『舒明天皇』：593?–641。生年に疑問符があるためbirth_yearは不詳扱い,押坂彦人大兄皇子の皇子,押坂彦人大兄皇子の皇子
+t035t037,35・37 皇極・斉明天皇,宝皇女,female_tenno,female,imperial,,661,,B_partial_or_disputed,birth_unrecorded;disputed_birth,Kotobank『皇極天皇』：594?–661。重祚して斉明天皇,重祚・敏達天皇曽孫,重祚（敏達天皇の曽孫・男系女子として即位）
+u_jomei_kogyoku,,,marriage,,,,,,,,,舒明・皇極の婚姻等関係節点,舒明・皇極の婚姻等関係節点
+t036,36 孝徳天皇,軽皇子,tenno,male,imperial,,654,,B_partial_or_disputed,birth_unrecorded;disputed_birth,Kotobank『孝徳天皇』：597?–654。生年に疑問符があるためbirth_yearは不詳扱い,大化改新期の天皇・皇極天皇同母弟,大化改新期の天皇・皇極天皇同母弟
+t038,38 天智天皇,中大兄皇子,tenno,male,imperial,626,671,,A_standard,,Kotobank『天智天皇』：626–671,舒明天皇・皇極天皇第二皇子,舒明天皇・皇極天皇第二皇子
+t039,39 弘文天皇,大友皇子,tenno,male,imperial,648,672,,A_standard,,Kotobank『大友皇子』：648–672。後世に弘文天皇と追号,天智天皇第一皇子（壬申の乱で敗死）,天智天皇第一皇子（壬申の乱で敗死）
+t040,40 天武天皇,大海人皇子,tenno,male,imperial,,686,,B_partial_or_disputed,birth_unrecorded;disputed_birth,Kotobank『天武天皇』：生年不詳・没年686。631年説は通説だが確定値としない,天智天皇の弟・系譜に異説あり,天智天皇の弟（天智の兄説や非皇統説など異説あり）
+t041,41 持統天皇,鸕野讚良皇女,female_tenno,female,imperial,645,702,,A_standard,,Kotobank『持統天皇』：645–702（大化1–大宝2）。大宝2年12月22日は現代暦換算では703年1月だが、本プロジェクトは和暦年対応の西暦年を採用,天智天皇の皇女・天武天皇の皇后,天智天皇の皇女・天武天皇の皇后
+u_temmu_jito,,,marriage,,,,,,,,,天武・持統の婚姻等関係節点,天武・持統の婚姻等関係節点
+p_toneri,舎人親王,,prince,male,imperial,,735,,B_partial_or_disputed,birth_unrecorded;disputed_birth,Kotobank『舎人親王』：生年676年説に疑問符があるため不詳扱い,天武天皇皇子・淳仁天皇の父,天武天皇皇子（『日本書紀』の編集を総監・淳仁天皇の父）
+p_kusakabe,草壁皇子,岡宮天皇,prince,male,imperial,662,689,,A_standard,,飛鳥時代の皇太子。天武天皇と持統天皇の皇子。681年に皇太子となったが即位せず、持統3年（689）4月13日死去。662–689を通常年代として収録する。,天武と持統の皇子（聖武天皇の祖父）,天武と持統の皇子（聖武天皇の祖父）
+t043,43 元明天皇,阿閉皇女,female_tenno,female,imperial,661,721,,A_standard,,Kotobank『元明天皇』,天智天皇皇女・草壁皇子妃,天智天皇皇女・草壁皇子妃（平城京遷都）
+u_kusakabe_gemmei,,,marriage,,,,,,,,,草壁皇子・元明天皇の婚姻等関係節点,草壁皇子・元明天皇の婚姻等関係節点
+t042,42 文武天皇,軽皇子,tenno,male,imperial,683,707,,A_standard,,Kotobank『文武天皇』,草壁皇子・元明天皇第一皇子（大宝律令）,草壁皇子・元明天皇第一皇子（大宝律令）
+t044,44 元正天皇,氷高皇女,female_tenno,female,imperial,680,748,,A_standard,,Kotobank『元正天皇』,草壁皇子・元明天皇皇女・母娘継承,草壁皇子・元明天皇皇女（『日本書紀』完成・男系女子による母娘継承）
+t045,45 聖武天皇,首皇子,tenno,male,imperial,701,756,,A_standard,,Kotobank等『聖武天皇』,文武天皇第一皇子・東大寺大仏を建立,文武天皇第一皇子・東大寺大仏を建立
+t046t048,46・48 孝謙・称徳天皇,阿倍内親王,female_tenno,female,imperial,718,770,,A_standard,,Kotobank『孝謙天皇／称徳天皇』,重祚・聖武天皇皇女,重祚（聖武天皇皇女・天武系の最後の天皇）
+t047,47 淳仁天皇,大炊王,tenno,male,imperial,733,765,,A_standard,,Kotobank『淳仁天皇』,舎人親王第七男子・天武天皇孫,天武天皇の孫（舎人親王の第七子・淡路廃帝）
+p_shiki,志貴皇子,春日宮天皇,prince,male,imperial,,716,,B_partial_or_disputed,birth_unrecorded;disputed_death,天智天皇皇子で光仁天皇の父。『万葉集』歌人としても知られる。没年は霊亀2年（716）とする資料が多いが、715年説もあるため異説を注記する。生年不詳。,天智天皇の皇子・光仁天皇の実父,天智天皇の皇子・光仁天皇の実父
+t049,49 光仁天皇,白壁王,tenno,male,imperial,709,781,,A_standard,,Kotobank『光仁天皇』：和暦年基準では709–781。現代暦換算では没年782表記もある,天智天皇孫・天智天皇系から即位,天智天皇の孫・天武系から天智系への皇統回帰
+t050,50 桓武天皇,山部親王,tenno,male,imperial,737,806,,A_standard,,Kotobank『桓武天皇』,平安京遷都・桓武平氏の祖,平安京遷都・桓武平氏の祖
+p_nakano,仲野親王,,prince,male,imperial,792,867,,A_standard,,Kotobank『仲野親王』,桓武天皇皇子・班子女王の父,桓武天皇皇子・班子女王の父
+p_hanshi,班子女王,,princess,female,imperial,833,900,,A_standard,,Kotobank『班子女王』,仲野親王王女・光孝天皇妃・宇多天皇の母,仲野親王王女・光孝天皇妃・宇多天皇の母
+u_koko_hanshi,,,marriage,,,,,,,,,光孝天皇・班子女王の婚姻等関係節点,光孝天皇・班子女王の婚姻等関係節点
+t051,51 平城天皇,安殿親王,tenno,male,imperial,774,824,,A_standard,,Kotobank『平城天皇』,,
+t052,52 嵯峨天皇,神野親王,tenno,male,imperial,786,842,,A_standard,,Kotobank『嵯峨天皇』,桓武天皇第二皇子・嵯峨源氏の祖,桓武天皇第二皇子・嵯峨源氏の祖
+t053,53 淳和天皇,大伴親王,tenno,male,imperial,786,840,,A_standard,,Kotobank『淳和天皇』,,
+t054,54 仁明天皇,正良親王,tenno,male,imperial,810,850,,A_standard,,Kotobank『仁明天皇』,,
+t055,55 文徳天皇,道康親王,tenno,male,imperial,827,858,,A_standard,,Kotobank『文徳天皇』,,
+t056,56 清和天皇,惟仁親王,tenno,male,imperial,850,880,,A_standard,,Kotobank『清和天皇』,藤原良房が摂政・清和源氏の祖,初の幼少での摂政（藤原良房）・清和源氏の祖
+t057,57 陽成天皇,貞明親王,tenno,male,imperial,868,949,,A_standard,,Kotobank『陽成天皇』,,
+t058,58 光孝天皇,時康親王,tenno,male,imperial,830,887,,A_standard,,Kotobank『光孝天皇』,,
+t059,59 宇多天皇,定省親王,tenno,male,imperial,867,931,,A_standard,,Kotobank『宇多天皇』,寛平の治・臣籍降下から皇籍復帰して即位,寛平の治・臣籍降下から皇籍復帰して即位
+t060,60 醍醐天皇,敦仁親王,tenno,male,imperial,885,930,,A_standard,,Kotobank『醍醐天皇』,延喜の治,延喜の治
+t061,61 朱雀天皇,寛明親王,tenno,male,imperial,923,952,,A_standard,,Kotobank『朱雀天皇』,,
+t062,62 村上天皇,成明親王,tenno,male,imperial,926,967,,A_standard,,Kotobank『村上天皇』,,
+t063,63 冷泉天皇,憲平親王,tenno,male,imperial,950,1011,,A_standard,,Kotobank『冷泉天皇』,,
+t064,64 円融天皇,守平親王,tenno,male,imperial,959,991,,A_standard,,Kotobank『円融天皇』,,
+t065,65 花山天皇,師貞親王,tenno,male,imperial,968,1008,,A_standard,,Kotobank『花山天皇』,,
+t066,66 一条天皇,懐仁親王,tenno,male,imperial,980,1011,,A_standard,,Kotobank『一条天皇』,,
+t067,67 三条天皇,居貞親王,tenno,male,imperial,976,1017,,A_standard,,Kotobank『三条天皇』,,
+p_teishi,禎子内親王,陽明門院,princess,female,imperial,1013,1094,,A_standard,,平安時代中期の皇族。三条天皇第三皇女、後朱雀天皇皇后、後三条天皇の母。院号は陽明門院。1013–1094を通常年代として収録する。,三条天皇第三皇女・後三条天皇の母,三条天皇第三皇女・後朱雀天皇皇后・後三条天皇の母
+u_go_suzaku_teishi,,,marriage,,,,,,,,,後朱雀天皇・禎子内親王の婚姻等関係節点,後朱雀天皇・禎子内親王の婚姻等関係節点
+t068,68 後一条天皇,敦成親王,tenno,male,imperial,1008,1036,,A_standard,,Kotobank『後一条天皇』,,
+t069,69 後朱雀天皇,敦良親王,tenno,male,imperial,1009,1045,,A_standard,,Kotobank『後朱雀天皇』,,
+t070,70 後冷泉天皇,親仁親王,tenno,male,imperial,1025,1068,,A_standard,,Kotobank『後冷泉天皇』,,
+t071,71 後三条天皇,尊仁親王,tenno,male,imperial,1034,1073,,A_standard,,Kotobank『後三条天皇』,,
+t072,72 白河天皇,貞仁親王,tenno,male,imperial,1053,1129,,A_standard,,Kotobank『白河天皇』,,
+t073,73 堀河天皇,善仁親王,tenno,male,imperial,1079,1107,,A_standard,,Kotobank『堀河天皇』,,
+t074,74 鳥羽天皇,宗仁親王,tenno,male,imperial,1103,1156,,A_standard,,Kotobank『鳥羽天皇』,院政期の中心人物,院政期の中心人物
+t075,75 崇徳天皇,顕仁親王,tenno,male,imperial,1119,1164,,A_standard,,Kotobank『崇徳天皇』,,
+t076,76 近衛天皇,体仁親王,tenno,male,imperial,1139,1155,,A_standard,,Kotobank『近衛天皇』,,
+t077,77 後白河天皇,雅仁親王,tenno,male,imperial,1127,1192,,A_standard,,Kotobank『後白河天皇』,,
+t078,78 二条天皇,守仁親王,tenno,male,imperial,1143,1165,,A_standard,,Kotobank『二条天皇』,,
+t079,79 六条天皇,順仁親王,tenno,male,imperial,1164,1176,,A_standard,,Kotobank『六条天皇』,,
+t080,80 高倉天皇,憲仁親王,tenno,male,imperial,1161,1181,,A_standard,,Kotobank『高倉天皇』,,
+t081,81 安徳天皇,言仁親王,tenno,male,imperial,1178,1185,,A_standard,,Kotobank『安徳天皇』,,
+t082,82 後鳥羽天皇,尊成親王,tenno,male,imperial,1180,1239,,A_standard,,Kotobank『後鳥羽天皇』,,
+t083,83 土御門天皇,為仁親王,tenno,male,imperial,1195,1231,,A_standard,,Kotobank『土御門天皇』,,
+t084,84 順徳天皇,守成親王,tenno,male,imperial,1197,1242,,A_standard,,Kotobank『順徳天皇』,,
+t085,85 仲恭天皇,懐成親王,tenno,male,imperial,1218,1234,,A_standard,,Kotobank『仲恭天皇』,,
+t086,86 後堀河天皇,茂仁王,tenno,male,imperial,1212,1234,,A_standard,,Kotobank『後堀河天皇』,,
+t087,87 四条天皇,秀仁親王,tenno,male,imperial,1231,1242,,A_standard,,Kotobank『四条天皇』,,
+p_morisada,守貞親王,,prince,male,imperial,1179,1223,,A_standard,,1179–1223。鎌倉時代の親王。高倉天皇の皇子、安徳天皇の異母弟。承久の乱後、子の茂仁親王が後堀河天皇として即位したため、自らは即位せず太上法皇（後高倉院）として院政を行った。v3.64で誤って後鳥羽天皇皇子としていた系譜エッジ・noteを修正。,高倉天皇皇子・安徳天皇異母弟・後堀河天皇父,高倉天皇皇子・安徳天皇異母弟・後堀河天皇父
+t088,88 後嵯峨天皇,邦仁親王,tenno,male,imperial,1220,1272,,A_standard,,Kotobank『後嵯峨天皇』,持明院統・大覚寺統分立の起点,持明院統・大覚寺統分立の起点
+t089,89 後深草天皇,久仁親王,tenno,male,imperial,1243,1304,,A_standard,,Kotobank『後深草天皇』,,
+t090,90 亀山天皇,恒仁親王,tenno,male,imperial,1249,1305,,A_standard,,Kotobank『亀山天皇』,,
+t091,91 後宇多天皇,世仁親王,tenno,male,imperial,1267,1324,,A_standard,,Kotobank『後宇多天皇』,,
+t092,92 伏見天皇,煕仁親王,tenno,male,imperial,1265,1317,,A_standard,,Kotobank『伏見天皇』,,
+t093,93 後伏見天皇,胤仁親王,tenno,male,imperial,1288,1336,,A_standard,,Kotobank『後伏見天皇』,持明院統の祖,持明院統の祖
+tn001,北1 光厳天皇,量仁親王,tenno,male,imperial,1313,1364,,A_standard,,Kotobank『光厳天皇』,北朝第1代,北朝第1代
+tn002,北2 光明天皇,豊仁親王,tenno,male,imperial,1321,1380,,A_standard,,Kotobank『光明天皇』,北朝第2代,北朝第2代
+t094,94 後二条天皇,邦治親王,tenno,male,imperial,1285,1308,,A_standard,,Kotobank『後二条天皇』,,
+t095,95 花園天皇,富仁親王,tenno,male,imperial,1297,1348,,A_standard,,Kotobank『花園天皇』,,
+t096,96 後醍醐天皇,尊治親王,tenno,male,imperial,1288,1339,,A_standard,,Kotobank『後醍醐天皇』,,
+t097,97 後村上天皇,憲良親王・義良親王,tenno,male,imperial,1328,1368,,A_standard,,Kotobank『後村上天皇』,南朝第2代,南朝第2代
+t098,98 長慶天皇,寛成親王,tenno,male,imperial,1343,1394,,A_standard,,Kotobank『長慶天皇』,南朝第3代,南朝第3代
+t099,99 後亀山天皇,熙成親王,tenno,male,imperial,,1424,,B_partial_or_disputed,birth_unrecorded;disputed_birth,Kotobank『後亀山天皇』：生年は1350年? とされるためbirth_yearは不詳扱い,南朝第4代,南朝第4代
+tn003,北3 崇光天皇,興仁親王,tenno,male,imperial,1334,1398,,A_standard,,Kotobank『崇光天皇』,伏見宮家の男系祖先,伏見宮家の男系祖先
+tn004,北4 後光厳天皇,弥仁親王,tenno,male,imperial,1338,1374,,A_standard,,Kotobank『後光厳天皇』,北朝第4代,北朝第4代
+tn005,北5 後円融天皇,緒仁親王,tenno,male,imperial,1358,1393,,A_standard,,Kotobank『後円融天皇』,北朝第5代,北朝第5代
+t100,100 後小松天皇,幹仁親王,tenno,male,imperial,1377,1433,,A_standard,,Kotobank『後小松天皇』,,
+t101,101 称光天皇,躬仁親王・実仁親王,tenno,male,imperial,1401,1428,,A_standard,,Kotobank『称光天皇』,,
+t102,102 後花園天皇,彦仁親王,tenno,male,imperial,1419,1470,,A_standard,,Kotobank『後花園天皇』・宮内公文書館実録所在確認,,
+t103,103 後土御門天皇,成仁親王,tenno,male,imperial,1442,1500,,A_standard,,Kotobank『後土御門天皇』・宮内公文書館実録所在確認,,
+t104,104 後柏原天皇,勝仁親王,tenno,male,imperial,1464,1526,,A_standard,,Kotobank『後柏原天皇』,,
+t105,105 後奈良天皇,知仁親王,tenno,male,imperial,1496,1557,,A_standard,,Kotobank『後奈良天皇』,,
+t106,106 正親町天皇,方仁親王,tenno,male,imperial,1517,1593,,A_standard,,Kotobank『正親町天皇』,,
+t107,107 後陽成天皇,和仁親王・周仁親王,tenno,male,imperial,1571,1617,,A_standard,,Kotobank『後陽成天皇』,,
+t108,108 後水尾天皇,政仁親王,tenno,male,imperial,1596,1680,,A_standard,,Kotobank『後水尾天皇』,,
+t109,109 明正天皇,興子内親王,female_tenno,female,imperial,1623,1696,,A_standard,,Kotobank『明正天皇』,,
+t110,110 後光明天皇,紹仁親王,tenno,male,imperial,1633,1654,,A_standard,,Kotobank『後光明天皇』,,
+t111,111 後西天皇,良仁親王,tenno,male,imperial,1637,1685,,A_standard,,Kotobank『後西天皇』,,
+t112,112 霊元天皇,識仁親王,tenno,male,imperial,1654,1732,,A_standard,,Kotobank等で確認（年のみ）,,
+p_fukuko_reigen,福子内親王,,princess,female,imperial,1676,1707,,A_standard,,Kotobank『福子内親王』,霊元天皇皇女・伏見宮貞建親王の母,霊元天皇皇女・伏見宮邦永親王妃・伏見宮貞建親王の母
+u_kuninaga_fukuko,,,marriage,,,,,,,,,伏見宮邦永親王・福子内親王の婚姻等関係節点,伏見宮邦永親王・福子内親王の婚姻等関係節点
+p_masahito_01,誠仁親王,陽光院,prince,male,imperial,1552,1586,,A_standard,,Kotobank『誠仁親王』,正親町天皇第一皇子・追尊天皇,正親町天皇第一皇子（即位前に急逝・追尊天皇）
+t113,113 東山天皇,朝仁親王,tenno,male,imperial,1675,1710,,A_standard,,公開人物辞典で確認（年のみ）,閑院宮直仁親王の父,閑院宮初代直仁親王の父
+t114,114 中御門天皇,慶仁親王,tenno,male,imperial,1702,1737,,A_standard,,Kotobank等で確認（年のみ）,,
+t115,115 桜町天皇,昭仁親王,tenno,male,imperial,1720,1750,,A_standard,,Kotobankで確認（年のみ）,,
+t116,116 桃園天皇,遐仁親王,tenno,male,imperial,1741,1762,,A_standard,,Kotobankで確認（年のみ）,,
+t117,117 後桜町天皇,智子内親王,female_tenno,female,imperial,1740,1813,,A_standard,,Kotobankで確認（年のみ）,江戸時代最後の女性天皇,江戸時代最後の女性天皇
+t118,118 後桃園天皇,英仁親王,tenno,male,imperial,1758,1779,,A_standard,,Kotobankで確認（年のみ）,22歳で崩御・光格天皇を猶子とする,22歳で崩御・光格天皇を猶子とする
+t119,119 光格天皇,師仁親王・兼仁親王,tenno,male,imperial,1771,1840,,A_standard,,JapanKnowledge・宮内庁書陵部で確認（年のみ）,閑院宮家から皇位を継承,閑院宮家から皇位を継承
+t120,120 仁孝天皇,恵仁親王,tenno,male,imperial,1800,1846,,A_standard,,Kotobankで確認（年のみ）,,
+t121,121 孝明天皇,統仁親王,tenno,male,imperial,1831,1867,,A_standard,,Kotobankで確認（年のみ）,,
+t122,122 明治天皇,睦仁親王,tenno,male,imperial,1852,1912,,A_standard,,Kotobankで確認（年のみ）,,
+fushimi_001,伏見宮栄仁親王,,prince,male,imperial,1351,1416,,A_standard,,Kotobank『栄仁親王』,崇光天皇第一皇子・伏見宮初代,崇光天皇第一皇子・伏見宮初代
+fushimi_002,伏見宮治仁王,,prince,male,imperial,1381,1417,,A_standard,,Kotobank『治仁王』,貞成親王の同母兄・伏見宮第2代,貞成親王の同母兄・伏見宮第2代
+fushimi_003,伏見宮貞成親王,後崇光院,prince,male,imperial,1372,1456,,A_standard,,Kotobank『貞成親王』,後花園天皇の実父・伏見宮第3代,後花園天皇の実父・伏見宮第3代
+fushimi_004,伏見宮貞常親王,,prince,male,imperial,1425,1474,,A_standard,,Kotobank『貞常親王』,貞成親王第二男子・伏見宮第4代,貞成親王第二男子・伏見宮第4代
+fushimi_005,伏見宮邦高親王,,prince,male,imperial,1456,1532,,A_standard,,Kotobank『邦高親王』,貞常親王第一男子・伏見宮第5代,貞常親王第一男子・伏見宮第5代
+fushimi_006,伏見宮貞敦親王,,prince,male,imperial,1488,1572,,A_standard,,Kotobank『貞敦親王』,邦高親王第一男子・伏見宮第6代,邦高親王第一男子・伏見宮第6代
+fushimi_007,伏見宮邦輔親王,,prince,male,imperial,1513,1563,,A_standard,,Kotobank『邦輔親王』,貞敦親王第一男子・伏見宮第7代,貞敦親王第一男子・伏見宮第7代
+fushimi_008,伏見宮貞康親王,,prince,male,imperial,1547,1568,,A_standard,,Kotobank『貞康親王』,邦輔親王第三男子・伏見宮第8代,邦輔親王第三男子・伏見宮第8代
+fushimi_009,伏見宮邦房親王,,prince,male,imperial,1566,1622,,A_standard,,Kotobank『邦房親王』,貞康親王第一男子・伏見宮第9代,貞康親王第一男子・伏見宮第9代
+fushimi_010,伏見宮貞清親王,,prince,male,imperial,1596,1654,,A_standard,,Kotobank『貞清親王』,邦房親王第一男子・伏見宮第10代,邦房親王第一男子・伏見宮第10代
+fushimi_011,伏見宮邦尚親王,,prince,male,imperial,1613,1654,,A_standard,,Kotobank『邦尚親王』,貞清親王男子・伏見宮第11代・後継者なし,貞清親王男子・伏見宮第11代・後継者なし
+fushimi_012,伏見宮邦道親王,,prince,male,imperial,1641,1654,,A_standard,,Kotobank『邦道親王』,貞清親王男子・伏見宮第12代・邦尚親王の異母弟・夭逝,貞清親王男子・伏見宮第12代・邦尚親王の異母弟・夭逝
+fushimi_013,伏見宮貞致親王,,prince,male,imperial,1632,1694,,A_standard,,Kotobank『貞致親王』,貞清親王男子（出自に異説あり）・伏見宮第13代,貞清親王男子（出自に異説あり）・伏見宮第13代・後水尾天皇猶子
+fushimi_014,伏見宮邦永親王,,prince,male,imperial,1676,1726,,C_secondary_genealogy,,早稲田大学古典籍総合DB・公開系譜照合 v3.60最終C監査: 歴史史料本文の直接確認待ちとしてCを維持する。民間人物の探索打ち止めとは別扱い。,貞致親王第二男子・伏見宮第14代,貞致親王第二男子・伏見宮第14代・霊元天皇猶子
+fushimi_015,伏見宮貞建親王,,prince,male,imperial,1701,1754,,A_standard,,Kotobank『貞建親王』,邦永親王第三男子・伏見宮第15代,邦永親王第三男子・伏見宮第15代・東山天皇猶子
+fushimi_016,伏見宮邦忠親王,,prince,male,imperial,1732,1759,,C_secondary_genealogy,,公開系譜照合 v3.60最終C監査: 歴史史料本文の直接確認待ちとしてCを維持する。民間人物の探索打ち止めとは別扱い。,貞建親王第一男子・伏見宮第16代・後継者なし,貞建親王第一男子・伏見宮第16代・桜町天皇猶子・後継者なし
+fushimi_017,伏見宮貞行親王,,prince,male,imperial,1760,1772,,A_standard,,Kotobank『貞行親王』,桃園天皇第二皇子・伏見宮第17代,桃園天皇第二皇子・邦忠親王薨去後に伏見宮を継承・夭逝
+fushimi_018,伏見宮邦頼親王,,prince,male,imperial,1733,1802,,A_standard,,Kotobank『邦頼親王』,貞建親王第二男子・伏見宮第18代,貞建親王第二男子・伏見宮第18代・桜町天皇猶子
+fushimi_019,伏見宮貞敬親王,,prince,male,imperial,1776,1841,,A_standard,,Kotobank『貞敬親王』,邦頼親王第一男子・伏見宮第19代,邦頼親王第一男子・伏見宮第19代・後桃園天皇猶子
+fushimi_020,伏見宮邦家親王,,prince,male,imperial,1802,1872,,A_standard,,Kotobank『邦家親王』,伏見宮第20代・旧11宮家の男系共通祖・香淳皇后の父系祖,伏見宮第20代・光格天皇猶子・旧11宮家の男系共通祖・香淳皇后の父系祖
+shogoin_001,聖護院宮嘉言親王,,prince,male,imperial,1821,1868,,A_standard,,幕末の皇族。伏見宮邦家親王の王子。聖護院門跡となり、王政復古後に還俗して内国事務総督・海軍総督などを務めた。1821–1868を通常年代として収録する。,邦家親王第二男子・聖護院宮初代,邦家親王第二男子・聖護院宮初代
+komatsu_001,小松宮彰仁親王,仁和寺宮嘉彰親王,prince,male,imperial,1846,1903,,A_standard,,幕末・明治時代の皇族・軍人。伏見宮邦家親王の王子。嘉彰親王、東伏見宮を経て小松宮彰仁親王となり、陸軍大将・元帥を務めた。1846–1903を通常年代として収録する。,邦家親王第八男子・小松宮初代,邦家親王第八男子・小松宮初代・仁孝天皇養子
+kacho_001,華頂宮博経親王,,prince,male,imperial,1851,1876,,A_standard,,幕末・明治時代の皇族・軍人。伏見宮邦家親王の王子で華頂宮初代。知恩院門跡から還俗し、皇族として早期に海外留学した。1851–1876を通常年代として収録する。,邦家親王第十二男子・華頂宮初代,邦家親王第十二男子・華頂宮初代・孝明天皇猶子
+fushimi_021,伏見宮貞教親王,,prince,male,imperial,1836,1862,,A_standard,,Kotobank『貞教親王』,邦家親王第六男子・伏見宮第21代,邦家親王第六男子・伏見宮第21代・仁孝天皇猶子
+fushimi_022,伏見宮貞愛親王,,prince,male,imperial,1858,1923,,A_standard,,Kotobank『伏見宮貞愛親王』,邦家親王第十四男子・伏見宮第22代・のち再継承,邦家親王第十四男子・伏見宮第22代・孝明天皇養子・貞教親王猶子・のち再継承
+fushimi_023,伏見宮博恭王,愛賢王,prince,male,imperial,1875,1946,,A_standard,,国立国会図書館典拠（伏見宮博恭 1875–1946）および講談社『日本人名大辞典+Plus』で生没年を再確認。1875–1946を通常年代として維持する。,貞愛親王第一男子・伏見宮第23代,貞愛親王第一男子・伏見宮第23代
+fushimi_024,博義王,,prince,male,imperial,1897,1938,,A_standard,,宮内庁書陵部に『伏見宮博義王殿下薨去の件 昭和13年』が現存し、国立台湾歴史博物館の収蔵品解説も博義王を1897–1938と明記する。生没年を公的機関資料で再確認できたためA_standardへ更新する。,博恭王第一男子・伏見宮継承前に薨去・博明の父,博恭王第一男子・博明王の父・祖父博恭王に先立ち薨去
+fushimi_025,伏見博明,伏見宮博明王,prince,male,imperial,1932,,,B_partial_or_disputed,death_unrecorded,国立国会図書館サーチ『旧皇族の宗家・伏見宮家に生まれて : 伏見博明オーラルヒストリー』の著者紹介・著者標目が伏見博明1932年生を明示するためbirth_year=1932を公的図書館書誌で再確認。没年欄が空欄のためB_partial_or_disputedへ更新する。,博義王第一男子・伏見宮第24代・1947年皇籍離脱,博義王第一男子・伏見宮第24代・1947年皇籍離脱
+kanin_001,閑院宮直仁親王,,prince,male,imperial,1704,1753,,A_standard,,環境省京都御苑資料・公開人物辞典照合,東山天皇第六皇子・閑院宮初代,東山天皇第六皇子・閑院宮初代
+kanin_002,閑院宮典仁親王,慶光天皇,prince,male,imperial,1733,1794,,A_standard,,Kotobank『典仁親王』,光格天皇の実父・追尊天皇・閑院宮第2代,光格天皇の実父・追尊天皇・閑院宮第2代
+u_taisho_sadako,,,marriage,,,,,,,,,大正天皇・貞明皇后の婚姻等関係節点,大正天皇・貞明皇后の婚姻等関係節点
+n_sadako,貞明皇后,九条節子,civil_princess,female,non_imperial,1884,1951,,A_standard,,宮内庁書陵部・Kotobankで確認（年のみ） v3.64で大正天皇との婚姻等関係節点を修正し、昭和天皇・秩父宮雍仁親王・高松宮宣仁親王・三笠宮崇仁親王の母として系譜接続を正規化。,九条道孝・野間幾子の娘・大正天皇皇后・昭和天皇母,九条道孝・野間幾子の娘・大正天皇皇后・昭和天皇母。図上では皇室后妃として皇室側への再流入点。
+t123,123 大正天皇,嘉仁親王,tenno,male,imperial,1879,1926,,A_standard,,Kotobank・宮内庁関係年表で確認（年のみ）,,
+p_yasuhito,秩父宮雍仁親王,,prince,male,imperial,1902,1953,,A_standard,,大正天皇第二皇子。秩父宮。1902年6月25日生、1953年1月4日薨去。スポーツ振興・国際親善などに尽力した。1902–1953を通常年代として収録する。,大正天皇第二皇子,大正天皇第二皇子
+p_nobuhito,高松宮宣仁親王,,prince,male,imperial,1905,1987,,A_standard,,大正天皇第三皇子。高松宮。1905年1月3日生、1987年2月3日薨去。海軍軍人として勤務し、戦後は国際親善・福祉・文化活動などに携わった。1905–1987を通常年代として収録する。,大正天皇第三皇子,大正天皇第三皇子
+p_takahito,三笠宮崇仁親王,,prince,male,imperial,1915,2016,,A_standard,,宮内庁公開略歴（年のみ）,大正天皇第四皇子,大正天皇第四皇子
+u_chichibu_setsuko,,,marriage,,,,,,,,,秩父宮雍仁親王・雍仁親王妃 勢津子の婚姻等関係節点,秩父宮雍仁親王・雍仁親王妃 勢津子の婚姻等関係節点
+n_setsuko,雍仁親王妃 勢津子,松平勢津子,civil_princess,female,non_imperial,1909,1995,,A_standard,,1909年9月9日生。1928年に秩父宮雍仁親王と結婚。1995年8月25日薨去。1909–1995を通常年代として収録する。,秩父宮雍仁親王妃,秩父宮雍仁親王妃。旧名松平勢津子。
+u_takamatsu_kikuko,,,marriage,,,,,,,,,高松宮宣仁親王・宣仁親王妃 喜久子の婚姻等関係節点,高松宮宣仁親王・宣仁親王妃 喜久子の婚姻等関係節点
+n_kikuko,宣仁親王妃 喜久子,徳川喜久子,civil_princess,female,non_imperial,1911,2004,,A_standard,,1911年12月26日生。1930年に高松宮宣仁親王と結婚。2004年12月18日薨去。1911–2004を通常年代として収録する。,高松宮宣仁親王妃,高松宮宣仁親王妃。旧名徳川喜久子。
+u_mikasa_yuriko,,,marriage,,,,,,,,,三笠宮崇仁親王・崇仁親王妃 百合子の婚姻等関係節点,三笠宮崇仁親王・崇仁親王妃 百合子の婚姻等関係節点
+n_yuriko,崇仁親王妃 百合子,高木百合子,civil_princess,female,non_imperial,1923,2024,,A_standard,,宮内庁公開略歴（年のみ）,,
+u_showa_nagako,,,marriage,,,,,,,,,昭和天皇・香淳皇后の婚姻等関係節点,昭和天皇・香淳皇后の婚姻等関係節点
+kuni_001,久邇宮朝彦親王,青蓮院宮,prince,male,imperial,1824,1891,,A_standard,,国立国会図書館の朝彦親王関係書誌・典拠および人物辞典で1824–1891を再確認。公開系譜依存から公的図書館典拠確認済みへ更新する。,邦家親王第四男子・久邇宮初代,邦家親王第四男子・久邇宮初代・仁孝天皇養子
+kuni_002,久邇宮邦彦王,,prince,male,imperial,1873,1929,,A_standard,,講談社『日本人名大辞典+Plus』で久邇宮邦彦王1873–1929を再確認。公開系譜依存から人物辞典確認済みへ更新する。,朝彦親王第三男子・久邇宮第2代・香淳皇后の父,朝彦親王第三男子・久邇宮第2代・香淳皇后の父
+kuni_003,香淳皇后,良子女王,princess,female,imperial,1903,2000,,A_standard,,宮内庁・公開系譜（年のみ）,邦彦王第一女子・昭和天皇皇后,邦彦王第一女子・昭和天皇皇后
+kuni_004,久邇朝融,久邇宮朝融王,prince,male,imperial,1901,1959,,A_standard,,国立国会図書館レファレンス協同データベース（山梨県立図書館提供）が久邇宮朝融王を1901–1959とし、『皇室の百科事典』『皇室事典』を参照しているため再確認済み。1901–1959を維持しA_standardへ更新する。,邦彦王第一男子・久邇宮第3代・1947年皇籍離脱,邦彦王第一男子・久邇宮第3代・1947年皇籍離脱
+kuni_005,久邇邦昭,邦昭王,prince,male,imperial,1929,,,B_partial_or_disputed,death_unrecorded,宮内庁書陵部『朝融王殿下王男子御誕生御命名の件（邦昭王殿下）昭和3～4年』で1929年出生を直接確認。death_yearは空欄のためB_partial_or_disputedへ更新する。,朝融王第一男子・1947年皇籍離脱・旧久邇宮第4代,朝融王第一男子・1947年皇籍離脱・旧久邇宮第4代・元神宮大宮司
+kuni_006,久邇朝尊,,imperial_descendant,male,imperial,1959,,,B_partial_or_disputed,death_unrecorded,神社新報（2022年7月11日『神宮大宮司に久邇朝尊氏』）が久邇朝尊を「昭和三十四年に東京で生まれ」と明記する。伊勢神宮大宮司就任に伴う神社界の人物紹介でbirth_year=1959を再確認した。death_yearは空欄のためB_partial_or_disputedへ更新する。,久邇邦昭第一男子・神宮大宮司,久邇邦昭第一男子・神宮大宮司
+kuni_007,久邇朝建,朝建王,prince,male,imperial,1940,,,B_partial_or_disputed,death_unrecorded,宮内庁書陵部『朝融王妃知子殿下御分娩の件（朝建王殿下）昭和15年』で1940年出生を直接確認。death_yearは空欄のためB_partial_or_disputedへ更新する。,朝融王第二男子・1947年皇籍離脱,朝融王第二男子・1947年皇籍離脱・長男朝俊。公開資料で男系男子孫の存在が報告されるが氏名非公表のため未収録
+kuni_008,久邇邦晴,,imperial_descendant,male,imperial,1961,,,C_secondary_genealogy,,公開系譜照合（年のみ） v3.60最終C監査: 神社・公益法人・勤務先法人・役員名簿・公式プロフィールも追加検索したが、現行birth_yearを直接裏付ける一次・準一次プロフィールに到達しなかったためCを最終確定する。公開系譜を超える個人情報探索は行わない。,久邇邦昭第二男子,久邇邦昭第二男子
+kuni_009,久邇朝俊,,imperial_descendant,male,imperial,1971,,,C_secondary_genealogy,,久邇朝建の長男。公開系譜資料では1971年生とされる。旧宮家男系子孫の系譜確認用として収録し、詳細な個人情報は本図の目的外とする。 v3.60最終C監査: 神社・公益法人・勤務先法人・役員名簿・公式プロフィールも追加検索したが、現行birth_yearを直接裏付ける一次・準一次プロフィールに到達しなかったためCを最終確定する。公開系譜を超える個人情報探索は行わない。,久邇朝建第一男子,久邇朝建第一男子
+kuni_010,久邇朝宏,朝宏王,prince,male,imperial,1944,,,B_partial_or_disputed,death_unrecorded,宮内庁書陵部『朝融王妃知子女王殿下御分娩王男子御誕生ニ関スル件』昭和19年および御誕生関係録で朝宏王の1944年出生を確認。death_yearは空欄のためB_partial_or_disputedへ更新する。,朝融王第三男子・1947年皇籍離脱,朝融王第三男子・1947年皇籍離脱
+kuni_011,多嘉王,,prince,male,imperial,1875,1937,,A_standard,,講談社『日本人名大辞典+Plus』で久邇宮多嘉王1875–1937を再確認。公開系譜依存から人物辞典確認済みへ更新する。,朝彦親王第五男子,久邇宮朝彦親王第五男子・生涯皇族として久邇宮家に属す
+kuni_012,賀彦王,,prince,male,imperial,1912,1918,,A_standard,,宮内庁書陵部『多嘉王殿下王男子御誕生の件（賀彦王殿下）明治45年』で1912年出生を確認し、『皇族雑録 大正6～12年』の大正8年条に『故賀彦王』の皇霊殿合祭記事があるため1918年没も確認できる。1912–1918を維持しA_standardへ更新する。,多嘉王第一男子・夭逝,多嘉王第一男子・夭逝
+higashikuni_001,東久邇稔彦,東久邇宮稔彦王,prince,male,imperial,1887,1990,,A_standard,,首相官邸・公開系譜（年のみ）,朝彦親王第九男子・東久邇宮初代・1947年皇籍離脱,久邇宮朝彦親王第九男子・東久邇宮初代・第43代内閣総理大臣
+p_toshiko,東久邇聡子,泰宮聡子内親王,princess,female,imperial,1896,1978,,A_standard,,Kotobankで確認（年のみ）,明治天皇第九皇女・稔彦王妃・1947年皇籍離脱,明治天皇第九皇女。御称号は泰宮。稔彦王妃。1947年皇籍離脱。
+u_naruhiko_toshiko,,,marriage,,,,,,,,,東久邇宮稔彦王・東久邇聡子の婚姻等関係節点,東久邇宮稔彦王・東久邇聡子の婚姻等関係節点
+higashikuni_002,東久邇盛厚,盛厚王,prince,male,imperial,1916,1969,,A_standard,,講談社『デジタル版 日本人名大辞典+Plus』および日外アソシエーツ『20世紀日本人名事典』が東久邇盛厚1916–1969を一致して掲げるため再確認済み。A_standardへ更新する。,稔彦王第一男子・1947年皇籍離脱,稔彦王第一男子・1947年皇籍離脱・昭和天皇第一皇女成子内親王の夫
+u_morihiro_shigeko,,,marriage,,,,,,,,,盛厚王・東久邇成子の婚姻等関係節点,盛厚王・東久邇成子の婚姻等関係節点
+higashikuni_003,東久邇信彦,信彦王,prince,male,imperial,1945,2019,,A_standard,,公開資料照合（年のみ）,盛厚王第一男子・1947年皇籍離脱・旧東久邇宮第2代,盛厚王第一男子・1947年皇籍離脱・旧東久邇宮第2代
+higashikuni_004,東久邇征彦,,imperial_descendant,male,imperial,1973,,,C_secondary_genealogy,,公開系譜照合（年のみ） v3.60最終C監査: 神社・公益法人・勤務先法人・役員名簿・公式プロフィールも追加検索したが、現行birth_yearを直接裏付ける一次・準一次プロフィールに到達しなかったためCを最終確定する。公開系譜を超える個人情報探索は行わない。,東久邇信彦第一男子・旧東久邇宮第3代,東久邇信彦第一男子・旧東久邇宮第3代。公開資料で男子2名の存在が報告されるが氏名非公表のため未収録
+higashikuni_005,東久邇眞彦,,imperial_descendant,male,imperial,1953,,,C_secondary_genealogy,,公開系譜照合（年のみ） v3.60最終C監査: 神社・公益法人・勤務先法人・役員名簿・公式プロフィールも追加検索したが、現行birth_yearを直接裏付ける一次・準一次プロフィールに到達しなかったためCを最終確定する。公開系譜を超える個人情報探索は行わない。,盛厚王第三男子,盛厚王第三男子
+higashikuni_006,東久邇照彦,,imperial_descendant,male,imperial,1979,,,C_secondary_genealogy,,東久邇眞彦の長男。公開系譜資料では1979年生とされる。旧東久邇宮家の男系子孫として収録する。子世代は氏名非公表のため既存方針どおり未収録。 v3.60最終C監査: 神社・公益法人・勤務先法人・役員名簿・公式プロフィールも追加検索したが、現行birth_yearを直接裏付ける一次・準一次プロフィールに到達しなかったためCを最終確定する。公開系譜を超える個人情報探索は行わない。,東久邇眞彦第一男子,東久邇眞彦長男。公開資料で男子1名の存在が報告されるが氏名非公表のため未収録
+higashikuni_007,東久邇睦彦,,imperial_descendant,male,imperial,1980,,,C_secondary_genealogy,,東久邇眞彦の次男。公開系譜資料では1980年生とされる。旧東久邇宮家の男系子孫として収録する。 v3.60最終C監査: 神社・公益法人・勤務先法人・役員名簿・公式プロフィールも追加検索したが、現行birth_yearを直接裏付ける一次・準一次プロフィールに到達しなかったためCを最終確定する。公開系譜を超える個人情報探索は行わない。,東久邇眞彦第二男子,東久邇眞彦第二男子
+higashikuni_008,壬生基博,東久邇秀彦,imperial_descendant,male,imperial,1949,,,B_partial_or_disputed,death_unrecorded,公益財団法人山階鳥類研究所の公式『壬生基博 理事長紹介』が「1949年生 東京生まれ」と明記し、理事長就任歴も掲載する。birth_year=1949を法人公式プロフィールで再確認した。death_yearは空欄のためB_partial_or_disputedへ更新する。,盛厚王・成子内親王第二男子・壬生家養子,盛厚・成子の第二男子・壬生家養子・山階鳥類研究所理事長
+higashikuni_009,壬生基成,,imperial_descendant,male,imperial,1979,,,C_secondary_genealogy,,壬生基博の長男。公開系譜資料では1979年生とされる。東久邇宮家から壬生家へ入った男系子孫として収録する。子世代は氏名非公表のため未収録。 v3.60最終C監査: 神社・公益法人・勤務先法人・役員名簿・公式プロフィールも追加検索したが、現行birth_yearを直接裏付ける一次・準一次プロフィールに到達しなかったためCを最終確定する。公開系譜を超える個人情報探索は行わない。,壬生基博第一男子,壬生基博長男。公開資料で男子1名の存在が報告されるが氏名非公表のため未収録
+higashikuni_010,壬生基敦,,imperial_descendant,male,imperial,1982,,,C_secondary_genealogy,,壬生基博の次男。公開系譜資料では1982年生とされる。東久邇宮家から壬生家へ入った男系子孫として収録する。子世代は氏名非公表のため未収録。 v3.60最終C監査: 神社・公益法人・勤務先法人・役員名簿・公式プロフィールも追加検索したが、現行birth_yearを直接裏付ける一次・準一次プロフィールに到達しなかったためCを最終確定する。公開系譜を超える個人情報探索は行わない。,壬生基博第二男子,壬生基博次男。公開資料で男子1名の存在が報告されるが氏名非公表のため未収録
+n_yoshiko_terao,寺尾佳子,,civil_princess,female,non_imperial,1927,,,C_secondary_genealogy,,東久邇盛厚の再婚相手。公開系譜資料では1927年生とされ、盛厚との間に寺尾厚彦・東久邇盛彦をもうけた。近現代民間人のため、公開系譜の範囲を超える詳細情報は収録しない。 v3.60最終C監査: 神社・公益法人・勤務先法人・役員名簿・公式プロフィールも追加検索したが、現行birth_yearを直接裏付ける一次・準一次プロフィールに到達しなかったためCを最終確定する。公開系譜を超える個人情報探索は行わない。,東久邇盛厚の再婚相手,東久邇盛厚の再婚相手
+u_morihiro_yoshiko,,,marriage,,,,,,,,,東久邇盛厚・寺尾佳子の婚姻等関係節点,東久邇盛厚・寺尾佳子の婚姻等関係節点
+higashikuni_011,寺尾厚彦,東久邇厚彦,imperial_descendant,male,imperial,1966,,,C_secondary_genealogy,,公開系譜照合（年のみ） v3.60最終C監査: 神社・公益法人・勤務先法人・役員名簿・公式プロフィールも追加検索したが、現行birth_yearを直接裏付ける一次・準一次プロフィールに到達しなかったためCを最終確定する。公開系譜を超える個人情報探索は行わない。,盛厚・寺尾佳子第一男子・寺尾家養子,盛厚・寺尾佳子第一男子・寺尾家養子
+higashikuni_012,東久邇盛彦,,imperial_descendant,male,imperial,1967,,,C_secondary_genealogy,,公開系譜照合（年のみ） v3.60最終C監査: 神社・公益法人・勤務先法人・役員名簿・公式プロフィールも追加検索したが、現行birth_yearを直接裏付ける一次・準一次プロフィールに到達しなかったためCを最終確定する。公開系譜を超える個人情報探索は行わない。,盛厚・寺尾佳子第二男子,盛厚・寺尾佳子第二男子
+higashikuni_013,師正王,,prince,male,imperial,1917,1923,,A_standard,,公開資料照合（年のみ）,稔彦王第二男子・夭逝,稔彦王第二男子・夭逝
+higashikuni_014,多羅間俊彦,俊彦王,prince,male,imperial,1929,2015,,A_standard,,ブラジル日本文化福祉協会（文協）の公式訃報が、多羅間俊彦について2015年4月15日死去・86歳と明記する。同協会では支援および指導高等審議会の委員・会長を務めたことも公式役員ページで確認できる。既存birth_year=1929と死亡時年齢が整合するためdeath_year=2015を追加し、1929–2015としてA_standardへ更新する。,稔彦王第四男子・1947年皇籍離脱,稔彦王第四男子・1947年皇籍離脱・のち多羅間家の養子となりブラジルへ移住
+higashikuni_015,多羅間アルフレッド稔彦,,imperial_descendant,male,imperial,1955,,,C_secondary_genealogy,,多羅間俊彦の一人息子として公開系譜で確認される男系男子。公開系譜資料では1955年生とされる。日本国外で生活する民間人であり、系譜確認に必要な範囲のみ収録する。 v3.60最終C監査: 神社・公益法人・勤務先法人・役員名簿・公式プロフィールも追加検索したが、現行birth_yearを直接裏付ける一次・準一次プロフィールに到達しなかったためCを最終確定する。公開系譜を超える個人情報探索は行わない。,多羅間俊彦一人息子,多羅間俊彦の一人息子として公開資料で確認される男系男子
+kitashirakawa_005,北白川宮智成親王,,prince,male,imperial,1856,1872,,B_partial_or_disputed,disputed_birth;value_corrected,北白川宮智成親王は安政3年6月21日生で、西暦換算は1856年。v3.56までbirth_year=1855としていたため1856へ修正。公開系譜間に1855/1856の差が見られるため、修正後もB_partial_or_disputedとして典拠差を保持する。,邦家親王第十三男子・聖護院宮第2代・北白川宮初代,伏見宮邦家親王第十三男子・孝明天皇猶子・北白川宮初代・実子なし・夭逝
+kitashirakawa_001,北白川宮能久親王,輪王寺宮公現親王,prince,male,imperial,1847,1895,,A_standard,,国立国会図書館『近代日本人の肖像』で北白川宮能久親王1847–1895を再確認。公的図書館資料確認済み。,邦家親王第九男子・北白川宮第2代,伏見宮邦家親王第九男子・仁孝天皇養子・北白川宮智成親王薨去後に北白川宮第2代を継承
+kitashirakawa_002,北白川宮成久王,,prince,male,imperial,1887,1923,,A_standard,,講談社『日本人名大辞典+Plus』で北白川宮成久王1887–1923を再確認。公開系譜依存から人物辞典確認済みへ更新する。,能久親王第三男子・北白川宮第3代,能久親王第三男子・北白川宮第3代・明治天皇第七皇女房子内親王の夫
+p_fusako_meiji,北白川房子,周宮房子内親王,princess,female,imperial,1890,1974,,A_standard,,Kotobankで確認（年のみ）,明治天皇第七皇女・成久王妃・1947年皇籍離脱,明治天皇第七皇女。御称号は周宮。成久王妃。1947年皇籍離脱。
+u_naruhisa_fusako,,,marriage,,,,,,,,,北白川宮成久王・北白川房子の婚姻等関係節点,北白川宮成久王・北白川房子の婚姻等関係節点
+kitashirakawa_003,北白川宮永久王,,prince,male,imperial,1910,1940,,A_standard,,国立国会図書館サーチの皇族軍人伝記集成件名典拠で北白川宮永久王1910–1940を再確認。公的図書館典拠確認済み。,成久王第一男子・北白川宮第4代,成久王第一男子・北白川宮第4代
+kitashirakawa_004,北白川道久,北白川宮道久王,prince,male,imperial,1937,2018,,A_standard,,公開資料照合（年のみ）,永久王第一男子・北白川宮第5代・1947年皇籍離脱,永久王第一男子・北白川宮第5代・1947年皇籍離脱
+takeda_001,竹田宮恒久王,,prince,male,imperial,1882,1919,,A_standard,,講談社『日本人名大辞典+Plus』で竹田宮恒久王1882–1919を再確認。公開系譜依存から人物辞典確認済みへ更新する。,能久親王第一男子・竹田宮初代,能久親王第一男子・竹田宮初代
+p_masako_meiji,恒久王妃 昌子内親王,常宮昌子内親王,princess,female,imperial,1888,1940,,A_standard,,公開皇族系譜で確認（年のみ）,明治天皇第六皇女,明治天皇第六皇女。御称号は常宮。恒久王妃。
+u_tsunehisa_masako,,,marriage,,,,,,,,,竹田宮恒久王・恒久王妃 昌子内親王の婚姻等関係節点,竹田宮恒久王・恒久王妃 昌子内親王の婚姻等関係節点
+takeda_002,竹田恒徳,竹田宮恒徳王,prince,male,imperial,1909,1992,,A_standard,,公開資料照合（年のみ）,恒久王第一男子・竹田宮第2代・1947年皇籍離脱,恒久王第一男子・竹田宮第2代・1947年皇籍離脱
+takeda_003,竹田恒正,恒正王,prince,male,imperial,1940,,,B_partial_or_disputed,death_unrecorded,宮内庁書陵部『恒徳王妃光子殿下御分娩の件（恒正王殿下）昭和15年』で1940年出生を直接確認。death_yearは空欄のためB_partial_or_disputedへ更新する。,恒徳王第一男子・1947年皇籍離脱・旧竹田宮第3代,恒徳王第一男子・1947年皇籍離脱・旧竹田宮第3代
+takeda_004,竹田恒治,恒治王,prince,male,imperial,1944,,,B_partial_or_disputed,death_unrecorded,宮内庁書陵部『恒徳王妃光子殿下御分娩の件（恒治王殿下）昭和19年』で1944年出生を直接確認。death_yearは空欄のためB_partial_or_disputedへ更新する。,恒徳王第二男子・1947年皇籍離脱,恒徳王第二男子・1947年皇籍離脱
+takeda_005,竹田恒和,,imperial_descendant,male,imperial,1947,,,B_partial_or_disputed,death_unrecorded,日本オリンピック委員会（JOC）公式プロフィールで竹田恆和の生年月日を1947年11月1日と確認。birth_year=1947を維持し、death_yearは空欄のためB_partial_or_disputedへ更新する。,恒徳王第三男子・皇籍離脱後に出生,恒徳王第三男子・皇籍離脱後に出生・元JOC会長
+takeda_006,竹田恒貴,,imperial_descendant,male,imperial,1974,,,C_secondary_genealogy,,公開系譜照合（年のみ） v3.60最終C監査: 神社・公益法人・勤務先法人・役員名簿・公式プロフィールも追加検索したが、現行birth_yearを直接裏付ける一次・準一次プロフィールに到達しなかったためCを最終確定する。公開系譜を超える個人情報探索は行わない。,竹田恒正第一男子,竹田恒正第一男子
+takeda_007,竹田恒昭,,imperial_descendant,male,imperial,1979,,,C_secondary_genealogy,,竹田恒治の長男。公開系譜資料では1979年生とされる。旧竹田宮家の男系子孫として収録する。 v3.60最終C監査: 神社・公益法人・勤務先法人・役員名簿・公式プロフィールも追加検索したが、現行birth_yearを直接裏付ける一次・準一次プロフィールに到達しなかったためCを最終確定する。公開系譜を超える個人情報探索は行わない。,竹田恒治第一男子,竹田恒治第一男子
+takeda_008,竹田恒智,,imperial_descendant,male,imperial,1980,,,C_secondary_genealogy,,竹田恒治の次男。公開系譜資料では1980年生とされる。旧竹田宮家の男系子孫として収録する。 v3.60最終C監査: 神社・公益法人・勤務先法人・役員名簿・公式プロフィールも追加検索したが、現行birth_yearを直接裏付ける一次・準一次プロフィールに到達しなかったためCを最終確定する。公開系譜を超える個人情報探索は行わない。,竹田恒治第二男子,竹田恒治第二男子
+takeda_009,竹田恒泰,,imperial_descendant,male,imperial,1975,,,B_partial_or_disputed,death_unrecorded,"国立国会図書館典拠（竹田, 恒泰／典拠ID 01024918）が生年1975を明記し、PHP研究所・NDL書誌の著者紹介も1975年生で一致する。著名人として公開情報を追加検証し、birth_year=1975を維持。death_yearは空欄のためB_partial_or_disputedへ更新する。",竹田恒和第一男子,竹田恒和第一男子
+takeda_010,竹田恒俊,,imperial_descendant,male,imperial,1978,,,C_secondary_genealogy,,竹田恒和の次男。公開系譜資料では1978年生とされる。旧竹田宮家の男系子孫として収録する。 v3.60最終C監査: 神社・公益法人・勤務先法人・役員名簿・公式プロフィールも追加検索したが、現行birth_yearを直接裏付ける一次・準一次プロフィールに到達しなかったためCを最終確定する。公開系譜を超える個人情報探索は行わない。,竹田恒和第二男子,竹田恒和第二男子
+t124,124 昭和天皇,裕仁親王,tenno,male,imperial,1901,1989,,A_standard,,宮内庁公開略歴（年のみ）,大正天皇第一皇子・第124代天皇・昭和,大正天皇第一皇子・第124代天皇・昭和
+p_masahito_02,常陸宮正仁親王,,prince,male,imperial,1935,,,A_standard,,宮内庁公開略歴（年のみ）,昭和天皇第二皇子,昭和天皇第二皇子
+u_hitachi_hanako,,,marriage,,,,,,,,,常陸宮正仁親王・正仁親王妃 華子の婚姻等関係節点,常陸宮正仁親王・正仁親王妃 華子の婚姻等関係節点
+n_hanako,正仁親王妃 華子,津軽華子,civil_princess,female,non_imperial,1940,,,A_standard,,宮内庁公開略歴（年のみ）,,
+p_shigeko,東久邇成子,照宮成子内親王,princess,female,imperial,1925,1961,,A_standard,,宮内庁・公開系譜（年のみ）,昭和天皇第一皇女・盛厚王妃・1947年皇籍離脱,昭和天皇第一皇女。御称号は照宮。盛厚王妃。1947年皇籍離脱。
+p_kazuko,鷹司和子,孝宮和子内親王,princess,female,imperial,1929,1989,,A_standard,,宮内庁・公開系譜（年のみ）,昭和天皇第三皇女・1950年婚姻により皇族の身分を離れる,昭和天皇第三皇女・1950年婚姻により皇族の身分を離れる
+p_atsuko,池田厚子,順宮厚子内親王,princess,female,imperial,1931,,,A_standard,,宮内庁公開略歴（年のみ）,昭和天皇第四皇女・1952年婚姻により皇族の身分を離れる,昭和天皇第四皇女・1952年婚姻により皇族の身分を離れる
+p_takako,島津貴子,清宮貴子内親王,princess,female,imperial,1939,,,A_standard,,宮内庁公開略歴（年のみ）,昭和天皇第五皇女・1960年婚姻により皇族の身分を離れる,昭和天皇第五皇女・1960年婚姻により皇族の身分を離れる
+u_joko_michiko,,,marriage,,,,,,,,,上皇・上皇后美智子の婚姻等関係節点,上皇・上皇后美智子の婚姻等関係節点
+n_michiko,上皇后 美智子,正田美智子,civil_princess,female,non_imperial,1934,,,A_standard,,宮内庁公開略歴（年のみ）,,
+t125,125 上皇,明仁親王,tenno,male,imperial,1933,,,A_standard,,宮内庁公開略歴（年のみ）,昭和天皇第一皇子・第125代天皇・平成,昭和天皇第一皇子・第125代天皇・平成
+p_fumihito,秋篠宮文仁親王,,prince,male,imperial,1965,,,A_standard,,宮内庁公開略歴（年のみ）,上皇第二皇子・皇嗣,上皇第二皇子
+p_sayako,黒田清子,紀宮清子内親王,princess,female,imperial,1969,,,A_standard,,宮内庁公開略歴（年のみ）,上皇第一皇女・2005年婚姻により皇族の身分を離れる,上皇第一皇女・2005年婚姻により皇族の身分を離れる
+u_naruhito_masako,,,marriage,,,,,,,,,今上天皇・皇后雅子の婚姻等関係節点,今上天皇・皇后雅子の婚姻等関係節点
+n_masako,皇后 雅子,小和田雅子,civil_princess,female,non_imperial,1963,,,A_standard,,宮内庁公開略歴（年のみ）,,
+t126,126 今上天皇,徳仁親王,tenno,male,imperial,1960,,,A_standard,,宮内庁公開略歴（年のみ）,上皇第一皇子・第126代天皇・令和,上皇第一皇子・第126代天皇・令和
+p_aiko,敬宮愛子内親王,,princess,female,imperial,2001,,,A_standard,,宮内庁公開略歴（年のみ）,今上天皇第一皇女,今上天皇第一皇女
+u_akishino_kiko,,,marriage,,,,,,,,,秋篠宮文仁親王・文仁親王妃 紀子の婚姻等関係節点,秋篠宮文仁親王・文仁親王妃 紀子の婚姻等関係節点
+n_kiko,文仁親王妃 紀子,川嶋紀子,civil_princess,female,non_imperial,1966,,,A_standard,,宮内庁公開略歴（年のみ）,皇嗣妃,
+p_hisahito,悠仁親王,,prince,male,imperial,2006,,,A_standard,,宮内庁公開略歴（年のみ）,文仁親王第一男子,文仁親王第一男子
+p_kako,佳子内親王,,princess,female,imperial,1994,,,A_standard,,宮内庁公開略歴（年のみ）,文仁親王第二女子,文仁親王第二女子
+p_mako,小室眞子,眞子内親王,princess,female,imperial,1991,,,A_standard,,宮内庁公開略歴（年のみ）,文仁親王第一女子・2021年婚姻により皇族の身分を離れる,文仁親王第一女子・2021年婚姻により皇族の身分を離れる
+p_tomohito,寛仁親王,,prince,male,imperial,1946,2012,,A_standard,,宮内庁公開略歴（年のみ）,崇仁親王第一男子,崇仁親王第一男子
+p_yoshihito,桂宮宜仁親王,,prince,male,imperial,1948,2014,,A_standard,,宮内庁公開略歴（年のみ）,崇仁親王第二男子,崇仁親王第二男子
+p_norihito,高円宮憲仁親王,,prince,male,imperial,1954,2002,,A_standard,,宮内庁公開略歴（年のみ）,崇仁親王第三男子,崇仁親王第三男子
+u_tomohito_nobuko,,,marriage,,,,,,,,,寛仁親王・寛仁親王妃 信子の婚姻等関係節点,寛仁親王・寛仁親王妃 信子の婚姻等関係節点
+u_norihito_hisako,,,marriage,,,,,,,,,高円宮憲仁親王・憲仁親王妃 久子の婚姻等関係節点,高円宮憲仁親王・憲仁親王妃 久子の婚姻等関係節点
+n_nobuko,寛仁親王妃 信子,麻生信子,civil_princess,female,non_imperial,1955,,,A_standard,,宮内庁公開略歴（年のみ）,,
+n_hisako,憲仁親王妃 久子,鳥取久子,civil_princess,female,non_imperial,1953,,,A_standard,,宮内庁公開略歴（年のみ）,,
+p_akiko,彬子女王,,princess,female,imperial,1981,,,A_standard,,宮内庁公開略歴（年のみ）,寛仁親王第一女子,寛仁親王第一女子
+p_yoko,瑶子女王,,princess,female,imperial,1983,,,A_standard,,宮内庁公開略歴（年のみ）,寛仁親王第二女子,寛仁親王第二女子
+p_tsuguko,承子女王,,princess,female,imperial,1986,,,A_standard,,宮内庁公開略歴（年のみ）,憲仁親王第一女子,憲仁親王第一女子
+p_noriko,千家典子,典子女王,princess,female,imperial,1988,,,A_standard,,宮内庁公開略歴（年のみ）,憲仁親王第二女子・2014年婚姻により皇族の身分を離れる,憲仁親王第二女子・2014年婚姻により皇族の身分を離れる
+p_ayako,守谷絢子,絢子女王,princess,female,imperial,1990,,,A_standard,,宮内庁公開略歴（年のみ）,憲仁親王第三女子・2018年婚姻により皇族の身分を離れる,憲仁親王第三女子・2018年婚姻により皇族の身分を離れる
+kaya_001,賀陽宮邦憲王,巌麿王,prince,male,imperial,1867,1909,,A_standard,,講談社『日本人名大辞典+Plus』で賀陽宮邦憲王1867–1909を再確認。公開系譜依存から人物辞典確認済みへ更新する。,朝彦親王第二男子・賀陽宮初代,朝彦親王第二男子・賀陽宮初代
+kaya_002,賀陽恒憲,賀陽宮恒憲王,prince,male,imperial,1900,1978,,A_standard,,講談社『デジタル版 日本人名大辞典+Plus』および日外アソシエーツ『20世紀日本人名事典』が賀陽恒憲1900–1978を一致して掲げるため再確認済み。A_standardへ更新する。,邦憲王第一男子・賀陽宮第2代・1947年皇籍離脱,邦憲王第一男子・賀陽宮第2代・1947年皇籍離脱
+kaya_003,賀陽邦寿,邦寿王,prince,male,imperial,1922,1986,,A_standard,,徳富蘇峰記念館人物検索が賀陽邦寿1922–1986を明示し、元皇族・賀陽宮恒憲王第一王子として確認できるため、1922–1986を維持しA_standardへ更新する。,恒憲王第一男子・1947年皇籍離脱・旧賀陽宮第3代・子女なし,恒憲王第一男子・1947年皇籍離脱・旧賀陽宮第3代・子女なし
+kaya_004,賀陽治憲,治憲王,prince,male,imperial,1926,,,B_partial_or_disputed,death_unrecorded,宮内庁書陵部『恒憲王殿下王男子御誕生御命名の件（治憲王殿下）大正15年』で1926年出生を直接確認。death_yearは空欄のためB_partial_or_disputedへ更新する。,恒憲王第二男子・1947年皇籍離脱・旧賀陽宮第4代,恒憲王第二男子・1947年皇籍離脱・旧賀陽宮第4代
+kaya_005,賀陽章憲,章憲王,prince,male,imperial,1929,1994,,B_partial_or_disputed,source_mixed,宮内庁書陵部『恒憲王殿下王男子御誕生御命名の件（章憲王殿下）昭和4年』で1929年出生を直接確認。death_year=1994は現段階で二次系譜由来のため、全生没年が一次・公的確認済みとはせずB_partial_or_disputedへ更新する。,恒憲王第三男子・1947年皇籍離脱,恒憲王第三男子・1947年皇籍離脱
+kaya_006,賀陽文憲,文憲王,prince,male,imperial,1931,,,B_partial_or_disputed,death_unrecorded,宮内庁書陵部『恒憲王殿下王男子御誕生御命名の件（文憲王殿下）昭和6年』で1931年出生を直接確認。death_yearは空欄のためB_partial_or_disputedへ更新する。,恒憲王第四男子・1947年皇籍離脱,恒憲王第四男子・1947年皇籍離脱
+kaya_007,賀陽宗憲,宗憲王,prince,male,imperial,1935,,,B_partial_or_disputed,death_unrecorded,宮内庁書陵部『恒憲王妃敏子殿下御分娩の件（宗憲王殿下）昭和10年』で1935年出生を直接確認。death_yearは空欄のためB_partial_or_disputedへ更新する。,恒憲王第五男子・1947年皇籍離脱,恒憲王第五男子・1947年皇籍離脱
+kaya_008,賀陽健憲,健憲王,prince,male,imperial,1942,,,B_partial_or_disputed,death_unrecorded,宮内庁書陵部『恒憲王妃敏子殿下御分娩の件（健憲王殿下）昭和17年』で1942年出生を直接確認。death_yearは空欄のためB_partial_or_disputedへ更新する。,恒憲王第六男子・1947年皇籍離脱,恒憲王第六男子・1947年皇籍離脱
+kaya_009,賀陽正憲,,imperial_descendant,male,imperial,1959,,,A_standard,,賀陽章憲の長男。1959年生。外交官・国家公務員として勤務した人物で、賀陽家当主。男子2人は氏名非公表のため既存方針どおり未収録。,賀陽章憲第一男子・旧賀陽宮第5代,賀陽章憲第一男子・旧賀陽宮第5代。男子2人は氏名非公表のため未収録
+asaka_001,朝香鳩彦,朝香宮鳩彦王,prince,male,imperial,1887,1981,,A_standard,,東京都庭園美術館（旧朝香宮邸）公式資料で朝香宮鳩彦王1887–1981を再確認。公的博物館資料確認済み。,朝彦親王第八男子・朝香宮初代・1947年皇籍離脱,朝彦親王第八男子・朝香宮初代・1947年皇籍離脱
+p_nobuko_meiji,鳩彦王妃 允子内親王,富美宮允子内親王,princess,female,imperial,1891,1933,,A_standard,,東京都庭園美術館・Kotobankで確認（年のみ）,明治天皇第八皇女,明治天皇第八皇女。御称号は富美宮。鳩彦王妃。
+u_yasuhiko_nobuko,,,marriage,,,,,,,,,朝香宮鳩彦王・鳩彦王妃 允子内親王の婚姻等関係節点,朝香宮鳩彦王・鳩彦王妃 允子内親王の婚姻等関係節点
+asaka_002,朝香孚彦,孚彦王,prince,male,imperial,1912,1994,,A_standard,,日外アソシエーツ『367日誕生日大事典』が朝香孚彦を1912年10月8日生、1994年没とするため、1912–1994を維持しA_standardへ更新する。,鳩彦王第一男子・1947年皇籍離脱・旧朝香宮第2代,鳩彦王第一男子・1947年皇籍離脱・旧朝香宮第2代
+asaka_003,朝香誠彦,誠彦王,prince,male,imperial,1943,,,A_standard,,公開資料照合（年のみ）,孚彦王第一男子・1947年皇籍離脱・旧朝香宮第3代,孚彦王第一男子・1947年皇籍離脱・旧朝香宮第3代
+asaka_004,朝香明彦,,imperial_descendant,male,imperial,1972,,,C_secondary_genealogy,,公開系譜照合（年のみ） v3.60最終C監査: 神社・公益法人・勤務先法人・役員名簿・公式プロフィールも追加検索したが、現行birth_yearを直接裏付ける一次・準一次プロフィールに到達しなかったためCを最終確定する。公開系譜を超える個人情報探索は行わない。,朝香誠彦第一男子,朝香誠彦第一男子
+yamashina_001,山階宮晃親王,,prince,male,imperial,1816,1898,,A_standard,,京都国立近代美術館収蔵品データベースおよび講談社『日本人名大辞典+Plus』で山階宮晃親王1816–1898を再確認。公的博物館・人物辞典確認済み。,邦家親王第一男子・山階宮初代,邦家親王第一男子・山階宮初代・光格天皇猶子・のち孝明天皇猶子
+yamashina_002,山階宮菊麿王,梨本宮菊麿王,prince,male,imperial,1873,1908,,B_partial_or_disputed,disputed_birth;value_corrected,講談社『日本人名大辞典+Plus』では山階宮菊麿王は1873年7月3日生、1908年5月2日没。v3.56までbirth_year=1874としていたため1873へ修正。旧公開系譜に1874年表記があり典拠差が確認されたためB_partial_or_disputedとする。,晃親王第一男子・一時梨本宮継承・山階宮第2代,晃親王第一男子・一時梨本宮守脩親王の養子、のち山階宮第2代
+yamashina_003,山階武彦,山階宮武彦王,prince,male,imperial,1898,1987,,A_standard,,公開資料照合（年のみ）,菊麿王第一男子・山階宮第3代・1947年皇籍離脱,菊麿王第一男子・山階宮第3代・1947年皇籍離脱・男子なし
+nashimoto_001,梨本宮守脩親王,,prince,male,imperial,1819,1881,,A_standard,,江戸後期・明治時代の皇族。伏見宮貞敬親王の王子。円満院・梶井門跡、天台座主を経て還俗し、梨本宮を創立した。1819–1881を通常年代として収録する。,貞敬親王第十男子・梨本宮初代,貞敬親王第十男子・梨本宮初代
+nashimoto_002,梨本守正,梨本宮守正王,prince,male,imperial,1874,1951,,A_standard,,国立国会図書館『近代日本人の肖像』で梨本守正1874–1951を再確認。公的図書館資料確認済み。,朝彦親王第四男子・梨本宮第2代・1947年皇籍離脱,久邇宮朝彦親王第四男子・梨本宮第2代・1947年皇籍離脱・男子なし
+kanin_003,閑院宮美仁親王,,prince,male,imperial,1758,1818,,A_standard,,Kotobank『美仁親王』,典仁親王第一男子・閑院宮第3代,典仁親王第一男子・閑院宮第3代
+kanin_004,閑院宮孝仁親王,,prince,male,imperial,1792,1824,,A_standard,,Kotobank『孝仁親王』,美仁親王第一男子・閑院宮第4代,美仁親王第一男子・閑院宮第4代
+kanin_005,閑院宮愛仁親王,,prince,male,imperial,1818,1842,,A_standard,,CiNii Books『孝仁親王実録 ; 愛仁親王実録』の件名標目が愛仁親王1818–1842を明示するため、1818–1842を維持しA_standardへ更新する。,孝仁親王第二男子・閑院宮第5代・子女なし,孝仁親王第二男子・閑院宮第5代・子女なし
+kanin_006,閑院宮載仁親王,,prince,male,imperial,1865,1945,,A_standard,,講談社『日本人名大辞典+Plus』で閑院宮載仁親王1865–1945を再確認。宮内庁書陵部の皇族旅行録にも同人物の記録がある。,邦家親王第十六男子・閑院宮第6代,伏見宮邦家親王第十六男子・孝明天皇養子・1872年に閑院宮第6代を継承
+kanin_007,閑院春仁,閑院宮春仁王,prince,male,imperial,1902,1988,,A_standard,,公開資料照合（年のみ）,載仁親王第二男子・閑院宮第7代・1947年皇籍離脱,載仁親王第二男子・閑院宮第7代・1947年皇籍離脱・子女なし
+higashifushimi_001,東伏見宮依仁親王,小松宮依仁親王,prince,male,imperial,1867,1922,,A_standard,,国立国会図書館典拠で東伏見宮依仁親王1867–1922を再確認。講談社『日本人名大辞典+Plus』とも一致する。,邦家親王第十七男子・東伏見宮初代,伏見宮邦家親王第十七男子・山階宮晃親王養嗣子、のち小松宮彰仁親王養嗣子・明治天皇猶子・東伏見宮初代・実子なく1922年に宮家断絶
+u_kogen_ikagashikome,,,marriage,,,,,,,,,孝元天皇・伊香色謎命の婚姻等関係節点,孝元天皇・伊香色謎命の婚姻等関係節点
+p_tochi,十市皇女,,princess,female,imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,天武天皇皇女・母は額田王・弘文天皇妃,天武天皇皇女・母は額田王・弘文天皇妃・葛野王母
+p_kadono,葛野王,,prince,male,imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,弘文天皇・十市皇女皇子,弘文天皇・十市皇女皇子・池辺王父
+p_ikebe,池辺王,,prince,male,imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,葛野王の子,葛野王の子
+c_omimifune,淡海三船,御船王,civil_prince,male,granted_clan,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,池辺王の子・御船王から淡海真人を賜姓,池辺王の子・旧名御船王・751年淡海真人を賜姓し臣籍降下
+n_omimifune_daughter,淡海三船の娘,,civil_princess,female,granted_clan,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,淡海三船の娘,淡海三船の娘
+c_tachibana_tsunenushi,橘常主,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,淡海三船の外孫,淡海三船の外孫
+c_tachibana_yasukio,橘安吉雄,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,橘常主の子,橘常主の子
+c_tachibana_yoshimoto,橘良基,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,橘安吉雄の子,橘安吉雄の子
+c_tachibana_sumikiyo,橘澄清,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,橘良基の子,橘良基の子
+n_tachibana_sumikiyo_daughter,橘澄清の娘,,civil_princess,female,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,橘澄清の娘,橘澄清の娘
+n_fujiwara_tokihime,藤原時姫,,civil_princess,female,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,橘澄清の外孫,橘澄清の外孫
+n_fujiwara_senshi,藤原詮子,東三条院,civil_princess,female,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,藤原時姫の娘・一条天皇生母,藤原時姫の娘・一条天皇生母
+p_abo,阿保親王,,prince,male,imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,平城天皇皇子・在原業平父,平城天皇皇子・葛井藤子所生・伊都内親王夫・在原業平父
+c_ariwara_narihira,在原業平,在五中将,civil_prince,male,granted_clan,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,阿保親王・伊都内親王皇子・826年在原朝臣姓を賜る,阿保親王・伊都内親王皇子・826年在原朝臣姓を賜り臣籍降下
+n_ariwara_miko,在原美子,,civil_princess,female,granted_clan,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,在原業平の娘,在原業平の娘
+c_fujiwara_kiyotsura,藤原清貫,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,在原美子の子,在原美子の子
+n_fujiwara_kiyotsura_daughter,藤原清貫の娘,,civil_princess,female,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,藤原清貫の娘,藤原清貫の娘
+c_fujiwara_yasutada,藤原懐忠,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,藤原清貫の外孫,藤原清貫の外孫
+c_fujiwara_kunimasa,藤原邦昌,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,藤原懐忠の子,藤原懐忠の子
+c_fujiwara_kunitsune,藤原邦恒,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,藤原邦昌の子,藤原邦昌の子
+c_fujiwara_yukifusa,藤原行房,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,藤原邦恒の子,藤原邦恒の子
+n_fujiwara_yukifusa_daughter,藤原行房の娘,,civil_princess,female,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,藤原行房の娘,藤原行房の娘
+c_fujiwara_muneno,藤原宗能,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,藤原行房の外孫,藤原行房の外孫
+n_fujiwara_muneno_daughter,藤原宗能の娘,,civil_princess,female,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,藤原宗能の娘,藤原宗能の娘
+c_fujiwara_sadayoshi,藤原定能,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,藤原宗能の外孫,藤原宗能の外孫
+n_fujiwara_sadayoshi_daughter,藤原定能の娘,,civil_princess,female,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,藤原定能の娘,藤原定能の娘
+c_mochiie_sada,持明院家定,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,藤原定能の外孫,藤原定能の外孫
+c_mochiie_motomori,持明院基盛,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,持明院家定の子,持明院家定の子
+c_mochiie_motoyo,持明院基世,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,持明院基盛の子,持明院基盛の子
+c_mochiie_motokane,持明院基兼,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,持明院基世の子,持明院基世の子
+c_mochiie_motokiyo,持明院基清,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,持明院基兼の子,持明院基兼の子
+c_mochiie_motochika,持明院基親,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,持明院基清の子,持明院基清の子
+n_mochiie_motochika_daughter,持明院基親の娘,,civil_princess,female,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,持明院基親の娘,持明院基親の娘
+c_tokudaiji_kinari,徳大寺公有,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,持明院基親の外孫,持明院基親の外孫
+c_tokudaiji_saneatsu,徳大寺実淳,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,徳大寺公有の子,徳大寺公有の子
+n_tokudaiji_ishiko,徳大寺維子,,civil_princess,female,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,徳大寺実淳の娘・近衛稙家母,徳大寺実淳の娘・近衛尚通室・近衛稙家母
+p_nukata,額田王,,princess,female,imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,天武天皇妃・十市皇女母,天武天皇妃・十市皇女母
+u_tenmu_nukata,,,marriage,,,,,,,,,天武天皇・額田王の婚姻等関係節点,天武天皇・額田王の婚姻等関係節点
+u_kobun_tochi,,,marriage,,,,,,,,,弘文天皇・十市皇女の婚姻等関係節点,弘文天皇・十市皇女の婚姻等関係節点
+c_tachibana_shimadamaro,橘島田麻呂,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,淡海三船の娘の夫・橘常主父,淡海三船の娘の夫・橘常主父
+u_mifune_daughter_shimadamaro,,,marriage,,,,,,,,,淡海三船の娘・橘島田麻呂の婚姻等関係節点,淡海三船の娘・橘島田麻呂の婚姻等関係節点
+c_fujiwara_nakamasa,藤原中正,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,橘澄清の娘の夫・藤原時姫父,橘澄清の娘の夫・藤原時姫父
+u_sumikiyo_daughter_nakamasa,,,marriage,,,,,,,,,橘澄清の娘・藤原中正の婚姻等関係節点,橘澄清の娘・藤原中正の婚姻等関係節点
+c_fujiwara_kaneie,藤原兼家,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,藤原時姫の夫・藤原詮子父,藤原時姫の夫・藤原詮子父
+u_kaneie_tokihime,,,marriage,,,,,,,,,藤原兼家・藤原時姫の婚姻等関係節点,藤原兼家・藤原時姫の婚姻等関係節点
+u_enyu_senshi,,,marriage,,,,,,,,,円融天皇・藤原詮子の婚姻等関係節点,円融天皇・藤原詮子の婚姻等関係節点
+n_kuzui_toshi,葛井藤子,,civil_princess,female,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,平城天皇妃・阿保親王母,平城天皇妃・阿保親王母
+u_heizei_kuzui,,,marriage,,,,,,,,,平城天皇・葛井藤子の婚姻等関係節点,平城天皇・葛井藤子の婚姻等関係節点
+p_ito,伊都内親王,伊登内親王,princess,female,imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,桓武天皇皇女・阿保親王妃・在原業平母,桓武天皇皇女・阿保親王妃・在原業平母
+u_abo_ito,,,marriage,,,,,,,,,阿保親王・伊都内親王の婚姻等関係節点,阿保親王・伊都内親王の婚姻等関係節点
+c_fujiwara_yasunori,藤原保則,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,在原美子の夫・藤原清貫父,在原美子の夫・藤原清貫父
+u_ariwara_miko_yasunori,,,marriage,,,,,,,,,在原美子・藤原保則の婚姻等関係節点,在原美子・藤原保則の婚姻等関係節点
+c_fujiwara_tsunesuke,藤原恒佐,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,藤原清貫の娘の夫・藤原懐忠父,藤原清貫の娘の夫・藤原懐忠父
+u_kiyotsura_daughter_tsunesuke,,,marriage,,,,,,,,,藤原清貫の娘・藤原恒佐の婚姻等関係節点,藤原清貫の娘・藤原恒佐の婚姻等関係節点
+n_minamoto_kiyoto_daughter,源清遠の娘,,civil_princess,female,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,藤原懐忠の妻・藤原邦昌母,藤原懐忠の妻・藤原邦昌母
+u_yasutada_kiyoto_daughter,,,marriage,,,,,,,,,藤原懐忠・源清遠の娘の婚姻等関係節点,藤原懐忠・源清遠の娘の婚姻等関係節点
+n_minamoto_nin_daughter,源任の娘,,civil_princess,female,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,藤原邦昌の妻・藤原邦恒母,藤原邦昌の妻・藤原邦恒母
+u_kunimasa_minamoto_nin_daughter,,,marriage,,,,,,,,,藤原邦昌・源任の娘の婚姻等関係節点,藤原邦昌・源任の娘の婚姻等関係節点
+c_fujiwara_munetada,藤原宗忠,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,藤原行房の娘の夫・藤原宗能父,藤原行房の娘の夫・藤原宗能父
+u_yukifusa_daughter_munetada,,,marriage,,,,,,,,,藤原行房の娘・藤原宗忠の婚姻等関係節点,藤原行房の娘・藤原宗忠の婚姻等関係節点
+c_fujiwara_sueyuki,藤原季行,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,藤原宗能の娘の夫・藤原定能父,藤原宗能の娘の夫・藤原定能父
+u_muneno_daughter_sueyuki,,,marriage,,,,,,,,,藤原宗能の娘・藤原季行の婚姻等関係節点,藤原宗能の娘・藤原季行の婚姻等関係節点
+c_mochiie_ieyuki,持明院家行,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,藤原定能の娘の夫・持明院家定父,藤原定能の娘の夫・持明院家定父
+u_sadayoshi_daughter_ieyuki,,,marriage,,,,,,,,,藤原定能の娘・持明院家行の婚姻等関係節点,藤原定能の娘・持明院家行の婚姻等関係節点
+c_tokudaiji_sanemori,徳大寺実盛,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,持明院基親の娘の夫・徳大寺公有父,持明院基親の娘の夫・徳大寺公有父
+u_motochika_daughter_sanemori,,,marriage,,,,,,,,,持明院基親の娘・徳大寺実盛の婚姻等関係節点,持明院基親の娘・徳大寺実盛の婚姻等関係節点
+n_takakura_nagatoyo_daughter,高倉永豊の娘,,civil_princess,female,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,徳大寺公有の妻・徳大寺実淳母,徳大寺公有の妻・徳大寺実淳母
+u_kinari_takakura_daughter,,,marriage,,,,,,,,,徳大寺公有・高倉永豊の娘の婚姻等関係節点,徳大寺公有・高倉永豊の娘の婚姻等関係節点
+c_konoe_hisamichi,近衛尚通,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,徳大寺維子の夫・近衛稙家父,徳大寺維子の夫・近衛稙家父
+u_ishiko_hisamichi,,,marriage,,,,,,,,,徳大寺維子・近衛尚通の婚姻等関係節点,徳大寺維子・近衛尚通の婚姻等関係節点
+c_konoe_taneie,近衛稙家,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,近衛尚通・徳大寺維子の子・近衛前久父,近衛尚通・徳大寺維子の子・近衛前久父
+n_hosokawa_takamoto_daughter,細川高基の娘,,civil_princess,female,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,近衛稙家の妻・近衛前久母,近衛稙家の妻・近衛前久母
+u_taneie_hosokawa,,,marriage,,,,,,,,,近衛稙家・細川高基の娘の婚姻等関係節点,近衛稙家・細川高基の娘の婚姻等関係節点
+c_konoe_sakihisa,近衛前久,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,近衛稙家の子・近衛前子父,近衛稙家の子・近衛前子父
+n_konoe_sakiko,近衛前子,中和門院,civil_princess,female,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部系譜資料に基づき収録した直系祖先経路上の人物。生没年は今回は未収録。,近衛前久の娘・後陽成天皇女御・後水尾天皇母,近衛前久の娘・後陽成天皇女御・後水尾天皇母
+u_goyozei_sakiko,,,marriage,,,,,,,,,後陽成天皇・近衛前子の婚姻等関係節点,後陽成天皇・近衛前子の婚姻等関係節点
+c_minamoto_yoshiari,源能有,,civil_prince,male,granted_clan,845,897,,A_standard,,Kotobank『源能有』,文徳天皇皇子・臣籍に入り源姓,文徳天皇皇子・臣籍に入り源姓
+n_minamoto_akiko,源昭子,,civil_princess,female,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部史料・人名辞典に基づき収録した直系祖先経路上の人物。,源能有の娘・藤原師輔母,源能有の娘・藤原師輔母
+c_fujiwara_tadahira,藤原忠平,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部史料・人名辞典に基づき収録した直系祖先経路上の人物。,源昭子の夫・藤原師輔父,源昭子の夫・藤原師輔父
+c_fujiwara_morosuke,藤原師輔,,civil_prince,male,non_imperial,908,960,,A_standard,,Kotobank『藤原師輔』,藤原忠平・源昭子の子・藤原安子父,藤原忠平・源昭子の子・藤原安子父
+n_fujiwara_moriko,藤原盛子,,civil_princess,female,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部史料・人名辞典に基づき収録した直系祖先経路上の人物。,藤原師輔の妻・藤原安子母,藤原師輔の妻・藤原安子母
+n_fujiwara_anshi,藤原安子,,civil_princess,female,non_imperial,927,964,,A_standard,,Kotobank『藤原安子』,藤原師輔の娘・村上天皇皇后・冷泉天皇・円融天皇母,藤原師輔の娘・村上天皇皇后・冷泉天皇・円融天皇母
+u_tadahira_akiko,,,marriage,,,,,,,,,藤原忠平・源昭子の婚姻等関係節点,藤原忠平・源昭子の婚姻等関係節点
+u_morosuke_moriko,,,marriage,,,,,,,,,藤原師輔・藤原盛子の婚姻等関係節点,藤原師輔・藤原盛子の婚姻等関係節点
+u_murakami_anshi,,,marriage,,,,,,,,,村上天皇・藤原安子の婚姻等関係節点,村上天皇・藤原安子の婚姻等関係節点
+p_kameyama_princess,亀山天皇皇女,,princess,female,imperial,,,,U_undated,historical_period_known;external_source_contact,外部史料・人名辞典に基づき収録した直系祖先経路上の人物。,亀山天皇皇女・近衛経平母,亀山天皇皇女・近衛経平母
+c_konoe_iemoto,近衛家基,,civil_prince,male,non_imperial,1261,1296,,A_standard,,Kotobank『近衛家基』,亀山天皇皇女の夫・近衛経平父,亀山天皇皇女の夫・近衛経平父
+c_konoe_tsunehira,近衛経平,,civil_prince,male,non_imperial,1287,1318,,A_standard,,Kotobank『近衛経平』,近衛家基の子・母は亀山天皇皇女,近衛家基の子・母は亀山天皇皇女
+c_konoe_mototsugu,近衛基嗣,,civil_prince,male,non_imperial,1305,1354,,A_standard,,Kotobank『近衛基嗣』,近衛経平の子・近衛道嗣父,近衛経平の子・近衛道嗣父
+c_konoe_michitsugu,近衛道嗣,,civil_prince,male,non_imperial,1332,1387,,A_standard,,Kotobank『近衛道嗣』,近衛基嗣の子・近衛兼嗣父,近衛基嗣の子・近衛兼嗣父
+c_konoe_kanetsugu,近衛兼嗣,,civil_prince,male,non_imperial,1360,1388,,A_standard,,Kotobank『近衛兼嗣』,近衛道嗣の子・近衛忠嗣父,近衛道嗣の子・近衛忠嗣父
+c_konoe_tadatsugu,近衛忠嗣,,civil_prince,male,non_imperial,1383,1454,,A_standard,,Kotobank『近衛忠嗣』,近衛兼嗣の子・近衛房嗣父,近衛兼嗣の子・近衛房嗣父
+c_konoe_fusatsugu,近衛房嗣,,civil_prince,male,non_imperial,1402,1488,,A_standard,,Kotobank『近衛房嗣』,近衛忠嗣の子・近衛政家父,近衛忠嗣の子・近衛政家父
+c_konoe_masaie,近衛政家,,civil_prince,male,non_imperial,1444,1505,,A_standard,,Kotobank『近衛政家』,近衛房嗣の子・近衛尚通父,近衛房嗣の子・近衛尚通父
+u_kameyama_princess_iemoto,,,marriage,,,,,,,,,亀山天皇皇女・近衛家基の婚姻等関係節点,亀山天皇皇女・近衛家基の婚姻等関係節点
+p_kazan_kiyohito,清仁親王,,prince,male,imperial,,,,U_undated,historical_period_known;external_source_contact,外部史料・系譜資料に基づき収録した直系祖先経路上の人物。,花山天皇皇子・延信王父,花山天皇皇子・延信王父
+c_shirakawa_nobusane,延信王,源延信,civil_prince,male,granted_clan,,,,U_undated,historical_period_known;external_source_contact,外部史料・系譜資料に基づき収録した直系祖先経路上の人物。,清仁親王の子・1025年に源姓を賜り臣籍へ,清仁親王の子・1025年に源姓を賜り臣籍へ
+c_shirakawa_yasusuke,康資王,,civil_prince,male,granted_clan,,,,U_undated,historical_period_known;external_source_contact,外部史料・系譜資料に基づき収録した直系祖先経路上の人物。,延信王の子・白川家系統,延信王の子・白川家系統
+c_shirakawa_akiyasu,源顕康,顕康王,civil_prince,male,granted_clan,,,,U_undated,historical_period_known;external_source_contact,外部史料・系譜資料に基づき収録した直系祖先経路上の人物。,康資王系・顕広王父,康資王系・顕広王父
+c_shirakawa_akihiro,顕広王,,civil_prince,male,granted_clan,,,,U_undated,historical_period_known;external_source_contact,外部史料・系譜資料に基づき収録した直系祖先経路上の人物。,花山源氏白川家・神祇伯世襲系統,花山源氏白川家・神祇伯世襲系統
+c_shirakawa_nakasuke,仲資王,,civil_prince,male,granted_clan,,,,U_undated,historical_period_known;external_source_contact,外部史料・系譜資料に基づき収録した直系祖先経路上の人物。,顕広王の子・業資王父,顕広王の子・業資王父
+c_shirakawa_narisuke,業資王,,civil_prince,male,granted_clan,,,,U_undated,historical_period_known;external_source_contact,外部史料・系譜資料に基づき収録した直系祖先経路上の人物。,仲資王の子・資光王父,仲資王の子・資光王父
+c_shirakawa_sukemitsu,資光王,源資光,civil_prince,male,granted_clan,,,,U_undated,historical_period_known;external_source_contact,外部史料・系譜資料に基づき収録した直系祖先経路上の人物。,業資王の子・資邦王父,業資王の子・資邦王父
+c_shirakawa_sukekuni,資邦王,,civil_prince,male,granted_clan,,,,U_undated,historical_period_known;external_source_contact,外部史料・系譜資料に基づき収録した直系祖先経路上の人物。,資光王の子・業顕王父,資光王の子・業顕王父
+c_shirakawa_nariaki,業顕王,,civil_prince,male,granted_clan,,,,U_undated,historical_period_known;external_source_contact,外部史料・系譜資料に基づき収録した直系祖先経路上の人物。,資邦王の子・資清王父,資邦王の子・資清王父
+c_shirakawa_sukekiyo,資清王,,civil_prince,male,granted_clan,,,,U_undated,historical_period_known;external_source_contact,外部史料・系譜資料に基づき収録した直系祖先経路上の人物。,業顕王の子・資英王父,業顕王の子・資英王父
+c_shirakawa_sukehide,資英王,,civil_prince,male,granted_clan,,,,U_undated,historical_period_known;external_source_contact,外部史料・系譜資料に基づき収録した直系祖先経路上の人物。,資清王の子・顕邦王父,資清王の子・顕邦王父
+c_shirakawa_akikuni,顕邦王,,civil_prince,male,granted_clan,,,,U_undated,historical_period_known;external_source_contact,外部史料・系譜資料に基づき収録した直系祖先経路上の人物。,資英王の子・資忠王父,資英王の子・資忠王父
+c_shirakawa_suketada,資忠王,,civil_prince,male,granted_clan,,,,U_undated,historical_period_known;external_source_contact,外部史料・系譜資料に基づき収録した直系祖先経路上の人物。,顕邦王の子・豊子女王父,顕邦王の子・豊子女王父
+n_shirakawa_toyoko,豊子女王,,civil_princess,female,granted_clan,,,,U_undated,historical_period_known;external_source_contact,外部史料・系譜資料に基づき収録した直系祖先経路上の人物。,資忠王の娘・広橋兼郷室・広橋綱光母,資忠王の娘・広橋兼郷室・広橋綱光母
+c_hirohashi_kanesato,広橋兼郷,広橋宣光,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部史料・系譜資料に基づき収録した直系祖先経路上の人物。,豊子女王の夫・広橋綱光父,豊子女王の夫・広橋綱光父
+u_toyoko_kanesato,,,marriage,,,,,,,,,豊子女王・広橋兼郷の婚姻等関係節点,豊子女王・広橋兼郷の婚姻等関係節点
+c_hirohashi_tsunamitsu,広橋綱光,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部史料・系譜資料に基づき収録した直系祖先経路上の人物。,広橋兼郷・豊子女王の子・広橋綱光の娘父,広橋兼郷・豊子女王の子・広橋綱光の娘父
+n_hirohashi_tsunamitsu_daughter,広橋綱光の娘,,civil_princess,female,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部史料・系譜資料に基づき収録した直系祖先経路上の人物。,広橋綱光の娘・広橋守光室・広橋兼秀母,広橋綱光の娘・広橋守光室・広橋兼秀母
+c_hirohashi_morimitsu,広橋守光,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部史料・系譜資料に基づき収録した直系祖先経路上の人物。,広橋綱光の娘の夫・広橋兼秀父,広橋綱光の娘の夫・広橋兼秀父
+u_tsunamitsu_daughter_morimitsu,,,marriage,,,,,,,,,広橋綱光の娘・広橋守光の婚姻等関係節点,広橋綱光の娘・広橋守光の婚姻等関係節点
+c_hirohashi_kanehide,広橋兼秀,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部史料・系譜資料に基づき収録した直系祖先経路上の人物。,広橋守光・広橋綱光の娘の子・広橋国光父,広橋守光・広橋綱光の娘の子・広橋国光父
+c_hirohashi_kunimitsu,広橋国光,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部史料・系譜資料に基づき収録した直系祖先経路上の人物。,広橋兼秀の子・広橋兼勝父,広橋兼秀の子・広橋兼勝父
+c_hirohashi_kanekatsu,広橋兼勝,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部史料・系譜資料に基づき収録した直系祖先経路上の人物。,広橋国光の子・樋口信孝室の父,広橋国光の子・樋口信孝室の父
+n_hirohashi_kanekatsu_daughter,広橋兼勝の娘,,civil_princess,female,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部史料・系譜資料に基づき収録した直系祖先経路上の人物。,広橋兼勝の娘・樋口信孝室・樋口信康母,広橋兼勝の娘・樋口信孝室・樋口信康母
+c_higuchi_nobutaka,樋口信孝,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部史料・系譜資料に基づき収録した直系祖先経路上の人物。,広橋兼勝の娘の夫・樋口信康父,広橋兼勝の娘の夫・樋口信康父
+u_kanekatsu_daughter_nobutaka,,,marriage,,,,,,,,,広橋兼勝の娘・樋口信孝の婚姻等関係節点,広橋兼勝の娘・樋口信孝の婚姻等関係節点
+c_higuchi_nobuyasu,樋口信康,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部史料・系譜資料に基づき収録した直系祖先経路上の人物。,樋口信孝の子・樋口康熙父,樋口信孝の子・樋口康熙父
+c_higuchi_yasuhiro,樋口康熙,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部史料・系譜資料に基づき収録した直系祖先経路上の人物。,樋口信康の子・樋口基康父,樋口信康の子・樋口基康父
+c_higuchi_motoyasu,樋口基康,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部史料・系譜資料に基づき収録した直系祖先経路上の人物。,樋口康熙の子・樋口信子父,樋口康熙の子・樋口信子父
+n_higuchi_nobuko,樋口信子,,civil_princess,female,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部史料・系譜資料に基づき収録した直系祖先経路上の人物。,樋口基康の娘・二条治孝室・九条尚忠母,樋口基康の娘・二条治孝室・九条尚忠母
+c_nijo_harutaka,二条治孝,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部史料・系譜資料に基づき収録した直系祖先経路上の人物。,樋口信子の夫・九条尚忠父,樋口信子の夫・九条尚忠父
+u_nobuko_harutaka,,,marriage,,,,,,,,,樋口信子・二条治孝の婚姻等関係節点,樋口信子・二条治孝の婚姻等関係節点
+c_kujo_hisatada,九条尚忠,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部史料・系譜資料に基づき収録した直系祖先経路上の人物。,二条治孝・樋口信子の子・九条道孝父,二条治孝・樋口信子の子・九条道孝父
+c_kujo_michitaka,九条道孝,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部史料・系譜資料に基づき収録した直系祖先経路上の人物。,九条尚忠の子・貞明皇后父,九条尚忠の子・貞明皇后父
+n_noma_ikuko,野間幾子,,civil_princess,female,non_imperial,,,,U_undated,historical_period_known;external_source_contact,外部史料・系譜資料に基づき収録した直系祖先経路上の人物。,九条道孝の妻・貞明皇后母,九条道孝の妻・貞明皇后母
+u_michitaka_ikuko,,,marriage,,,,,,,,,九条道孝・野間幾子の婚姻等関係節点,九条道孝・野間幾子の婚姻等関係節点
+p_sadazumi,貞純親王,,prince,male,imperial,873,916,,A_standard,,清和天皇皇子。源経基の父については貞純親王説を採用するが、陽成天皇皇子・元平親王説の異説がある。,清和天皇皇子・源経基父（経基父系に異説あり）,清和天皇皇子。源経基の父は通説・近年研究に従い貞純親王として収録し、陽成天皇皇子元平親王説も注記。
+c_minamoto_tsunemoto,源経基,経基王・六孫王,civil_prince,male,granted_clan,,961,,B_partial_or_disputed,source_mixed,貞純親王の子とする通説・近年研究を採用。陽成天皇皇子元平親王の子とする説もあるため異説を明記。臣籍に入り源姓。,貞純親王の子・清和源氏祖（父系異説あり）,清和源氏祖。貞純親王の子として収録。元平親王父説は史料批判上の異説として注記。
+c_minamoto_mitsunaka,源満仲,多田満仲,civil_prince,male,non_imperial,912,997,,A_standard,,源経基の子。清和源氏の武門形成期の人物。,源経基の子・源頼光父,源経基の子・源頼光父。
+c_minamoto_yorimitsu,源頼光,源頼光・らいこう,civil_prince,male,non_imperial,948,1021,,A_standard,,源満仲の子。摂津源氏系。,源満仲の子・源頼国父,源満仲の子・源頼国父。
+c_minamoto_yorikuni,源頼国,,civil_prince,male,non_imperial,,1058,,B_partial_or_disputed,source_mixed,源頼光の子。娘の一人が藤原為房室。,源頼光の子・藤原為房室の父,源頼光の子。娘の一人が藤原為房室。
+n_minamoto_yorikuni_daughter,源頼国の娘,,civil_princess,female,non_imperial,,,,U_undated,historical_period_known;external_source_contact,源頼国の娘。藤原為房室で藤原顕隆母。,源頼国の娘・藤原為房室・藤原顕隆母,源頼国の娘・藤原為房室・藤原顕隆母。
+c_fujiwara_tamefusa,藤原為房,,civil_prince,male,non_imperial,1049,1115,,A_standard,,藤原北家勧修寺流。源頼国の娘との間に藤原顕隆。,源頼国の娘の夫・藤原顕隆父,源頼国の娘の夫・藤原顕隆父。
+u_yorikuni_daughter_tamefusa,,,marriage,,,,,,,,,源頼国の娘・藤原為房の婚姻等関係節点,源頼国の娘・藤原為房の婚姻等関係節点
+c_fujiwara_akitaka,藤原顕隆,葉室顕隆,civil_prince,male,non_imperial,1072,1129,,A_standard,,父藤原為房、母源頼国の娘。,藤原為房・源頼国の娘の子・藤原顕頼父,藤原為房・源頼国の娘の子・藤原顕頼父。
+c_fujiwara_akiyori,藤原顕頼,九条民部卿,civil_prince,male,non_imperial,1094,1148,,A_standard,,藤原顕隆の子。娘祐子は平時信室。,藤原顕隆の子・藤原祐子父,藤原顕隆の子・藤原祐子父。
+n_fujiwara_yuko,藤原祐子,,civil_princess,female,non_imperial,,,,U_undated,historical_period_known;external_source_contact,藤原顕頼の娘。平時信室・平滋子母。,藤原顕頼の娘・平時信室・平滋子母,藤原顕頼の娘・平時信室・平滋子母。
+c_taira_tokinobu,平時信,,civil_prince,male,non_imperial,,1149,,B_partial_or_disputed,source_mixed,桓武平氏高棟流。藤原祐子との間に平滋子。,藤原祐子の夫・平滋子父,藤原祐子の夫・平滋子父。
+u_yuko_tokinobu,,,marriage,,,,,,,,,藤原祐子・平時信の婚姻等関係節点,藤原祐子・平時信の婚姻等関係節点
+n_taira_shigeko,平滋子,建春門院,civil_princess,female,non_imperial,1142,1176,,A_standard,,父平時信、母藤原祐子。後白河天皇女御・高倉天皇生母。,建春門院・後白河天皇女御・高倉天皇母,父平時信、母藤原祐子。後白河天皇女御・高倉天皇母。
+u_goshirakawa_shigeko,,,marriage,,,,,,,,,後白河天皇・平滋子の婚姻等関係節点,後白河天皇・平滋子の婚姻等関係節点
+n_sugawara_masumori_daughter,増守の娘,菅原某女・菅典侍,civil_princess,female,non_imperial,,,,U_undated,historical_period_known,角田文衞『日本の後宮』第五章第四節・付録主要官女表。康平元年頃、後冷泉天皇の寵を蒙り皇子高階為行を産む（典拠『為房記』）。,後冷泉天皇に仕え、高階為行を産む,安楽寺別当増守の娘。角田文衞『日本の後宮』は『為房記』を典拠として、後冷泉天皇との間に皇子高階為行を産んだとする。のち藤原師信の妻。
+u_goreizei_masumori_daughter,,,marriage,,,,,,,,,後冷泉天皇・増守の娘の婚姻等関係節点,後冷泉天皇と増守の娘を父母として高階為行へ接続する婚姻等関係節点。正式な婚姻関係を意味しない。
+c_takashina_tameyuki,高階為行,後冷泉天皇落胤,civil_prince,male,non_imperial,1059,1107,,C_secondary_genealogy,,親子関係は角田文衞『日本の後宮』第五章第四節・付録主要官女表（典拠『為房記』）で確認。生没年1059–1107は二次系譜資料による。,後冷泉天皇実子・落胤として高階氏側で養育,後冷泉天皇と増守の娘の実子。皇族として公認されず、高階為家の子として扱われたため、本図では臣籍側（橙太破線）として表現する。
+c_takashina_tameie,高階為家,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known,角田文衞『日本の後宮』第五章第四節では、大弐三位藤原賢子が為行を自子・高階為家の子として扱わせた経緯を記す。,高階為行の養育上・系譜上の父,高階為行の生物学的父ではない。角田文衞の叙述に基づき養子的関係として記録する。
+n_takashina_tameyuki_daughter,高階為行の娘,,civil_princess,female,non_imperial,,,,U_undated,historical_period_known,『尊卑分脈』系の系譜および関連研究で藤原清綱室・藤原忠清母として確認される。,藤原清綱室・藤原忠清母,高階為行の娘。藤原清綱との間に藤原忠清。
+c_fujiwara_kiyotsuna,藤原清綱,良門流,civil_prince,male,non_imperial,,,,U_undated,historical_period_known,『尊卑分脈』系譜および平安後期国司研究により高階為行娘との婚姻・忠清父を確認。,高階為行娘の夫・藤原忠清父,良門流。高階為行の娘との間に藤原忠清。
+c_fujiwara_tadakiyo,藤原忠清,良門流・淡路守,civil_prince,male,non_imperial,,,,U_undated,historical_period_known,『尊卑分脈』系譜等で父藤原清綱・母高階為行娘。『国史大辞典』源義朝項で義朝母の父を淡路守藤原忠清とする。,藤原清綱と高階為行娘の子,娘が源為義の妻となり、源義朝を産む。
+n_fujiwara_tadakiyo_daughter,藤原忠清の娘,,civil_princess,female,non_imperial,,,,U_undated,historical_period_known,『国史大辞典』源義朝項は、源義朝の母を淡路守藤原忠清の娘とする。,源為義室・源義朝母,藤原忠清の娘。源為義との間に源義朝。
+c_minamoto_tameyoshi,源為義,六条判官,civil_prince,male,non_imperial,1096,1156,,A_standard,,Kotobank（世界大百科事典）『源為義』。,河内源氏,源義朝の父。
+c_minamoto_yoshitomo,源義朝,上総御曹司,civil_prince,male,non_imperial,1123,1160,,A_standard,,JapanKnowledge『源義朝』・国史大辞典系記述。,源頼朝・坊門姫の父,父源為義、母淡路守藤原忠清の娘。
+n_bomon_hime,坊門姫,源頼朝妹,civil_princess,female,non_imperial,,,,U_undated,historical_period_known,源義朝の娘・一条能保室として鎌倉初期史料・人物辞典系で確認。,源義朝娘・一条能保室,一条能保との間に一条全子ら。
+c_ichijo_yoshiyasu,一条能保,,civil_prince,male,non_imperial,1147,1197,,A_standard,,Kotobank『一条能保』。,坊門姫の夫,藤原頼宗流。五摂家一条家とは別流。
+n_ichijo_masako,一条全子,,civil_princess,female,non_imperial,,,,U_undated,historical_period_known,Kotobank『西園寺公経』で一条能保女全子・公経妻と確認。,一条能保女・西園寺公経室,坊門姫と一条能保の娘。西園寺実氏の母。
+c_saionji_kintsune,西園寺公経,藤原公経,civil_prince,male,non_imperial,1171,1244,,A_standard,,Kotobank『西園寺公経』。,西園寺家,一条全子を妻とし、西園寺実氏の父。
+c_saionji_saneuji,西園寺実氏,,civil_prince,male,non_imperial,1194,1269,,A_standard,,Kotobank『西園寺実氏』。,西園寺公経の子,西園寺姞子の父。
+n_shijo_sadako,四条貞子,北山准后,civil_princess,female,non_imperial,,,,U_undated,historical_period_known,西園寺姞子の母として系譜資料で確認。,西園寺実氏室・西園寺姞子母,四条隆衡の娘。
+n_saionji_kisshi,西園寺姞子,大宮院,civil_princess,female,non_imperial,1225,1292,,A_standard,,西園寺家・後嵯峨天皇関係の標準的系譜。,後嵯峨天皇中宮・後深草/亀山両天皇母,西園寺実氏女。後嵯峨天皇の中宮となり、後深草天皇・亀山天皇を産む。本図では皇室への再流入人物として実線枠。
+u_tameyuki_daughter_kiyotsuna,,,marriage,,,,,,,,,,高階為行娘・藤原清綱の婚姻等関係節点
+u_tadakiyo_daughter_tameyoshi,,,marriage,,,,,,,,,,藤原忠清娘・源為義の婚姻等関係節点
+u_bomon_yoshiyasu,,,marriage,,,,,,,,,,坊門姫・一条能保の婚姻等関係節点
+u_masako_kintsune,,,marriage,,,,,,,,,,一条全子・西園寺公経の婚姻等関係節点
+u_saneuji_sadako,,,marriage,,,,,,,,,,西園寺実氏・四条貞子の婚姻等関係節点
+u_gosaga_kisshi,,,marriage,,,,,,,,,,後嵯峨天皇・西園寺姞子の婚姻等関係節点
+c_takatsukasa_toshimichi,鷹司平通,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known,宮内庁「ご結婚により、皇族の身分を離れられた内親王及び女王」で婚姻関係を確認。生没年は本図では設定しない。,鷹司和子の夫,鷹司和子の夫
+u_kazuko_toshimichi,,,marriage,,,,,,,,,鷹司和子・鷹司平通の婚姻等関係節点,鷹司和子・鷹司平通の婚姻等関係節点
+c_ikeda_takamasa,池田隆政,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known,宮内庁「ご結婚により、皇族の身分を離れられた内親王及び女王」で婚姻関係を確認。生没年は本図では設定しない。,池田厚子の夫,池田厚子の夫
+u_atsuko_takamasa,,,marriage,,,,,,,,,池田厚子・池田隆政の婚姻等関係節点,池田厚子・池田隆政の婚姻等関係節点
+c_shimazu_hisanaga,島津久永,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known,宮内庁「ご結婚により、皇族の身分を離れられた内親王及び女王」で婚姻関係を確認。生没年は本図では設定しない。,島津貴子の夫,島津貴子の夫
+u_takako_hisanaga,,,marriage,,,,,,,,,島津貴子・島津久永の婚姻等関係節点,島津貴子・島津久永の婚姻等関係節点
+c_kuroda_yoshiki,黒田慶樹,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known,宮内庁「ご結婚により、皇族の身分を離れられた内親王及び女王」で婚姻関係を確認。生没年は本図では設定しない。,黒田清子の夫,黒田清子の夫
+u_sayako_yoshiki,,,marriage,,,,,,,,,黒田清子・黒田慶樹の婚姻等関係節点,黒田清子・黒田慶樹の婚姻等関係節点
+c_komuro_kei,小室圭,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known,宮内庁「ご結婚により、皇族の身分を離れられた内親王及び女王」で婚姻関係を確認。生没年は本図では設定しない。,小室眞子の夫,小室眞子の夫
+u_mako_kei,,,marriage,,,,,,,,,小室眞子・小室圭の婚姻等関係節点,小室眞子・小室圭の婚姻等関係節点
+c_senge_kunimaro,千家国麿,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known,宮内庁「ご結婚により、皇族の身分を離れられた内親王及び女王」で婚姻関係を確認。生没年は本図では設定しない。,千家典子の夫,千家典子の夫
+u_noriko_kunimaro,,,marriage,,,,,,,,,千家典子・千家国麿の婚姻等関係節点,千家典子・千家国麿の婚姻等関係節点
+c_moriya_kei,守谷慧,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known,宮内庁「ご結婚により、皇族の身分を離れられた内親王及び女王」で婚姻関係を確認。生没年は本図では設定しない。,守谷絢子の夫,守谷絢子の夫
+u_ayako_kei,,,marriage,,,,,,,,,守谷絢子・守谷慧の婚姻等関係節点,守谷絢子・守谷慧の婚姻等関係節点
+p_yasuko_mikasa,近衞甯子,甯子内親王,princess,female,imperial,1944,,,A_standard,,宮内庁「ご結婚により、皇族の身分を離れられた内親王及び女王」で出生・婚姻を確認。,崇仁親王第一女子・1966年婚姻により皇族の身分を離れる,崇仁親王第一女子・1966年12月18日、近衞忠煇と婚姻し皇族の身分を離れる
+c_konoe_tadateru,近衞忠煇,,civil_prince,male,non_imperial,,,,U_undated,historical_period_known,宮内庁「ご結婚により、皇族の身分を離れられた内親王及び女王」で婚姻関係を確認。生没年は本図では設定しない。,近衞甯子の夫,近衞甯子の夫
+u_yasuko_tadateru,,,marriage,,,,,,,,,近衞甯子・近衞忠煇の婚姻等関係節点,近衞甯子・近衞忠煇の婚姻等関係節点
+p_masako_mikasa,千容子,容子内親王,princess,female,imperial,1951,,,A_standard,,宮内庁「ご結婚により、皇族の身分を離れられた内親王及び女王」で出生・婚姻を確認。,崇仁親王第二女子・1983年婚姻により皇族の身分を離れる,崇仁親王第二女子・1983年10月14日、千政之（のち千宗室）と婚姻し皇族の身分を離れる
+c_sen_soshitsu,千宗室,千政之,civil_prince,male,non_imperial,,,,U_undated,historical_period_known,宮内庁「ご結婚により、皇族の身分を離れられた内親王及び女王」および宮内庁関係年表で婚姻関係と改名を確認。生没年は本図では設定しない。,千容子の夫,千容子の夫。婚姻時は千政之、2002年に宗室を襲名
+u_masako_soshitsu,,,marriage,,,,,,,,,千容子・千宗室の婚姻等関係節点,千容子・千宗室の婚姻等関係節点
+higashifushimi_002,東伏見慈洽,邦英王・東伏見邦英,prince,male,imperial,1910,2014,,A_standard,,"国立国会図書館典拠『東伏見, 慈洽, 1910-2014』で生没年を確認。NDL典拠は出典として『青蓮院』『人事興信録 第39版』および没年確認の朝日新聞を掲げる。",邦彦王第三男子・1931年臣籍降下・東伏見宮家祭祀継承,皇族時は邦英王。1931年臣籍降下後は東伏見邦英、のち出家して東伏見慈洽。東伏見宮依仁親王夫妻に実子同然に養育され、依仁親王薨去時に喪主を務めた。東伏見宮家の祭祀を継承した。
+higashifushimi_003,東伏見慈晃,東伏見守俶,imperial_descendant,male,imperial,1942,,,C_secondary_genealogy,,公開系譜で1942年生を照合。青蓮院公式サイトおよび天台宗公式資料で東伏見慈晃が青蓮院門跡門主であることを確認。,慈洽第二男子・青蓮院門跡門主,慈洽第二男子。旧名は東伏見守俶。青蓮院門跡門主。
+higashifushimi_004,東伏見光晋,東伏見憲和,imperial_descendant,male,imperial,1977,,,C_secondary_genealogy,,公開系譜で1977年生を照合。公開資料で青蓮院関係者として活動することを確認。,慈晃男子・男系男子子孫あり,慈晃男子。公開資料で男系男子子孫の存在が報告されるが、氏名非公表のため未収録。

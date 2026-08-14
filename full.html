@@ -1,1 +1,1770 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>皇統皇胤図 — 完全図</title><link rel="stylesheet" href="./assets/site.css"></head><body><header><h1>皇統皇胤図</h1><p class="subtitle">完全図（仮ページ）</p></header><main><section class="section"><p><strong>ここをJuliaで生成した公開用完全図HTMLに差し替えます。</strong></p><p><a href="./index.html">← トップへ戻る</a></p></section></main></body></html>
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>皇統皇胤図 v4.2.8 完全図</title>
+  <style>
+    html, body { margin: 0; padding: 0; background: #ffffff; color: #222222; overflow: hidden; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Yu Gothic UI", "Meiryo", sans-serif; }
+    .toolbar {
+      position: relative; z-index: 20;
+      display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center;
+      min-height: 42px; padding: 7px 10px; border-bottom: 1px solid #dddddd;
+      background: rgba(255,255,255,0.97); box-sizing: border-box;
+      font-size: 13px; user-select: none;
+    }
+    .toolbar button {
+      min-width: 32px; padding: 4px 9px; border: 1px solid #bbbbbb; border-radius: 4px;
+      background: #ffffff; color: #222222; cursor: pointer; font: inherit;
+    }
+    .toolbar button:hover { background: #f2f2f2; }
+    .toolbar .sep { width: 1px; height: 22px; background: #dddddd; margin: 0 2px; }
+    #zoomLabel { min-width: 48px; text-align: center; font-variant-numeric: tabular-nums; }
+    #status.error { color: #b00020; font-weight: 600; }
+
+    /* Mermaid描画条件はVS Code Previewに合わせ、描画後のSVG表示寸法だけ原寸固定する。 */
+    .viewport {
+      position: relative; overflow: auto;
+      width: 100vw; height: calc(100vh - 48px);
+      background: #ffffff; cursor: auto;
+    }
+    .viewport.pan-ready { cursor: grab; }
+    .viewport.dragging { cursor: grabbing; }
+    .mermaid, .mermaid * {
+      user-select: text;
+      -webkit-user-select: text;
+    }
+    .viewport.dragging .mermaid, .viewport.dragging .mermaid * {
+      user-select: none !important;
+      -webkit-user-select: none !important;
+    }
+    #panMode.active {
+      background: #e9eef8;
+      border-color: #7f96bd;
+      font-weight: 600;
+    }
+    .stage { position: relative; display: block; margin: 0; padding: 0; }
+    .diagram-wrap { position: absolute; left: 0; top: 0; padding: 24px; box-sizing: content-box; transform-origin: 0 0; }
+    .mermaid { display: inline-block; width: auto !important; min-width: 0 !important; }
+    .mermaid svg {
+      display: block;
+      width: auto !important;
+      max-width: none !important;
+      min-width: 0 !important;
+      height: auto !important;
+      overflow: visible;
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <strong>皇統皇胤図 v4.2.8 完全図</strong>
+    <a href="./index.html" style="color:#334155;text-decoration:none;">← トップ</a>
+    <span class="sep"></span>
+    <button id="zoomOut" title="縮小">−</button>
+    <span id="zoomLabel">100%</span>
+    <button id="zoomIn" title="拡大">＋</button>
+    <button id="zoom100" title="100%">100%</button>
+    <button id="fitWidth" title="横幅に合わせる（必要なときだけ）">横幅</button>
+    <button id="fitAll" title="全体を表示">全体</button>
+    <span class="sep"></span>
+    <button id="panMode" type="button" aria-pressed="false" title="ONのとき左ドラッグで図を移動。OFFでは文字選択">パン: OFF</button>
+    <span>左ドラッグ=文字選択 / Alt+左ドラッグ・中ボタン=移動 / Alt+ホイール=拡大縮小 / Shift+ホイール=左右</span>
+    <span id="status">描画中…</span>
+  </div>
+  <div id="viewport" class="viewport">
+    <div id="stage" class="stage">
+      <div id="diagramWrap" class="diagram-wrap">
+        <div class="mermaid">%% 皇統皇胤図 完全図
+%%{init: {'theme':'default','themeCSS':'.node foreignObject div, .node div, .node span, .label { white-space: normal !important; text-align: center; line-height: 1.4; }','flowchart':{'htmlLabels':true,'useMaxWidth':true}}}%%
+flowchart TB
+    classDef tennos fill:#ffffff,fill-opacity:0.8,stroke:#111111,stroke-width:6px,font-weight:bold;
+    classDef femaleTennos fill:#ffffff,fill-opacity:0.8,stroke:#7a378b,stroke-width:6px,font-weight:bold;
+    classDef princes fill:#ffffff,fill-opacity:0.8,stroke:#111111,stroke-width:1.5px;
+    classDef princesses fill:#ffffff,fill-opacity:0.8,stroke:#7a378b,stroke-width:1.5px,font-weight:bold;
+    classDef civilPrincesses fill:#ffffff,fill-opacity:0.8,stroke:#d9383a,stroke-width:1.5px,font-weight:bold;
+    classDef marriageNode fill:#444444,stroke:#444444;
+    t001["1 神武天皇&lt;br&gt;(神日本磐余彦尊)&lt;br&gt;前711–前585（伝承紀年）&lt;br&gt;※初代天皇"]:::tennos
+    n_ahiratsuhime["吾平津媛&lt;br&gt;(阿比良比売)&lt;br&gt;※神武天皇の日向時代の妃・手研耳命の母"]:::civilPrincesses
+    u_jimmu_ahiratsuhime(( )):::marriageNode
+    p_tagishimimi["手研耳命&lt;br&gt;(多芸志美美命)&lt;br&gt;※神武天皇皇子・綏靖天皇の異母兄"]:::princes
+    n_isuzuhime["媛蹈鞴五十鈴媛命&lt;br&gt;(伊須気余理比売命)&lt;br&gt;※神武天皇皇后・綏靖天皇および神八井耳命の母"]:::civilPrincesses
+    u_jimmu_isuzuhime(( )):::marriageNode
+    p_hikoyai["日子八井命&lt;br&gt;※『古事記』所見・神武天皇皇子"]:::princes
+    p_kamuyai_mimi["神八井耳命&lt;br&gt;※神武天皇皇子・綏靖天皇の同母兄"]:::princes
+    t002["2 綏靖天皇&lt;br&gt;(神渟名川耳尊)&lt;br&gt;前632–前549（伝承紀年）&lt;br&gt;※欠史八代"]:::tennos
+    n_isuzuyori["五十鈴依媛命&lt;br&gt;(河俣毘売)&lt;br&gt;※綏靖天皇皇后・安寧天皇の母"]:::civilPrincesses
+    u_suizei_isuzuyori(( )):::marriageNode
+    t003["3 安寧天皇&lt;br&gt;(磯城津彦玉手看尊)&lt;br&gt;前577–前511（伝承紀年）&lt;br&gt;※欠史八代"]:::tennos
+    n_nunasoko["渟名底仲媛命&lt;br&gt;(阿久斗比売)&lt;br&gt;※安寧天皇皇后"]:::civilPrincesses
+    u_annei_nunasoko(( )):::marriageNode
+    p_okisomimi["息石耳命&lt;br&gt;(常津彦命)&lt;br&gt;※安寧天皇第一皇子・天豊津媛命の父"]:::princes
+    p_shikitsuhiko["磯城津彦命&lt;br&gt;(師木津日子命)&lt;br&gt;※安寧天皇皇子（『日本書紀』一書所見）"]:::princes
+    p_amatoyotsuhime["天豊津媛命&lt;br&gt;(賦登麻和訶比売命)&lt;br&gt;※息石耳命の娘・懿徳天皇皇后・孝昭天皇の母"]:::princesses
+    t004["4 懿徳天皇&lt;br&gt;(大日本彦耜友尊)&lt;br&gt;前553–前477（伝承紀年）&lt;br&gt;※欠史八代"]:::tennos
+    u_itoku_amatoyotsuhime(( )):::marriageNode
+    p_takeshihiko["武石彦奇友背命&lt;br&gt;(多芸志比古命)&lt;br&gt;※懿徳天皇皇子・孝昭天皇の同母弟とされる"]:::princes
+    t005["5 孝昭天皇&lt;br&gt;(観松彦香殖稲尊)&lt;br&gt;前506–前393（伝承紀年）&lt;br&gt;※欠史八代"]:::tennos
+    n_yosotarashi["世襲足媛&lt;br&gt;(余曽多本毘売命)&lt;br&gt;※孝昭天皇皇后・孝安天皇の母"]:::civilPrincesses
+    u_kosho_yosotarashi(( )):::marriageNode
+    p_ameoshitarashi["天足彦国押人命&lt;br&gt;(天押帯日子命)&lt;br&gt;※孝昭天皇第一皇子・孝安天皇の同母兄"]:::princes
+    t006["6 孝安天皇&lt;br&gt;(日本足彦国押人尊)&lt;br&gt;前427–前291（伝承紀年）&lt;br&gt;※欠史八代"]:::tennos
+    p_oshihime["押媛&lt;br&gt;(忍鹿比売命)&lt;br&gt;※天足彦国押人命娘・孝霊天皇の母"]:::princesses
+    u_koan_oshihime(( )):::marriageNode
+    p_okibi_morosusume["大吉備諸進命&lt;br&gt;※孝安天皇皇子・孝霊天皇の同母兄とされる"]:::princes
+    t007["7 孝霊天皇&lt;br&gt;(大日本根子彦太瓊尊)&lt;br&gt;前342–前215（伝承紀年）&lt;br&gt;※欠史八代"]:::tennos
+    n_hosohime["細媛命&lt;br&gt;(細比売命)&lt;br&gt;※孝霊天皇皇后・孝元天皇の母"]:::civilPrincesses
+    u_korei_hosohime(( )):::marriageNode
+    t008["8 孝元天皇&lt;br&gt;(大日本根子彦国牽尊)&lt;br&gt;前273–前158（伝承紀年）&lt;br&gt;※欠史八代"]:::tennos
+    n_utsushikome["鬱色謎命&lt;br&gt;(内色許売命)&lt;br&gt;※孝元天皇皇后・大彦命および開化天皇の母"]:::civilPrincesses
+    u_kogen_utsushikome(( )):::marriageNode
+    p_ohiko["大彦命&lt;br&gt;(大毘古命)&lt;br&gt;※孝元天皇皇子・開化天皇同母兄"]:::princes
+    p_mimakihime["御間城姫&lt;br&gt;(御真津比売命)&lt;br&gt;※大彦命の娘・崇神天皇皇后・垂仁天皇の母"]:::princesses
+    u_sujin_mimakihime(( )):::marriageNode
+    t009["9 開化天皇&lt;br&gt;(稚日本根子彦大日日尊)&lt;br&gt;前208–前98（伝承紀年）&lt;br&gt;※欠史八代最後の天皇"]:::tennos
+    p_hikoimasu["彦坐王&lt;br&gt;(日子坐王)&lt;br&gt;※開化天皇皇子"]:::princes
+    p_tanbamichinushi["丹波道主命&lt;br&gt;(丹波道主王)&lt;br&gt;※彦坐王の子・日葉酢媛命の父"]:::princes
+    p_hibasuhime["日葉酢媛命&lt;br&gt;(日葉洲媛命)&lt;br&gt;?–3（伝承紀年）&lt;br&gt;※丹波道主命の娘・垂仁天皇皇后・景行天皇の母"]:::princesses
+    u_suinin_hibasuhime(( )):::marriageNode
+    n_ikagashikome["伊香色謎命&lt;br&gt;(伊迦賀色許売命)&lt;br&gt;※開化天皇皇后・崇神天皇の母"]:::civilPrincesses
+    u_kaika_ikagashikome(( )):::marriageNode
+    n_hahatsuhime["姥津媛命&lt;br&gt;(意祁都比売命)&lt;br&gt;※開化天皇妃・彦坐王の母とする日本書紀系の伝承"]:::civilPrincesses
+    u_kaika_hahatsuhime(( )):::marriageNode
+    p_yamashiro["山代之大筒木真若王&lt;br&gt;※彦坐王皇子・迦邇米雷王の父"]:::princes
+    p_kaname["迦邇米雷王&lt;br&gt;(迦爾米雷王)&lt;br&gt;※山代之大筒木真若王の皇子・息長宿禰王の父"]:::princes
+    p_okinaga["息長宿禰王&lt;br&gt;(気長宿禰王)&lt;br&gt;※古事記系譜で開化天皇4世孫・神功皇后の父"]:::princes
+    t010["10 崇神天皇&lt;br&gt;(御間城入彦五十瓊殖尊)&lt;br&gt;前148–前30（伝承紀年）&lt;br&gt;※実在性が論じられる最初期の天皇"]:::tennos
+    t011["11 垂仁天皇&lt;br&gt;(活目入彦五十狭茅尊)&lt;br&gt;前69–70（伝承紀年）"]:::tennos
+    p_iwatsukuwake["磐衝別命&lt;br&gt;(石衝別王)&lt;br&gt;※垂仁天皇皇子・『上宮記』逸文では振媛母系祖先"]:::princes
+    p_iwakiwake["磐城別&lt;br&gt;(伊波智和希)&lt;br&gt;※磐衝別命の子・『上宮記』逸文所伝"]:::princes
+    p_iwakoriwake["磐凝別&lt;br&gt;(伊波己里和氣)&lt;br&gt;※磐城別の子・『上宮記』逸文所伝"]:::princes
+    p_mawakake["真稚介&lt;br&gt;(麻和加介)&lt;br&gt;※磐凝別の子・『上宮記』逸文所伝"]:::princes
+    p_akahachikimi["赤蜂君&lt;br&gt;(阿加波智君)&lt;br&gt;※真稚介の子・『上宮記』逸文所伝"]:::princes
+    p_obachikimi["小蜂君&lt;br&gt;(乎波智君)&lt;br&gt;※赤蜂君の子・振媛の父・『上宮記』逸文所伝"]:::princes
+    p_furuhime["振媛&lt;br&gt;(布利比彌命)&lt;br&gt;※小蜂君娘・継体天皇の母・『上宮記』逸文所伝"]:::princesses
+    u_hikoushino_furuhime(( )):::marriageNode
+    t012["12 景行天皇&lt;br&gt;(大足彦忍代別尊)&lt;br&gt;前13–130（伝承紀年）"]:::tennos
+    p_yasakairihiko["八坂入彦命&lt;br&gt;(八坂之入日子命)&lt;br&gt;※崇神天皇皇子・八坂入媛命の父"]:::princes
+    p_yasakairihime["八坂入媛命&lt;br&gt;(八尺之入日売命)&lt;br&gt;※八坂入彦命娘・五百城入彦皇子の母"]:::princesses
+    u_keiko_yasakairihime(( )):::marriageNode
+    p_iokiirihiko["五百城入彦皇子&lt;br&gt;(五百木之入日子命)&lt;br&gt;※景行天皇皇子・母は八坂入媛命・品陀真若王の父"]:::princes
+    p_hondamawaka["品陀真若王&lt;br&gt;※五百城入彦皇子の子・仲姫命の父"]:::princes
+    p_nakatsuhime["仲姫命&lt;br&gt;(中日売命)&lt;br&gt;※品陀真若王の娘・応神天皇皇后・仁徳天皇の母"]:::princesses
+    u_ojin_nakatsuhime(( )):::marriageNode
+    p_yamatotakeru["日本武尊&lt;br&gt;(小碓尊)&lt;br&gt;※景行天皇皇子・東征・西征伝承"]:::princes
+    p_futajinoirihime["両道入姫命&lt;br&gt;(石衝毘売命)&lt;br&gt;※垂仁天皇皇女・日本武尊妃・仲哀天皇の母"]:::princesses
+    u_yamatotakeru_futajinoirihime(( )):::marriageNode
+    t013["13 成務天皇&lt;br&gt;(稚足彦尊)&lt;br&gt;84–190（伝承紀年）&lt;br&gt;※景行天皇の皇子（日本武尊の異母弟）"]:::tennos
+    t014["14 仲哀天皇&lt;br&gt;(足仲彦尊)&lt;br&gt;149?–200（伝承紀年）&lt;br&gt;※日本武尊第二男子・景行天皇孫"]:::tennos
+    u_chuai_jingu(( )):::marriageNode
+    p_jingu["神功皇后&lt;br&gt;(気長足姫尊)&lt;br&gt;170–269（伝承紀年）&lt;br&gt;※摂政・旧来は歴代天皇に列す"]:::princesses
+    t015["15 応神天皇&lt;br&gt;(誉田別尊)&lt;br&gt;200–310（伝承紀年）"]:::tennos
+    p_wakasako["稚野毛二派皇子&lt;br&gt;(若沼毛二俣王・若野毛二俣王)&lt;br&gt;※応神天皇皇子・継体の5代祖"]:::princes
+    p_ohoji["意富富杼王&lt;br&gt;(大郎子)&lt;br&gt;※2世孫"]:::princes
+    p_oshi["乎非王&lt;br&gt;※3世孫"]:::princes
+    p_hikoushino["彦主人王&lt;br&gt;(汗斯王)&lt;br&gt;※4世孫"]:::princes
+    t026["26 継体天皇&lt;br&gt;(男大跡王)&lt;br&gt;450?–531?/534?（伝承紀年）&lt;br&gt;※応神天皇5世孫・出自・皇位継承に諸説あり"]:::tennos
+    t016["16 仁徳天皇&lt;br&gt;(大鷦鷯尊)&lt;br&gt;257–399（伝承紀年）"]:::tennos
+    t017["17 履中天皇&lt;br&gt;(大兄去来穂別尊)&lt;br&gt;336?–405（伝承紀年）&lt;br&gt;※仁徳天皇第一皇子"]:::tennos
+    t018["18 反正天皇&lt;br&gt;(多遅比瑞歯別尊)&lt;br&gt;336?–410（伝承紀年）&lt;br&gt;※仁徳天皇第三皇子（履中天皇の同母弟）"]:::tennos
+    t019["19 允恭天皇&lt;br&gt;(雄朝津間稚子宿禰尊)&lt;br&gt;376?–453（伝承紀年）&lt;br&gt;※仁徳天皇第四皇子（反正天皇の同母弟）"]:::tennos
+    t020["20 安康天皇&lt;br&gt;(穴穂尊)&lt;br&gt;401?–456（伝承紀年）&lt;br&gt;※允恭天皇第二皇子（雄略天皇の同母兄）"]:::tennos
+    t021["21 雄略天皇&lt;br&gt;(大泊瀬幼武尊)&lt;br&gt;418–479（伝承紀年）&lt;br&gt;※ワカタケル大王・允恭天皇第五皇子"]:::tennos
+    p_kasuga_oiratsume["春日大娘皇女&lt;br&gt;(春日大娘女)&lt;br&gt;※雄略天皇皇女・仁賢天皇皇后・手白香皇女の母"]:::princesses
+    p_tachibana_nakatsuhime["橘仲皇女&lt;br&gt;(橘之中比売命)&lt;br&gt;※仁賢天皇皇女・石姫皇女の母"]:::princesses
+    u_senka_tachibana(( )):::marriageNode
+    u_ninken_kasuga(( )):::marriageNode
+    t022["22 清寧天皇&lt;br&gt;(白髪大倭根子命)&lt;br&gt;444?–484（伝承紀年）&lt;br&gt;※雄略天皇皇子・皇子女なし"]:::tennos
+    p_ichinobe["磐坂市辺押磐皇子&lt;br&gt;(市辺之忍歯王)&lt;br&gt;※履中天皇第一皇子（雄略天皇に殺害される）"]:::princes
+    t023["23 顕宗天皇&lt;br&gt;(弘計尊)&lt;br&gt;450–487（伝承紀年）&lt;br&gt;※市辺押磐皇子第二男子"]:::tennos
+    t024["24 仁賢天皇&lt;br&gt;(億計尊)&lt;br&gt;449–498（伝承紀年）&lt;br&gt;※市辺押磐皇子第一男子（顕宗天皇の兄）"]:::tennos
+    t025["25 武烈天皇&lt;br&gt;(小泊瀬稚鷦鷯尊)&lt;br&gt;489?–506（伝承紀年）&lt;br&gt;※仁賢天皇皇子・皇子女なし"]:::tennos
+    p_tashiraka["手白香皇女&lt;br&gt;(手白髪郎女)&lt;br&gt;※仁賢天皇皇女"]:::princesses
+    u_keitai_tashiraka(( )):::marriageNode
+    t027["27 安閑天皇&lt;br&gt;(勾大兄広国押武金日尊)&lt;br&gt;466?–536?（伝承紀年）&lt;br&gt;※継体天皇第一皇子"]:::tennos
+    t028["28 宣化天皇&lt;br&gt;(桧隈高田皇子)&lt;br&gt;467?–539?（伝承紀年）&lt;br&gt;※継体天皇第二皇子"]:::tennos
+    t029["29 欽明天皇&lt;br&gt;(天国排開広庭天皇)&lt;br&gt;510–571&lt;br&gt;※継体天皇・手白香皇女皇子"]:::tennos
+    p_sakurai["桜井皇子&lt;br&gt;※欽明天皇皇子・吉備姫王の父"]:::princes
+    p_kibihime["吉備姫王&lt;br&gt;(吉備嶋皇祖母命)&lt;br&gt;?–643&lt;br&gt;※桜井皇子王女・皇極・孝徳天皇の母"]:::princesses
+    u_chinu_kibihime(( )):::marriageNode
+    p_ishihime["石姫皇女&lt;br&gt;(石比売命)&lt;br&gt;※宣化天皇皇女・欽明天皇皇后・敏達天皇の母"]:::princesses
+    u_kinmei_ishihime(( )):::marriageNode
+    t030["30 敏達天皇&lt;br&gt;(訳語田渟中倉太珠敷尊)&lt;br&gt;?–585&lt;br&gt;※欽明天皇第二皇子"]:::tennos
+    t031["31 用明天皇&lt;br&gt;(橘豊日尊)&lt;br&gt;?–587&lt;br&gt;※欽明天皇第四皇子（聖徳太子の父）"]:::tennos
+    t032["32 崇峻天皇&lt;br&gt;(泊瀬部皇子)&lt;br&gt;?–592&lt;br&gt;※欽明天皇第十二皇子"]:::tennos
+    t033["33 推古天皇&lt;br&gt;(額田部皇女)&lt;br&gt;554–628&lt;br&gt;※最初の女性天皇・欽明天皇皇女"]:::femaleTennos
+    p_oshisaka["押坂彦人大兄皇子&lt;br&gt;(忍坂日子人太子・麻呂古王)&lt;br&gt;※敏達天皇第一皇子（舒明天皇・茅渟王の父）"]:::princes
+    p_nukatehime["糠手姫皇女&lt;br&gt;(田村皇女)&lt;br&gt;?–664&lt;br&gt;※敏達天皇皇女・舒明天皇の母"]:::princesses
+    u_oshisaka_nukatehime(( )):::marriageNode
+    p_chinu["茅渟王&lt;br&gt;(知奴王)&lt;br&gt;※押坂彦人大兄皇子の皇子（皇極・孝徳の父）"]:::princes
+    t034["34 舒明天皇&lt;br&gt;(息長足日広額天皇)&lt;br&gt;?–641&lt;br&gt;※押坂彦人大兄皇子の皇子"]:::tennos
+    t035t037["35・37 皇極・斉明天皇&lt;br&gt;(宝皇女)&lt;br&gt;?–661&lt;br&gt;※重祚・敏達天皇曽孫"]:::femaleTennos
+    u_jomei_kogyoku(( )):::marriageNode
+    t036["36 孝徳天皇&lt;br&gt;(軽皇子)&lt;br&gt;?–654&lt;br&gt;※大化改新期の天皇・皇極天皇同母弟"]:::tennos
+    t038["38 天智天皇&lt;br&gt;(中大兄皇子)&lt;br&gt;626–671&lt;br&gt;※舒明天皇・皇極天皇第二皇子"]:::tennos
+    t039["39 弘文天皇&lt;br&gt;(大友皇子)&lt;br&gt;648–672&lt;br&gt;※天智天皇第一皇子（壬申の乱で敗死）"]:::tennos
+    t040["40 天武天皇&lt;br&gt;(大海人皇子)&lt;br&gt;?–686&lt;br&gt;※天智天皇の弟・系譜に異説あり"]:::tennos
+    t041["41 持統天皇&lt;br&gt;(鸕野讚良皇女)&lt;br&gt;645–702&lt;br&gt;※天智天皇の皇女・天武天皇の皇后"]:::femaleTennos
+    u_temmu_jito(( )):::marriageNode
+    p_toneri["舎人親王&lt;br&gt;?–735&lt;br&gt;※天武天皇皇子・淳仁天皇の父"]:::princes
+    p_kusakabe["草壁皇子&lt;br&gt;(岡宮天皇)&lt;br&gt;662–689&lt;br&gt;※天武と持統の皇子（聖武天皇の祖父）"]:::princes
+    t043["43 元明天皇&lt;br&gt;(阿閉皇女)&lt;br&gt;661–721&lt;br&gt;※天智天皇皇女・草壁皇子妃"]:::femaleTennos
+    u_kusakabe_gemmei(( )):::marriageNode
+    t042["42 文武天皇&lt;br&gt;(軽皇子)&lt;br&gt;683–707&lt;br&gt;※草壁皇子・元明天皇第一皇子（大宝律令）"]:::tennos
+    t044["44 元正天皇&lt;br&gt;(氷高皇女)&lt;br&gt;680–748&lt;br&gt;※草壁皇子・元明天皇皇女・母娘継承"]:::femaleTennos
+    t045["45 聖武天皇&lt;br&gt;(首皇子)&lt;br&gt;701–756&lt;br&gt;※文武天皇第一皇子・東大寺大仏を建立"]:::tennos
+    t046t048["46・48 孝謙・称徳天皇&lt;br&gt;(阿倍内親王)&lt;br&gt;718–770&lt;br&gt;※重祚・聖武天皇皇女"]:::femaleTennos
+    t047["47 淳仁天皇&lt;br&gt;(大炊王)&lt;br&gt;733–765&lt;br&gt;※舎人親王第七男子・天武天皇孫"]:::tennos
+    p_shiki["志貴皇子&lt;br&gt;(春日宮天皇)&lt;br&gt;?–716&lt;br&gt;※天智天皇の皇子・光仁天皇の実父"]:::princes
+    t049["49 光仁天皇&lt;br&gt;(白壁王)&lt;br&gt;709–781&lt;br&gt;※天智天皇孫・天智天皇系から即位"]:::tennos
+    t050["50 桓武天皇&lt;br&gt;(山部親王)&lt;br&gt;737–806&lt;br&gt;※平安京遷都・桓武平氏の祖"]:::tennos
+    p_nakano["仲野親王&lt;br&gt;792–867&lt;br&gt;※桓武天皇皇子・班子女王の父"]:::princes
+    p_hanshi["班子女王&lt;br&gt;833–900&lt;br&gt;※仲野親王王女・光孝天皇妃・宇多天皇の母"]:::princesses
+    u_koko_hanshi(( )):::marriageNode
+    t051["51 平城天皇&lt;br&gt;(安殿親王)&lt;br&gt;774–824"]:::tennos
+    t052["52 嵯峨天皇&lt;br&gt;(神野親王)&lt;br&gt;786–842&lt;br&gt;※桓武天皇第二皇子・嵯峨源氏の祖"]:::tennos
+    t053["53 淳和天皇&lt;br&gt;(大伴親王)&lt;br&gt;786–840"]:::tennos
+    t054["54 仁明天皇&lt;br&gt;(正良親王)&lt;br&gt;810–850"]:::tennos
+    t055["55 文徳天皇&lt;br&gt;(道康親王)&lt;br&gt;827–858"]:::tennos
+    t056["56 清和天皇&lt;br&gt;(惟仁親王)&lt;br&gt;850–880&lt;br&gt;※藤原良房が摂政・清和源氏の祖"]:::tennos
+    t057["57 陽成天皇&lt;br&gt;(貞明親王)&lt;br&gt;868–949"]:::tennos
+    t058["58 光孝天皇&lt;br&gt;(時康親王)&lt;br&gt;830–887"]:::tennos
+    t059["59 宇多天皇&lt;br&gt;(定省親王)&lt;br&gt;867–931&lt;br&gt;※寛平の治・臣籍降下から皇籍復帰して即位"]:::tennos
+    t060["60 醍醐天皇&lt;br&gt;(敦仁親王)&lt;br&gt;885–930&lt;br&gt;※延喜の治"]:::tennos
+    t061["61 朱雀天皇&lt;br&gt;(寛明親王)&lt;br&gt;923–952"]:::tennos
+    t062["62 村上天皇&lt;br&gt;(成明親王)&lt;br&gt;926–967"]:::tennos
+    t063["63 冷泉天皇&lt;br&gt;(憲平親王)&lt;br&gt;950–1011"]:::tennos
+    t064["64 円融天皇&lt;br&gt;(守平親王)&lt;br&gt;959–991"]:::tennos
+    t065["65 花山天皇&lt;br&gt;(師貞親王)&lt;br&gt;968–1008"]:::tennos
+    t066["66 一条天皇&lt;br&gt;(懐仁親王)&lt;br&gt;980–1011"]:::tennos
+    t067["67 三条天皇&lt;br&gt;(居貞親王)&lt;br&gt;976–1017"]:::tennos
+    p_teishi["禎子内親王&lt;br&gt;(陽明門院)&lt;br&gt;1013–1094&lt;br&gt;※三条天皇第三皇女・後三条天皇の母"]:::princesses
+    u_go_suzaku_teishi(( )):::marriageNode
+    t068["68 後一条天皇&lt;br&gt;(敦成親王)&lt;br&gt;1008–1036"]:::tennos
+    t069["69 後朱雀天皇&lt;br&gt;(敦良親王)&lt;br&gt;1009–1045"]:::tennos
+    t070["70 後冷泉天皇&lt;br&gt;(親仁親王)&lt;br&gt;1025–1068"]:::tennos
+    t071["71 後三条天皇&lt;br&gt;(尊仁親王)&lt;br&gt;1034–1073"]:::tennos
+    t072["72 白河天皇&lt;br&gt;(貞仁親王)&lt;br&gt;1053–1129"]:::tennos
+    t073["73 堀河天皇&lt;br&gt;(善仁親王)&lt;br&gt;1079–1107"]:::tennos
+    t074["74 鳥羽天皇&lt;br&gt;(宗仁親王)&lt;br&gt;1103–1156&lt;br&gt;※院政期の中心人物"]:::tennos
+    t075["75 崇徳天皇&lt;br&gt;(顕仁親王)&lt;br&gt;1119–1164"]:::tennos
+    t076["76 近衛天皇&lt;br&gt;(体仁親王)&lt;br&gt;1139–1155"]:::tennos
+    t077["77 後白河天皇&lt;br&gt;(雅仁親王)&lt;br&gt;1127–1192"]:::tennos
+    t078["78 二条天皇&lt;br&gt;(守仁親王)&lt;br&gt;1143–1165"]:::tennos
+    t079["79 六条天皇&lt;br&gt;(順仁親王)&lt;br&gt;1164–1176"]:::tennos
+    t080["80 高倉天皇&lt;br&gt;(憲仁親王)&lt;br&gt;1161–1181"]:::tennos
+    t081["81 安徳天皇&lt;br&gt;(言仁親王)&lt;br&gt;1178–1185"]:::tennos
+    t082["82 後鳥羽天皇&lt;br&gt;(尊成親王)&lt;br&gt;1180–1239"]:::tennos
+    t083["83 土御門天皇&lt;br&gt;(為仁親王)&lt;br&gt;1195–1231"]:::tennos
+    t084["84 順徳天皇&lt;br&gt;(守成親王)&lt;br&gt;1197–1242"]:::tennos
+    t085["85 仲恭天皇&lt;br&gt;(懐成親王)&lt;br&gt;1218–1234"]:::tennos
+    t086["86 後堀河天皇&lt;br&gt;(茂仁王)&lt;br&gt;1212–1234"]:::tennos
+    t087["87 四条天皇&lt;br&gt;(秀仁親王)&lt;br&gt;1231–1242"]:::tennos
+    p_morisada["守貞親王&lt;br&gt;1179–1223&lt;br&gt;※高倉天皇皇子・安徳天皇異母弟・後堀河天皇父"]:::princes
+    t088["88 後嵯峨天皇&lt;br&gt;(邦仁親王)&lt;br&gt;1220–1272&lt;br&gt;※持明院統・大覚寺統分立の起点"]:::tennos
+    t089["89 後深草天皇&lt;br&gt;(久仁親王)&lt;br&gt;1243–1304"]:::tennos
+    t090["90 亀山天皇&lt;br&gt;(恒仁親王)&lt;br&gt;1249–1305"]:::tennos
+    t091["91 後宇多天皇&lt;br&gt;(世仁親王)&lt;br&gt;1267–1324"]:::tennos
+    t092["92 伏見天皇&lt;br&gt;(煕仁親王)&lt;br&gt;1265–1317"]:::tennos
+    t093["93 後伏見天皇&lt;br&gt;(胤仁親王)&lt;br&gt;1288–1336&lt;br&gt;※持明院統の祖"]:::tennos
+    t094["94 後二条天皇&lt;br&gt;(邦治親王)&lt;br&gt;1285–1308"]:::tennos
+    t095["95 花園天皇&lt;br&gt;(富仁親王)&lt;br&gt;1297–1348"]:::tennos
+    t096["96 後醍醐天皇&lt;br&gt;(尊治親王)&lt;br&gt;1288–1339"]:::tennos
+    t097["97 後村上天皇&lt;br&gt;(憲良親王・義良親王)&lt;br&gt;1328–1368&lt;br&gt;※南朝第2代"]:::tennos
+    t098["98 長慶天皇&lt;br&gt;(寛成親王)&lt;br&gt;1343–1394&lt;br&gt;※南朝第3代"]:::tennos
+    t099["99 後亀山天皇&lt;br&gt;(熙成親王)&lt;br&gt;?–1424&lt;br&gt;※南朝第4代"]:::tennos
+    t100["100 後小松天皇&lt;br&gt;(幹仁親王)&lt;br&gt;1377–1433"]:::tennos
+    t101["101 称光天皇&lt;br&gt;(躬仁親王・実仁親王)&lt;br&gt;1401–1428"]:::tennos
+    t102["102 後花園天皇&lt;br&gt;(彦仁親王)&lt;br&gt;1419–1470"]:::tennos
+    t103["103 後土御門天皇&lt;br&gt;(成仁親王)&lt;br&gt;1442–1500"]:::tennos
+    t104["104 後柏原天皇&lt;br&gt;(勝仁親王)&lt;br&gt;1464–1526"]:::tennos
+    t105["105 後奈良天皇&lt;br&gt;(知仁親王)&lt;br&gt;1496–1557"]:::tennos
+    t106["106 正親町天皇&lt;br&gt;(方仁親王)&lt;br&gt;1517–1593"]:::tennos
+    t107["107 後陽成天皇&lt;br&gt;(和仁親王・周仁親王)&lt;br&gt;1571–1617"]:::tennos
+    t108["108 後水尾天皇&lt;br&gt;(政仁親王)&lt;br&gt;1596–1680"]:::tennos
+    t109["109 明正天皇&lt;br&gt;(興子内親王)&lt;br&gt;1623–1696"]:::femaleTennos
+    t110["110 後光明天皇&lt;br&gt;(紹仁親王)&lt;br&gt;1633–1654"]:::tennos
+    t111["111 後西天皇&lt;br&gt;(良仁親王)&lt;br&gt;1637–1685"]:::tennos
+    t112["112 霊元天皇&lt;br&gt;(識仁親王)&lt;br&gt;1654–1732"]:::tennos
+    p_masahito_01["誠仁親王&lt;br&gt;(陽光院)&lt;br&gt;1552–1586&lt;br&gt;※正親町天皇第一皇子・追尊天皇"]:::princes
+    t113["113 東山天皇&lt;br&gt;(朝仁親王)&lt;br&gt;1675–1710&lt;br&gt;※閑院宮直仁親王の父"]:::tennos
+    t114["114 中御門天皇&lt;br&gt;(慶仁親王)&lt;br&gt;1702–1737"]:::tennos
+    t115["115 桜町天皇&lt;br&gt;(昭仁親王)&lt;br&gt;1720–1750"]:::tennos
+    t116["116 桃園天皇&lt;br&gt;(遐仁親王)&lt;br&gt;1741–1762"]:::tennos
+    t117["117 後桜町天皇&lt;br&gt;(智子内親王)&lt;br&gt;1740–1813&lt;br&gt;※江戸時代最後の女性天皇"]:::femaleTennos
+    t118["118 後桃園天皇&lt;br&gt;(英仁親王)&lt;br&gt;1758–1779&lt;br&gt;※22歳で崩御・光格天皇を猶子とする"]:::tennos
+    t119["119 光格天皇&lt;br&gt;(師仁親王・兼仁親王)&lt;br&gt;1771–1840&lt;br&gt;※閑院宮家から皇位を継承"]:::tennos
+    t120["120 仁孝天皇&lt;br&gt;(恵仁親王)&lt;br&gt;1800–1846"]:::tennos
+    t121["121 孝明天皇&lt;br&gt;(統仁親王)&lt;br&gt;1831–1867"]:::tennos
+    t122["122 明治天皇&lt;br&gt;(睦仁親王)&lt;br&gt;1852–1912"]:::tennos
+    t123["123 大正天皇&lt;br&gt;(嘉仁親王)&lt;br&gt;1879–1926"]:::tennos
+    u_kogen_ikagashikome(( )):::marriageNode
+    p_tochi["十市皇女&lt;br&gt;※天武天皇皇女・母は額田王・弘文天皇妃"]:::princesses
+    p_kadono["葛野王&lt;br&gt;※弘文天皇・十市皇女皇子"]:::princes
+    p_ikebe["池辺王&lt;br&gt;※葛野王の子"]:::princes
+    c_omimifune["淡海三船&lt;br&gt;(御船王)&lt;br&gt;※池辺王の子・御船王から淡海真人を賜姓"]:::princes
+    n_omimifune_daughter["淡海三船の娘&lt;br&gt;※淡海三船の娘"]:::civilPrincesses
+    c_tachibana_tsunenushi["橘常主&lt;br&gt;※淡海三船の外孫"]:::princes
+    c_tachibana_yasukio["橘安吉雄&lt;br&gt;※橘常主の子"]:::princes
+    c_tachibana_yoshimoto["橘良基&lt;br&gt;※橘安吉雄の子"]:::princes
+    c_tachibana_sumikiyo["橘澄清&lt;br&gt;※橘良基の子"]:::princes
+    n_tachibana_sumikiyo_daughter["橘澄清の娘&lt;br&gt;※橘澄清の娘"]:::civilPrincesses
+    n_fujiwara_tokihime["藤原時姫&lt;br&gt;※橘澄清の外孫"]:::civilPrincesses
+    n_fujiwara_senshi["藤原詮子&lt;br&gt;(東三条院)&lt;br&gt;※藤原時姫の娘・一条天皇生母"]:::civilPrincesses
+    p_abo["阿保親王&lt;br&gt;※平城天皇皇子・在原業平父"]:::princes
+    c_ariwara_narihira["在原業平&lt;br&gt;(在五中将)&lt;br&gt;※阿保親王・伊都内親王皇子・826年在原朝臣姓を賜る"]:::princes
+    n_ariwara_miko["在原美子&lt;br&gt;※在原業平の娘"]:::civilPrincesses
+    c_fujiwara_kiyotsura["藤原清貫&lt;br&gt;※在原美子の子"]:::princes
+    n_fujiwara_kiyotsura_daughter["藤原清貫の娘&lt;br&gt;※藤原清貫の娘"]:::civilPrincesses
+    c_fujiwara_yasutada["藤原懐忠&lt;br&gt;※藤原清貫の外孫"]:::princes
+    c_fujiwara_kunimasa["藤原邦昌&lt;br&gt;※藤原懐忠の子"]:::princes
+    c_fujiwara_kunitsune["藤原邦恒&lt;br&gt;※藤原邦昌の子"]:::princes
+    c_fujiwara_yukifusa["藤原行房&lt;br&gt;※藤原邦恒の子"]:::princes
+    n_fujiwara_yukifusa_daughter["藤原行房の娘&lt;br&gt;※藤原行房の娘"]:::civilPrincesses
+    c_fujiwara_muneno["藤原宗能&lt;br&gt;※藤原行房の外孫"]:::princes
+    n_fujiwara_muneno_daughter["藤原宗能の娘&lt;br&gt;※藤原宗能の娘"]:::civilPrincesses
+    c_fujiwara_sadayoshi["藤原定能&lt;br&gt;※藤原宗能の外孫"]:::princes
+    n_fujiwara_sadayoshi_daughter["藤原定能の娘&lt;br&gt;※藤原定能の娘"]:::civilPrincesses
+    c_mochiie_sada["持明院家定&lt;br&gt;※藤原定能の外孫"]:::princes
+    c_mochiie_motomori["持明院基盛&lt;br&gt;※持明院家定の子"]:::princes
+    c_mochiie_motoyo["持明院基世&lt;br&gt;※持明院基盛の子"]:::princes
+    c_mochiie_motokane["持明院基兼&lt;br&gt;※持明院基世の子"]:::princes
+    c_mochiie_motokiyo["持明院基清&lt;br&gt;※持明院基兼の子"]:::princes
+    c_mochiie_motochika["持明院基親&lt;br&gt;※持明院基清の子"]:::princes
+    n_mochiie_motochika_daughter["持明院基親の娘&lt;br&gt;※持明院基親の娘"]:::civilPrincesses
+    c_tokudaiji_kinari["徳大寺公有&lt;br&gt;※持明院基親の外孫"]:::princes
+    c_tokudaiji_saneatsu["徳大寺実淳&lt;br&gt;※徳大寺公有の子"]:::princes
+    n_tokudaiji_ishiko["徳大寺維子&lt;br&gt;※徳大寺実淳の娘・近衛稙家母"]:::civilPrincesses
+    p_nukata["額田王&lt;br&gt;※天武天皇妃・十市皇女母"]:::princesses
+    u_tenmu_nukata(( )):::marriageNode
+    u_kobun_tochi(( )):::marriageNode
+    c_tachibana_shimadamaro["橘島田麻呂&lt;br&gt;※淡海三船の娘の夫・橘常主父"]:::princes
+    u_mifune_daughter_shimadamaro(( )):::marriageNode
+    c_fujiwara_nakamasa["藤原中正&lt;br&gt;※橘澄清の娘の夫・藤原時姫父"]:::princes
+    u_sumikiyo_daughter_nakamasa(( )):::marriageNode
+    c_fujiwara_kaneie["藤原兼家&lt;br&gt;※藤原時姫の夫・藤原詮子父"]:::princes
+    u_kaneie_tokihime(( )):::marriageNode
+    u_enyu_senshi(( )):::marriageNode
+    n_kuzui_toshi["葛井藤子&lt;br&gt;※平城天皇妃・阿保親王母"]:::civilPrincesses
+    u_heizei_kuzui(( )):::marriageNode
+    p_ito["伊都内親王&lt;br&gt;(伊登内親王)&lt;br&gt;※桓武天皇皇女・阿保親王妃・在原業平母"]:::princesses
+    u_abo_ito(( )):::marriageNode
+    c_fujiwara_yasunori["藤原保則&lt;br&gt;※在原美子の夫・藤原清貫父"]:::princes
+    u_ariwara_miko_yasunori(( )):::marriageNode
+    c_fujiwara_tsunesuke["藤原恒佐&lt;br&gt;※藤原清貫の娘の夫・藤原懐忠父"]:::princes
+    u_kiyotsura_daughter_tsunesuke(( )):::marriageNode
+    n_minamoto_kiyoto_daughter["源清遠の娘&lt;br&gt;※藤原懐忠の妻・藤原邦昌母"]:::civilPrincesses
+    u_yasutada_kiyoto_daughter(( )):::marriageNode
+    n_minamoto_nin_daughter["源任の娘&lt;br&gt;※藤原邦昌の妻・藤原邦恒母"]:::civilPrincesses
+    u_kunimasa_minamoto_nin_daughter(( )):::marriageNode
+    c_fujiwara_munetada["藤原宗忠&lt;br&gt;※藤原行房の娘の夫・藤原宗能父"]:::princes
+    u_yukifusa_daughter_munetada(( )):::marriageNode
+    c_fujiwara_sueyuki["藤原季行&lt;br&gt;※藤原宗能の娘の夫・藤原定能父"]:::princes
+    u_muneno_daughter_sueyuki(( )):::marriageNode
+    c_mochiie_ieyuki["持明院家行&lt;br&gt;※藤原定能の娘の夫・持明院家定父"]:::princes
+    u_sadayoshi_daughter_ieyuki(( )):::marriageNode
+    c_tokudaiji_sanemori["徳大寺実盛&lt;br&gt;※持明院基親の娘の夫・徳大寺公有父"]:::princes
+    u_motochika_daughter_sanemori(( )):::marriageNode
+    n_takakura_nagatoyo_daughter["高倉永豊の娘&lt;br&gt;※徳大寺公有の妻・徳大寺実淳母"]:::civilPrincesses
+    u_kinari_takakura_daughter(( )):::marriageNode
+    c_konoe_hisamichi["近衛尚通&lt;br&gt;※徳大寺維子の夫・近衛稙家父"]:::princes
+    u_ishiko_hisamichi(( )):::marriageNode
+    c_konoe_taneie["近衛稙家&lt;br&gt;※近衛尚通・徳大寺維子の子・近衛前久父"]:::princes
+    n_hosokawa_takamoto_daughter["細川高基の娘&lt;br&gt;※近衛稙家の妻・近衛前久母"]:::civilPrincesses
+    u_taneie_hosokawa(( )):::marriageNode
+    c_konoe_sakihisa["近衛前久&lt;br&gt;※近衛稙家の子・近衛前子父"]:::princes
+    n_konoe_sakiko["近衛前子&lt;br&gt;(中和門院)&lt;br&gt;※近衛前久の娘・後陽成天皇女御・後水尾天皇母"]:::civilPrincesses
+    u_goyozei_sakiko(( )):::marriageNode
+    c_minamoto_yoshiari["源能有&lt;br&gt;845–897&lt;br&gt;※文徳天皇皇子・臣籍に入り源姓"]:::princes
+    n_minamoto_akiko["源昭子&lt;br&gt;※源能有の娘・藤原師輔母"]:::civilPrincesses
+    c_fujiwara_tadahira["藤原忠平&lt;br&gt;※源昭子の夫・藤原師輔父"]:::princes
+    c_fujiwara_morosuke["藤原師輔&lt;br&gt;908–960&lt;br&gt;※藤原忠平・源昭子の子・藤原安子父"]:::princes
+    n_fujiwara_moriko["藤原盛子&lt;br&gt;※藤原師輔の妻・藤原安子母"]:::civilPrincesses
+    n_fujiwara_anshi["藤原安子&lt;br&gt;927–964&lt;br&gt;※藤原師輔の娘・村上天皇皇后・冷泉天皇・円融天皇母"]:::civilPrincesses
+    u_tadahira_akiko(( )):::marriageNode
+    u_morosuke_moriko(( )):::marriageNode
+    u_murakami_anshi(( )):::marriageNode
+    p_kameyama_princess["亀山天皇皇女&lt;br&gt;※亀山天皇皇女・近衛経平母"]:::princesses
+    c_konoe_iemoto["近衛家基&lt;br&gt;1261–1296&lt;br&gt;※亀山天皇皇女の夫・近衛経平父"]:::princes
+    c_konoe_tsunehira["近衛経平&lt;br&gt;1287–1318&lt;br&gt;※近衛家基の子・母は亀山天皇皇女"]:::princes
+    c_konoe_mototsugu["近衛基嗣&lt;br&gt;1305–1354&lt;br&gt;※近衛経平の子・近衛道嗣父"]:::princes
+    c_konoe_michitsugu["近衛道嗣&lt;br&gt;1332–1387&lt;br&gt;※近衛基嗣の子・近衛兼嗣父"]:::princes
+    c_konoe_kanetsugu["近衛兼嗣&lt;br&gt;1360–1388&lt;br&gt;※近衛道嗣の子・近衛忠嗣父"]:::princes
+    c_konoe_tadatsugu["近衛忠嗣&lt;br&gt;1383–1454&lt;br&gt;※近衛兼嗣の子・近衛房嗣父"]:::princes
+    c_konoe_fusatsugu["近衛房嗣&lt;br&gt;1402–1488&lt;br&gt;※近衛忠嗣の子・近衛政家父"]:::princes
+    c_konoe_masaie["近衛政家&lt;br&gt;1444–1505&lt;br&gt;※近衛房嗣の子・近衛尚通父"]:::princes
+    u_kameyama_princess_iemoto(( )):::marriageNode
+    p_kazan_kiyohito["清仁親王&lt;br&gt;※花山天皇皇子・延信王父"]:::princes
+    c_shirakawa_nobusane["延信王&lt;br&gt;(源延信)&lt;br&gt;※清仁親王の子・1025年に源姓を賜り臣籍へ"]:::princes
+    c_shirakawa_yasusuke["康資王&lt;br&gt;※延信王の子・白川家系統"]:::princes
+    c_shirakawa_akiyasu["源顕康&lt;br&gt;(顕康王)&lt;br&gt;※康資王系・顕広王父"]:::princes
+    c_shirakawa_akihiro["顕広王&lt;br&gt;※花山源氏白川家・神祇伯世襲系統"]:::princes
+    c_shirakawa_nakasuke["仲資王&lt;br&gt;※顕広王の子・業資王父"]:::princes
+    c_shirakawa_narisuke["業資王&lt;br&gt;※仲資王の子・資光王父"]:::princes
+    c_shirakawa_sukemitsu["資光王&lt;br&gt;(源資光)&lt;br&gt;※業資王の子・資邦王父"]:::princes
+    c_shirakawa_sukekuni["資邦王&lt;br&gt;※資光王の子・業顕王父"]:::princes
+    c_shirakawa_nariaki["業顕王&lt;br&gt;※資邦王の子・資清王父"]:::princes
+    c_shirakawa_sukekiyo["資清王&lt;br&gt;※業顕王の子・資英王父"]:::princes
+    c_shirakawa_sukehide["資英王&lt;br&gt;※資清王の子・顕邦王父"]:::princes
+    c_shirakawa_akikuni["顕邦王&lt;br&gt;※資英王の子・資忠王父"]:::princes
+    c_shirakawa_suketada["資忠王&lt;br&gt;※顕邦王の子・豊子女王父"]:::princes
+    n_shirakawa_toyoko["豊子女王&lt;br&gt;※資忠王の娘・広橋兼郷室・広橋綱光母"]:::civilPrincesses
+    c_hirohashi_kanesato["広橋兼郷&lt;br&gt;(広橋宣光)&lt;br&gt;※豊子女王の夫・広橋綱光父"]:::princes
+    u_toyoko_kanesato(( )):::marriageNode
+    c_hirohashi_tsunamitsu["広橋綱光&lt;br&gt;※広橋兼郷・豊子女王の子・広橋綱光の娘父"]:::princes
+    n_hirohashi_tsunamitsu_daughter["広橋綱光の娘&lt;br&gt;※広橋綱光の娘・広橋守光室・広橋兼秀母"]:::civilPrincesses
+    c_hirohashi_morimitsu["広橋守光&lt;br&gt;※広橋綱光の娘の夫・広橋兼秀父"]:::princes
+    u_tsunamitsu_daughter_morimitsu(( )):::marriageNode
+    c_hirohashi_kanehide["広橋兼秀&lt;br&gt;※広橋守光・広橋綱光の娘の子・広橋国光父"]:::princes
+    c_hirohashi_kunimitsu["広橋国光&lt;br&gt;※広橋兼秀の子・広橋兼勝父"]:::princes
+    c_hirohashi_kanekatsu["広橋兼勝&lt;br&gt;※広橋国光の子・樋口信孝室の父"]:::princes
+    n_hirohashi_kanekatsu_daughter["広橋兼勝の娘&lt;br&gt;※広橋兼勝の娘・樋口信孝室・樋口信康母"]:::civilPrincesses
+    c_higuchi_nobutaka["樋口信孝&lt;br&gt;※広橋兼勝の娘の夫・樋口信康父"]:::princes
+    u_kanekatsu_daughter_nobutaka(( )):::marriageNode
+    c_higuchi_nobuyasu["樋口信康&lt;br&gt;※樋口信孝の子・樋口康熙父"]:::princes
+    c_higuchi_yasuhiro["樋口康熙&lt;br&gt;※樋口信康の子・樋口基康父"]:::princes
+    c_higuchi_motoyasu["樋口基康&lt;br&gt;※樋口康熙の子・樋口信子父"]:::princes
+    n_higuchi_nobuko["樋口信子&lt;br&gt;※樋口基康の娘・二条治孝室・九条尚忠母"]:::civilPrincesses
+    c_nijo_harutaka["二条治孝&lt;br&gt;※樋口信子の夫・九条尚忠父"]:::princes
+    u_nobuko_harutaka(( )):::marriageNode
+    c_kujo_hisatada["九条尚忠&lt;br&gt;※二条治孝・樋口信子の子・九条道孝父"]:::princes
+    c_kujo_michitaka["九条道孝&lt;br&gt;※九条尚忠の子・貞明皇后父"]:::princes
+    n_noma_ikuko["野間幾子&lt;br&gt;※九条道孝の妻・貞明皇后母"]:::civilPrincesses
+    u_michitaka_ikuko(( )):::marriageNode
+    p_sadazumi["貞純親王&lt;br&gt;873–916&lt;br&gt;※清和天皇皇子・源経基父（経基父系に異説あり）"]:::princes
+    c_minamoto_tsunemoto["源経基&lt;br&gt;(経基王・六孫王)&lt;br&gt;?–961&lt;br&gt;※貞純親王の子・清和源氏祖（父系異説あり）"]:::princes
+    c_minamoto_mitsunaka["源満仲&lt;br&gt;(多田満仲)&lt;br&gt;912–997&lt;br&gt;※源経基の子・源頼光父"]:::princes
+    c_minamoto_yorimitsu["源頼光&lt;br&gt;(源頼光・らいこう)&lt;br&gt;948–1021&lt;br&gt;※源満仲の子・源頼国父"]:::princes
+    c_minamoto_yorikuni["源頼国&lt;br&gt;?–1058&lt;br&gt;※源頼光の子・藤原為房室の父"]:::princes
+    n_minamoto_yorikuni_daughter["源頼国の娘&lt;br&gt;※源頼国の娘・藤原為房室・藤原顕隆母"]:::civilPrincesses
+    c_fujiwara_tamefusa["藤原為房&lt;br&gt;1049–1115&lt;br&gt;※源頼国の娘の夫・藤原顕隆父"]:::princes
+    u_yorikuni_daughter_tamefusa(( )):::marriageNode
+    c_fujiwara_akitaka["藤原顕隆&lt;br&gt;(葉室顕隆)&lt;br&gt;1072–1129&lt;br&gt;※藤原為房・源頼国の娘の子・藤原顕頼父"]:::princes
+    c_fujiwara_akiyori["藤原顕頼&lt;br&gt;(九条民部卿)&lt;br&gt;1094–1148&lt;br&gt;※藤原顕隆の子・藤原祐子父"]:::princes
+    n_fujiwara_yuko["藤原祐子&lt;br&gt;※藤原顕頼の娘・平時信室・平滋子母"]:::civilPrincesses
+    c_taira_tokinobu["平時信&lt;br&gt;?–1149&lt;br&gt;※藤原祐子の夫・平滋子父"]:::princes
+    u_yuko_tokinobu(( )):::marriageNode
+    n_taira_shigeko["平滋子&lt;br&gt;(建春門院)&lt;br&gt;1142–1176&lt;br&gt;※建春門院・後白河天皇女御・高倉天皇母"]:::civilPrincesses
+    u_goshirakawa_shigeko(( )):::marriageNode
+    n_sugawara_masumori_daughter["増守の娘&lt;br&gt;(菅原某女・菅典侍)&lt;br&gt;※後冷泉天皇に仕え、高階為行を産む"]:::civilPrincesses
+    u_goreizei_masumori_daughter(( )):::marriageNode
+    c_takashina_tameyuki["高階為行&lt;br&gt;(後冷泉天皇落胤)&lt;br&gt;1059–1107&lt;br&gt;※後冷泉天皇実子・落胤として高階氏側で養育"]:::princes
+    c_takashina_tameie["高階為家&lt;br&gt;※高階為行の養育上・系譜上の父"]:::princes
+    n_takashina_tameyuki_daughter["高階為行の娘&lt;br&gt;※藤原清綱室・藤原忠清母"]:::civilPrincesses
+    c_fujiwara_kiyotsuna["藤原清綱&lt;br&gt;(良門流)&lt;br&gt;※高階為行娘の夫・藤原忠清父"]:::princes
+    c_fujiwara_tadakiyo["藤原忠清&lt;br&gt;(良門流・淡路守)&lt;br&gt;※藤原清綱と高階為行娘の子"]:::princes
+    n_fujiwara_tadakiyo_daughter["藤原忠清の娘&lt;br&gt;※源為義室・源義朝母"]:::civilPrincesses
+    c_minamoto_tameyoshi["源為義&lt;br&gt;(六条判官)&lt;br&gt;1096–1156&lt;br&gt;※河内源氏"]:::princes
+    c_minamoto_yoshitomo["源義朝&lt;br&gt;(上総御曹司)&lt;br&gt;1123–1160&lt;br&gt;※源頼朝・坊門姫の父"]:::princes
+    n_bomon_hime["坊門姫&lt;br&gt;(源頼朝妹)&lt;br&gt;※源義朝娘・一条能保室"]:::civilPrincesses
+    c_ichijo_yoshiyasu["一条能保&lt;br&gt;1147–1197&lt;br&gt;※坊門姫の夫"]:::princes
+    n_ichijo_masako["一条全子&lt;br&gt;※一条能保女・西園寺公経室"]:::civilPrincesses
+    c_saionji_kintsune["西園寺公経&lt;br&gt;(藤原公経)&lt;br&gt;1171–1244&lt;br&gt;※西園寺家"]:::princes
+    c_saionji_saneuji["西園寺実氏&lt;br&gt;1194–1269&lt;br&gt;※西園寺公経の子"]:::princes
+    n_shijo_sadako["四条貞子&lt;br&gt;(北山准后)&lt;br&gt;※西園寺実氏室・西園寺姞子母"]:::civilPrincesses
+    n_saionji_kisshi["西園寺姞子&lt;br&gt;(大宮院)&lt;br&gt;1225–1292&lt;br&gt;※後嵯峨天皇中宮・後深草/亀山両天皇母"]:::civilPrincesses
+    u_tameyuki_daughter_kiyotsuna(( )):::marriageNode
+    u_tadakiyo_daughter_tameyoshi(( )):::marriageNode
+    u_bomon_yoshiyasu(( )):::marriageNode
+    u_masako_kintsune(( )):::marriageNode
+    u_saneuji_sadako(( )):::marriageNode
+    u_gosaga_kisshi(( )):::marriageNode
+    subgraph sg_full_north["北朝系"]
+        direction TB
+        tn001["北1 光厳天皇&lt;br&gt;(量仁親王)&lt;br&gt;1313–1364&lt;br&gt;※北朝第1代"]:::tennos
+        tn002["北2 光明天皇&lt;br&gt;(豊仁親王)&lt;br&gt;1321–1380&lt;br&gt;※北朝第2代"]:::tennos
+        tn003["北3 崇光天皇&lt;br&gt;(興仁親王)&lt;br&gt;1334–1398&lt;br&gt;※伏見宮家の男系祖先"]:::tennos
+        tn004["北4 後光厳天皇&lt;br&gt;(弥仁親王)&lt;br&gt;1338–1374&lt;br&gt;※北朝第4代"]:::tennos
+        tn005["北5 後円融天皇&lt;br&gt;(緒仁親王)&lt;br&gt;1358–1393&lt;br&gt;※北朝第5代"]:::tennos
+    end
+    style sg_full_north fill:#e8e8e8,fill-opacity:0.55,stroke:#a8a8a8,stroke-width:1.5px,color:#333333;
+    subgraph sg_full_fushimi["伏見宮系"]
+        direction TB
+        p_fukuko_reigen["福子内親王&lt;br&gt;1676–1707&lt;br&gt;※霊元天皇皇女・伏見宮貞建親王の母"]:::princesses
+        u_kuninaga_fukuko(( )):::marriageNode
+        fushimi_001["伏見宮栄仁親王&lt;br&gt;1351–1416&lt;br&gt;※崇光天皇第一皇子・伏見宮初代"]:::princes
+        fushimi_002["伏見宮治仁王&lt;br&gt;1381–1417&lt;br&gt;※貞成親王の同母兄・伏見宮第2代"]:::princes
+        fushimi_003["伏見宮貞成親王&lt;br&gt;(後崇光院)&lt;br&gt;1372–1456&lt;br&gt;※後花園天皇の実父・伏見宮第3代"]:::princes
+        fushimi_004["伏見宮貞常親王&lt;br&gt;1425–1474&lt;br&gt;※貞成親王第二男子・伏見宮第4代"]:::princes
+        fushimi_005["伏見宮邦高親王&lt;br&gt;1456–1532&lt;br&gt;※貞常親王第一男子・伏見宮第5代"]:::princes
+        fushimi_006["伏見宮貞敦親王&lt;br&gt;1488–1572&lt;br&gt;※邦高親王第一男子・伏見宮第6代"]:::princes
+        fushimi_007["伏見宮邦輔親王&lt;br&gt;1513–1563&lt;br&gt;※貞敦親王第一男子・伏見宮第7代"]:::princes
+        fushimi_008["伏見宮貞康親王&lt;br&gt;1547–1568&lt;br&gt;※邦輔親王第三男子・伏見宮第8代"]:::princes
+        fushimi_009["伏見宮邦房親王&lt;br&gt;1566–1622&lt;br&gt;※貞康親王第一男子・伏見宮第9代"]:::princes
+        fushimi_010["伏見宮貞清親王&lt;br&gt;1596–1654&lt;br&gt;※邦房親王第一男子・伏見宮第10代"]:::princes
+        fushimi_011["伏見宮邦尚親王&lt;br&gt;1613–1654&lt;br&gt;※貞清親王男子・伏見宮第11代・後継者なし"]:::princes
+        fushimi_012["伏見宮邦道親王&lt;br&gt;1641–1654&lt;br&gt;※貞清親王男子・伏見宮第12代・邦尚親王の異母弟・夭逝"]:::princes
+        fushimi_013["伏見宮貞致親王&lt;br&gt;1632–1694&lt;br&gt;※貞清親王男子（出自に異説あり）・伏見宮第13代"]:::princes
+        fushimi_014["伏見宮邦永親王&lt;br&gt;1676–1726&lt;br&gt;※貞致親王第二男子・伏見宮第14代"]:::princes
+        fushimi_015["伏見宮貞建親王&lt;br&gt;1701–1754&lt;br&gt;※邦永親王第三男子・伏見宮第15代"]:::princes
+        fushimi_016["伏見宮邦忠親王&lt;br&gt;1732–1759&lt;br&gt;※貞建親王第一男子・伏見宮第16代・後継者なし"]:::princes
+        fushimi_017["伏見宮貞行親王&lt;br&gt;1760–1772&lt;br&gt;※桃園天皇第二皇子・伏見宮第17代"]:::princes
+        fushimi_018["伏見宮邦頼親王&lt;br&gt;1733–1802&lt;br&gt;※貞建親王第二男子・伏見宮第18代"]:::princes
+        fushimi_019["伏見宮貞敬親王&lt;br&gt;1776–1841&lt;br&gt;※邦頼親王第一男子・伏見宮第19代"]:::princes
+        fushimi_020["伏見宮邦家親王&lt;br&gt;1802–1872&lt;br&gt;※伏見宮第20代・旧11宮家の男系共通祖・香淳皇后の父系祖"]:::princes
+        fushimi_021["伏見宮貞教親王&lt;br&gt;1836–1862&lt;br&gt;※邦家親王第六男子・伏見宮第21代"]:::princes
+        fushimi_022["伏見宮貞愛親王&lt;br&gt;1858–1923&lt;br&gt;※邦家親王第十四男子・伏見宮第22代・のち再継承"]:::princes
+        fushimi_023["伏見宮博恭王&lt;br&gt;(愛賢王)&lt;br&gt;1875–1946&lt;br&gt;※貞愛親王第一男子・伏見宮第23代"]:::princes
+        fushimi_024["博義王&lt;br&gt;1897–1938&lt;br&gt;※博恭王第一男子・伏見宮継承前に薨去・博明の父"]:::princes
+        fushimi_025["伏見博明&lt;br&gt;(伏見宮博明王)&lt;br&gt;1932–&lt;br&gt;※博義王第一男子・伏見宮第24代・1947年皇籍離脱"]:::princes
+    end
+    style sg_full_fushimi fill:#e8e8e8,fill-opacity:0.55,stroke:#a8a8a8,stroke-width:1.5px,color:#333333;
+    subgraph sg_full_shogoin["聖護院宮系"]
+        direction TB
+        shogoin_001["聖護院宮嘉言親王&lt;br&gt;1821–1868&lt;br&gt;※邦家親王第二男子・聖護院宮初代"]:::princes
+    end
+    style sg_full_shogoin fill:#e8e8e8,fill-opacity:0.55,stroke:#a8a8a8,stroke-width:1.5px,color:#333333;
+    subgraph sg_full_komatsu["小松宮系"]
+        direction TB
+        komatsu_001["小松宮彰仁親王&lt;br&gt;(仁和寺宮嘉彰親王)&lt;br&gt;1846–1903&lt;br&gt;※邦家親王第八男子・小松宮初代"]:::princes
+    end
+    style sg_full_komatsu fill:#e8e8e8,fill-opacity:0.55,stroke:#a8a8a8,stroke-width:1.5px,color:#333333;
+    subgraph sg_full_kacho["華頂宮系"]
+        direction TB
+        kacho_001["華頂宮博経親王&lt;br&gt;1851–1876&lt;br&gt;※邦家親王第十二男子・華頂宮初代"]:::princes
+    end
+    style sg_full_kacho fill:#e8e8e8,fill-opacity:0.55,stroke:#a8a8a8,stroke-width:1.5px,color:#333333;
+    subgraph sg_full_kanin["閑院宮系"]
+        direction TB
+        kanin_001["閑院宮直仁親王&lt;br&gt;1704–1753&lt;br&gt;※東山天皇第六皇子・閑院宮初代"]:::princes
+        kanin_002["閑院宮典仁親王&lt;br&gt;(慶光天皇)&lt;br&gt;1733–1794&lt;br&gt;※光格天皇の実父・追尊天皇・閑院宮第2代"]:::princes
+        kanin_003["閑院宮美仁親王&lt;br&gt;1758–1818&lt;br&gt;※典仁親王第一男子・閑院宮第3代"]:::princes
+        kanin_004["閑院宮孝仁親王&lt;br&gt;1792–1824&lt;br&gt;※美仁親王第一男子・閑院宮第4代"]:::princes
+        kanin_005["閑院宮愛仁親王&lt;br&gt;1818–1842&lt;br&gt;※孝仁親王第二男子・閑院宮第5代・子女なし"]:::princes
+        kanin_006["閑院宮載仁親王&lt;br&gt;1865–1945&lt;br&gt;※邦家親王第十六男子・閑院宮第6代"]:::princes
+        kanin_007["閑院春仁&lt;br&gt;(閑院宮春仁王)&lt;br&gt;1902–1988&lt;br&gt;※載仁親王第二男子・閑院宮第7代・1947年皇籍離脱"]:::princes
+    end
+    style sg_full_kanin fill:#e8e8e8,fill-opacity:0.55,stroke:#a8a8a8,stroke-width:1.5px,color:#333333;
+    subgraph sg_full_kuni["久邇宮系"]
+        direction TB
+        kuni_001["久邇宮朝彦親王&lt;br&gt;(青蓮院宮)&lt;br&gt;1824–1891&lt;br&gt;※邦家親王第四男子・久邇宮初代"]:::princes
+        kuni_002["久邇宮邦彦王&lt;br&gt;1873–1929&lt;br&gt;※朝彦親王第三男子・久邇宮第2代・香淳皇后の父"]:::princes
+        kuni_004["久邇朝融&lt;br&gt;(久邇宮朝融王)&lt;br&gt;1901–1959&lt;br&gt;※邦彦王第一男子・久邇宮第3代・1947年皇籍離脱"]:::princes
+        kuni_005["久邇邦昭&lt;br&gt;(邦昭王)&lt;br&gt;1929–&lt;br&gt;※朝融王第一男子・1947年皇籍離脱・旧久邇宮第4代"]:::princes
+        kuni_006["久邇朝尊&lt;br&gt;1959–&lt;br&gt;※久邇邦昭第一男子・神宮大宮司"]:::princes
+        kuni_007["久邇朝建&lt;br&gt;(朝建王)&lt;br&gt;1940–&lt;br&gt;※朝融王第二男子・1947年皇籍離脱"]:::princes
+        kuni_008["久邇邦晴&lt;br&gt;1961–&lt;br&gt;※久邇邦昭第二男子"]:::princes
+        kuni_009["久邇朝俊&lt;br&gt;1971–&lt;br&gt;※久邇朝建第一男子"]:::princes
+        kuni_010["久邇朝宏&lt;br&gt;(朝宏王)&lt;br&gt;1944–&lt;br&gt;※朝融王第三男子・1947年皇籍離脱"]:::princes
+        kuni_011["多嘉王&lt;br&gt;1875–1937&lt;br&gt;※朝彦親王第五男子"]:::princes
+        kuni_012["賀彦王&lt;br&gt;1912–1918&lt;br&gt;※多嘉王第一男子・夭逝"]:::princes
+    end
+    style sg_full_kuni fill:#e8e8e8,fill-opacity:0.55,stroke:#a8a8a8,stroke-width:1.5px,color:#333333;
+    subgraph sg_full_higashikuni["東久邇宮系"]
+        direction TB
+        higashikuni_001["東久邇稔彦&lt;br&gt;(東久邇宮稔彦王)&lt;br&gt;1887–1990&lt;br&gt;※朝彦親王第九男子・東久邇宮初代・1947年皇籍離脱"]:::princes
+        p_toshiko["東久邇聡子&lt;br&gt;(泰宮聡子内親王)&lt;br&gt;1896–1978&lt;br&gt;※明治天皇第九皇女・稔彦王妃・1947年皇籍離脱"]:::princesses
+        u_naruhiko_toshiko(( )):::marriageNode
+        higashikuni_002["東久邇盛厚&lt;br&gt;(盛厚王)&lt;br&gt;1916–1969&lt;br&gt;※稔彦王第一男子・1947年皇籍離脱"]:::princes
+        u_morihiro_shigeko(( )):::marriageNode
+        higashikuni_003["東久邇信彦&lt;br&gt;(信彦王)&lt;br&gt;1945–2019&lt;br&gt;※盛厚王第一男子・1947年皇籍離脱・旧東久邇宮第2代"]:::princes
+        higashikuni_004["東久邇征彦&lt;br&gt;1973–&lt;br&gt;※東久邇信彦第一男子・旧東久邇宮第3代"]:::princes
+        higashikuni_005["東久邇眞彦&lt;br&gt;1953–&lt;br&gt;※盛厚王第三男子"]:::princes
+        higashikuni_006["東久邇照彦&lt;br&gt;1979–&lt;br&gt;※東久邇眞彦第一男子"]:::princes
+        higashikuni_007["東久邇睦彦&lt;br&gt;1980–&lt;br&gt;※東久邇眞彦第二男子"]:::princes
+        higashikuni_008["壬生基博&lt;br&gt;(東久邇秀彦)&lt;br&gt;1949–&lt;br&gt;※盛厚王・成子内親王第二男子・壬生家養子"]:::princes
+        higashikuni_009["壬生基成&lt;br&gt;1979–&lt;br&gt;※壬生基博第一男子"]:::princes
+        higashikuni_010["壬生基敦&lt;br&gt;1982–&lt;br&gt;※壬生基博第二男子"]:::princes
+        n_yoshiko_terao["寺尾佳子&lt;br&gt;1927–&lt;br&gt;※東久邇盛厚の再婚相手"]:::civilPrincesses
+        u_morihiro_yoshiko(( )):::marriageNode
+        higashikuni_011["寺尾厚彦&lt;br&gt;(東久邇厚彦)&lt;br&gt;1966–&lt;br&gt;※盛厚・寺尾佳子第一男子・寺尾家養子"]:::princes
+        higashikuni_012["東久邇盛彦&lt;br&gt;1967–&lt;br&gt;※盛厚・寺尾佳子第二男子"]:::princes
+        higashikuni_013["師正王&lt;br&gt;1917–1923&lt;br&gt;※稔彦王第二男子・夭逝"]:::princes
+        higashikuni_014["多羅間俊彦&lt;br&gt;(俊彦王)&lt;br&gt;1929–2015&lt;br&gt;※稔彦王第四男子・1947年皇籍離脱"]:::princes
+        higashikuni_015["多羅間アルフレッド稔彦&lt;br&gt;1955–&lt;br&gt;※多羅間俊彦一人息子"]:::princes
+        p_shigeko["東久邇成子&lt;br&gt;(照宮成子内親王)&lt;br&gt;1925–1961&lt;br&gt;※昭和天皇第一皇女・盛厚王妃・1947年皇籍離脱"]:::princesses
+    end
+    style sg_full_higashikuni fill:#e8e8e8,fill-opacity:0.55,stroke:#a8a8a8,stroke-width:1.5px,color:#333333;
+    subgraph sg_full_kitashirakawa["北白川宮系"]
+        direction TB
+        kitashirakawa_005["北白川宮智成親王&lt;br&gt;1856–1872&lt;br&gt;※邦家親王第十三男子・聖護院宮第2代・北白川宮初代"]:::princes
+        kitashirakawa_001["北白川宮能久親王&lt;br&gt;(輪王寺宮公現親王)&lt;br&gt;1847–1895&lt;br&gt;※邦家親王第九男子・北白川宮第2代"]:::princes
+        kitashirakawa_002["北白川宮成久王&lt;br&gt;1887–1923&lt;br&gt;※能久親王第三男子・北白川宮第3代"]:::princes
+        p_fusako_meiji["北白川房子&lt;br&gt;(周宮房子内親王)&lt;br&gt;1890–1974&lt;br&gt;※明治天皇第七皇女・成久王妃・1947年皇籍離脱"]:::princesses
+        u_naruhisa_fusako(( )):::marriageNode
+        kitashirakawa_003["北白川宮永久王&lt;br&gt;1910–1940&lt;br&gt;※成久王第一男子・北白川宮第4代"]:::princes
+        kitashirakawa_004["北白川道久&lt;br&gt;(北白川宮道久王)&lt;br&gt;1937–2018&lt;br&gt;※永久王第一男子・北白川宮第5代・1947年皇籍離脱"]:::princes
+    end
+    style sg_full_kitashirakawa fill:#e8e8e8,fill-opacity:0.55,stroke:#a8a8a8,stroke-width:1.5px,color:#333333;
+    subgraph sg_full_takeda["竹田宮系"]
+        direction TB
+        takeda_001["竹田宮恒久王&lt;br&gt;1882–1919&lt;br&gt;※能久親王第一男子・竹田宮初代"]:::princes
+        p_masako_meiji["恒久王妃 昌子内親王&lt;br&gt;(常宮昌子内親王)&lt;br&gt;1888–1940&lt;br&gt;※明治天皇第六皇女"]:::princesses
+        u_tsunehisa_masako(( )):::marriageNode
+        takeda_002["竹田恒徳&lt;br&gt;(竹田宮恒徳王)&lt;br&gt;1909–1992&lt;br&gt;※恒久王第一男子・竹田宮第2代・1947年皇籍離脱"]:::princes
+        takeda_003["竹田恒正&lt;br&gt;(恒正王)&lt;br&gt;1940–&lt;br&gt;※恒徳王第一男子・1947年皇籍離脱・旧竹田宮第3代"]:::princes
+        takeda_004["竹田恒治&lt;br&gt;(恒治王)&lt;br&gt;1944–&lt;br&gt;※恒徳王第二男子・1947年皇籍離脱"]:::princes
+        takeda_005["竹田恒和&lt;br&gt;1947–&lt;br&gt;※恒徳王第三男子・皇籍離脱後に出生"]:::princes
+        takeda_006["竹田恒貴&lt;br&gt;1974–&lt;br&gt;※竹田恒正第一男子"]:::princes
+        takeda_007["竹田恒昭&lt;br&gt;1979–&lt;br&gt;※竹田恒治第一男子"]:::princes
+        takeda_008["竹田恒智&lt;br&gt;1980–&lt;br&gt;※竹田恒治第二男子"]:::princes
+        takeda_009["竹田恒泰&lt;br&gt;1975–&lt;br&gt;※竹田恒和第一男子"]:::princes
+        takeda_010["竹田恒俊&lt;br&gt;1978–&lt;br&gt;※竹田恒和第二男子"]:::princes
+    end
+    style sg_full_takeda fill:#e8e8e8,fill-opacity:0.55,stroke:#a8a8a8,stroke-width:1.5px,color:#333333;
+    subgraph sg_full_kaya["賀陽宮系"]
+        direction TB
+        kaya_001["賀陽宮邦憲王&lt;br&gt;(巌麿王)&lt;br&gt;1867–1909&lt;br&gt;※朝彦親王第二男子・賀陽宮初代"]:::princes
+        kaya_002["賀陽恒憲&lt;br&gt;(賀陽宮恒憲王)&lt;br&gt;1900–1978&lt;br&gt;※邦憲王第一男子・賀陽宮第2代・1947年皇籍離脱"]:::princes
+        kaya_003["賀陽邦寿&lt;br&gt;(邦寿王)&lt;br&gt;1922–1986&lt;br&gt;※恒憲王第一男子・1947年皇籍離脱・旧賀陽宮第3代・子女なし"]:::princes
+        kaya_004["賀陽治憲&lt;br&gt;(治憲王)&lt;br&gt;1926–&lt;br&gt;※恒憲王第二男子・1947年皇籍離脱・旧賀陽宮第4代"]:::princes
+        kaya_005["賀陽章憲&lt;br&gt;(章憲王)&lt;br&gt;1929–1994&lt;br&gt;※恒憲王第三男子・1947年皇籍離脱"]:::princes
+        kaya_006["賀陽文憲&lt;br&gt;(文憲王)&lt;br&gt;1931–&lt;br&gt;※恒憲王第四男子・1947年皇籍離脱"]:::princes
+        kaya_007["賀陽宗憲&lt;br&gt;(宗憲王)&lt;br&gt;1935–&lt;br&gt;※恒憲王第五男子・1947年皇籍離脱"]:::princes
+        kaya_008["賀陽健憲&lt;br&gt;(健憲王)&lt;br&gt;1942–&lt;br&gt;※恒憲王第六男子・1947年皇籍離脱"]:::princes
+        kaya_009["賀陽正憲&lt;br&gt;1959–&lt;br&gt;※賀陽章憲第一男子・旧賀陽宮第5代"]:::princes
+    end
+    style sg_full_kaya fill:#e8e8e8,fill-opacity:0.55,stroke:#a8a8a8,stroke-width:1.5px,color:#333333;
+    subgraph sg_full_asaka["朝香宮系"]
+        direction TB
+        asaka_001["朝香鳩彦&lt;br&gt;(朝香宮鳩彦王)&lt;br&gt;1887–1981&lt;br&gt;※朝彦親王第八男子・朝香宮初代・1947年皇籍離脱"]:::princes
+        p_nobuko_meiji["鳩彦王妃 允子内親王&lt;br&gt;(富美宮允子内親王)&lt;br&gt;1891–1933&lt;br&gt;※明治天皇第八皇女"]:::princesses
+        u_yasuhiko_nobuko(( )):::marriageNode
+        asaka_002["朝香孚彦&lt;br&gt;(孚彦王)&lt;br&gt;1912–1994&lt;br&gt;※鳩彦王第一男子・1947年皇籍離脱・旧朝香宮第2代"]:::princes
+        asaka_003["朝香誠彦&lt;br&gt;(誠彦王)&lt;br&gt;1943–&lt;br&gt;※孚彦王第一男子・1947年皇籍離脱・旧朝香宮第3代"]:::princes
+        asaka_004["朝香明彦&lt;br&gt;1972–&lt;br&gt;※朝香誠彦第一男子"]:::princes
+    end
+    style sg_full_asaka fill:#e8e8e8,fill-opacity:0.55,stroke:#a8a8a8,stroke-width:1.5px,color:#333333;
+    subgraph sg_full_yamashina["山階宮系"]
+        direction TB
+        yamashina_001["山階宮晃親王&lt;br&gt;1816–1898&lt;br&gt;※邦家親王第一男子・山階宮初代"]:::princes
+        yamashina_002["山階宮菊麿王&lt;br&gt;(梨本宮菊麿王)&lt;br&gt;1873–1908&lt;br&gt;※晃親王第一男子・一時梨本宮継承・山階宮第2代"]:::princes
+        yamashina_003["山階武彦&lt;br&gt;(山階宮武彦王)&lt;br&gt;1898–1987&lt;br&gt;※菊麿王第一男子・山階宮第3代・1947年皇籍離脱"]:::princes
+    end
+    style sg_full_yamashina fill:#e8e8e8,fill-opacity:0.55,stroke:#a8a8a8,stroke-width:1.5px,color:#333333;
+    subgraph sg_full_nashimoto["梨本宮系"]
+        direction TB
+        nashimoto_001["梨本宮守脩親王&lt;br&gt;1819–1881&lt;br&gt;※貞敬親王第十男子・梨本宮初代"]:::princes
+        nashimoto_002["梨本守正&lt;br&gt;(梨本宮守正王)&lt;br&gt;1874–1951&lt;br&gt;※朝彦親王第四男子・梨本宮第2代・1947年皇籍離脱"]:::princes
+    end
+    style sg_full_nashimoto fill:#e8e8e8,fill-opacity:0.55,stroke:#a8a8a8,stroke-width:1.5px,color:#333333;
+    subgraph sg_full_higashifushimi["東伏見宮系"]
+        direction TB
+        higashifushimi_001["東伏見宮依仁親王&lt;br&gt;(小松宮依仁親王)&lt;br&gt;1867–1922&lt;br&gt;※邦家親王第十七男子・東伏見宮初代"]:::princes
+        higashifushimi_002["東伏見慈洽&lt;br&gt;(邦英王・東伏見邦英)&lt;br&gt;1910–2014&lt;br&gt;※邦彦王第三男子・1931年臣籍降下・東伏見宮家祭祀継承"]:::princes
+        higashifushimi_003["東伏見慈晃&lt;br&gt;(東伏見守俶)&lt;br&gt;1942–&lt;br&gt;※慈洽第二男子・青蓮院門跡門主"]:::princes
+        higashifushimi_004["東伏見光晋&lt;br&gt;(東伏見憲和)&lt;br&gt;1977–&lt;br&gt;※慈晃男子・男系男子子孫あり"]:::princes
+    end
+    style sg_full_higashifushimi fill:#e8e8e8,fill-opacity:0.55,stroke:#a8a8a8,stroke-width:1.5px,color:#333333;
+    subgraph sg_remaining_royal_outer["1947年10月14日の11宮家皇籍離脱後も皇室に残った系統&lt;br/&gt;※後年に婚姻等で皇籍を離れた内親王・女王と、その関係表示に必要な婚姻相手を含む"]
+        direction TB
+        subgraph sg_remaining_mainline["昭和天皇・上皇・今上天皇系"]
+            direction TB
+            u_taisho_sadako(( )):::marriageNode
+            n_sadako["貞明皇后&lt;br&gt;(九条節子)&lt;br&gt;1884–1951&lt;br&gt;※九条道孝・野間幾子の娘・大正天皇皇后・昭和天皇母"]:::civilPrincesses
+            u_showa_nagako(( )):::marriageNode
+            kuni_003["香淳皇后&lt;br&gt;(良子女王)&lt;br&gt;1903–2000&lt;br&gt;※邦彦王第一女子・昭和天皇皇后"]:::princesses
+            t124["124 昭和天皇&lt;br&gt;(裕仁親王)&lt;br&gt;1901–1989&lt;br&gt;※大正天皇第一皇子・第124代天皇・昭和"]:::tennos
+            p_kazuko["鷹司和子&lt;br&gt;(孝宮和子内親王)&lt;br&gt;1929–1989&lt;br&gt;※昭和天皇第三皇女・1950年婚姻により皇族の身分を離れる"]:::princesses
+            p_atsuko["池田厚子&lt;br&gt;(順宮厚子内親王)&lt;br&gt;1931–&lt;br&gt;※昭和天皇第四皇女・1952年婚姻により皇族の身分を離れる"]:::princesses
+            p_takako["島津貴子&lt;br&gt;(清宮貴子内親王)&lt;br&gt;1939–&lt;br&gt;※昭和天皇第五皇女・1960年婚姻により皇族の身分を離れる"]:::princesses
+            u_joko_michiko(( )):::marriageNode
+            n_michiko["上皇后 美智子&lt;br&gt;(正田美智子)&lt;br&gt;1934–"]:::civilPrincesses
+            t125["125 上皇&lt;br&gt;(明仁親王)&lt;br&gt;1933–&lt;br&gt;※昭和天皇第一皇子・第125代天皇・平成"]:::tennos
+            p_sayako["黒田清子&lt;br&gt;(紀宮清子内親王)&lt;br&gt;1969–&lt;br&gt;※上皇第一皇女・2005年婚姻により皇族の身分を離れる"]:::princesses
+            u_naruhito_masako(( )):::marriageNode
+            n_masako["皇后 雅子&lt;br&gt;(小和田雅子)&lt;br&gt;1963–"]:::civilPrincesses
+            t126["126 今上天皇&lt;br&gt;(徳仁親王)&lt;br&gt;1960–&lt;br&gt;※上皇第一皇子・第126代天皇・令和"]:::tennos
+            p_aiko["敬宮愛子内親王&lt;br&gt;2001–&lt;br&gt;※今上天皇第一皇女"]:::princesses
+            c_takatsukasa_toshimichi["鷹司平通&lt;br&gt;※鷹司和子の夫"]:::princes
+            u_kazuko_toshimichi(( )):::marriageNode
+            c_ikeda_takamasa["池田隆政&lt;br&gt;※池田厚子の夫"]:::princes
+            u_atsuko_takamasa(( )):::marriageNode
+            c_shimazu_hisanaga["島津久永&lt;br&gt;※島津貴子の夫"]:::princes
+            u_takako_hisanaga(( )):::marriageNode
+            c_kuroda_yoshiki["黒田慶樹&lt;br&gt;※黒田清子の夫"]:::princes
+            u_sayako_yoshiki(( )):::marriageNode
+        end
+        style sg_remaining_mainline fill:#e8e8e8,fill-opacity:0.55,stroke:#a8a8a8,stroke-width:1.5px,color:#333333;
+        subgraph sg_remaining_chichibu["秩父宮系"]
+            direction TB
+            p_yasuhito["秩父宮雍仁親王&lt;br&gt;1902–1953&lt;br&gt;※大正天皇第二皇子"]:::princes
+            u_chichibu_setsuko(( )):::marriageNode
+            n_setsuko["雍仁親王妃 勢津子&lt;br&gt;(松平勢津子)&lt;br&gt;1909–1995&lt;br&gt;※秩父宮雍仁親王妃"]:::civilPrincesses
+        end
+        style sg_remaining_chichibu fill:#e8e8e8,fill-opacity:0.55,stroke:#a8a8a8,stroke-width:1.5px,color:#333333;
+        subgraph sg_remaining_takamatsu["高松宮系"]
+            direction TB
+            p_nobuhito["高松宮宣仁親王&lt;br&gt;1905–1987&lt;br&gt;※大正天皇第三皇子"]:::princes
+            u_takamatsu_kikuko(( )):::marriageNode
+            n_kikuko["宣仁親王妃 喜久子&lt;br&gt;(徳川喜久子)&lt;br&gt;1911–2004&lt;br&gt;※高松宮宣仁親王妃"]:::civilPrincesses
+        end
+        style sg_remaining_takamatsu fill:#e8e8e8,fill-opacity:0.55,stroke:#a8a8a8,stroke-width:1.5px,color:#333333;
+        subgraph sg_remaining_mikasa["三笠宮系"]
+            direction TB
+            p_takahito["三笠宮崇仁親王&lt;br&gt;1915–2016&lt;br&gt;※大正天皇第四皇子"]:::princes
+            u_mikasa_yuriko(( )):::marriageNode
+            n_yuriko["崇仁親王妃 百合子&lt;br&gt;(高木百合子)&lt;br&gt;1923–2024"]:::civilPrincesses
+            p_tomohito["寛仁親王&lt;br&gt;1946–2012&lt;br&gt;※崇仁親王第一男子"]:::princes
+            u_tomohito_nobuko(( )):::marriageNode
+            n_nobuko["寛仁親王妃 信子&lt;br&gt;(麻生信子)&lt;br&gt;1955–"]:::civilPrincesses
+            p_akiko["彬子女王&lt;br&gt;1981–&lt;br&gt;※寛仁親王第一女子"]:::princesses
+            p_yoko["瑶子女王&lt;br&gt;1983–&lt;br&gt;※寛仁親王第二女子"]:::princesses
+            p_yasuko_mikasa["近衞甯子&lt;br&gt;(甯子内親王)&lt;br&gt;1944–&lt;br&gt;※崇仁親王第一女子・1966年婚姻により皇族の身分を離れる"]:::princesses
+            c_konoe_tadateru["近衞忠煇&lt;br&gt;※近衞甯子の夫"]:::princes
+            u_yasuko_tadateru(( )):::marriageNode
+            p_masako_mikasa["千容子&lt;br&gt;(容子内親王)&lt;br&gt;1951–&lt;br&gt;※崇仁親王第二女子・1983年婚姻により皇族の身分を離れる"]:::princesses
+            c_sen_soshitsu["千宗室&lt;br&gt;(千政之)&lt;br&gt;※千容子の夫"]:::princes
+            u_masako_soshitsu(( )):::marriageNode
+        end
+        style sg_remaining_mikasa fill:#e8e8e8,fill-opacity:0.55,stroke:#a8a8a8,stroke-width:1.5px,color:#333333;
+        subgraph sg_remaining_hitachi["常陸宮系"]
+            direction TB
+            p_masahito_02["常陸宮正仁親王&lt;br&gt;1935–&lt;br&gt;※昭和天皇第二皇子"]:::princes
+            u_hitachi_hanako(( )):::marriageNode
+            n_hanako["正仁親王妃 華子&lt;br&gt;(津軽華子)&lt;br&gt;1940–"]:::civilPrincesses
+        end
+        style sg_remaining_hitachi fill:#e8e8e8,fill-opacity:0.55,stroke:#a8a8a8,stroke-width:1.5px,color:#333333;
+        subgraph sg_remaining_akishino["秋篠宮系"]
+            direction TB
+            p_fumihito["秋篠宮文仁親王&lt;br&gt;1965–&lt;br&gt;※上皇第二皇子・皇嗣"]:::princes
+            u_akishino_kiko(( )):::marriageNode
+            n_kiko["文仁親王妃 紀子&lt;br&gt;(川嶋紀子)&lt;br&gt;1966–&lt;br&gt;※皇嗣妃"]:::civilPrincesses
+            p_hisahito["悠仁親王&lt;br&gt;2006–&lt;br&gt;※文仁親王第一男子"]:::princes
+            p_kako["佳子内親王&lt;br&gt;1994–&lt;br&gt;※文仁親王第二女子"]:::princesses
+            p_mako["小室眞子&lt;br&gt;(眞子内親王)&lt;br&gt;1991–&lt;br&gt;※文仁親王第一女子・2021年婚姻により皇族の身分を離れる"]:::princesses
+            c_komuro_kei["小室圭&lt;br&gt;※小室眞子の夫"]:::princes
+            u_mako_kei(( )):::marriageNode
+        end
+        style sg_remaining_akishino fill:#e8e8e8,fill-opacity:0.55,stroke:#a8a8a8,stroke-width:1.5px,color:#333333;
+        subgraph sg_remaining_katsura["桂宮系"]
+            direction TB
+            p_yoshihito["桂宮宜仁親王&lt;br&gt;1948–2014&lt;br&gt;※崇仁親王第二男子"]:::princes
+        end
+        style sg_remaining_katsura fill:#e8e8e8,fill-opacity:0.55,stroke:#a8a8a8,stroke-width:1.5px,color:#333333;
+        subgraph sg_remaining_takamado["高円宮系"]
+            direction TB
+            p_norihito["高円宮憲仁親王&lt;br&gt;1954–2002&lt;br&gt;※崇仁親王第三男子"]:::princes
+            u_norihito_hisako(( )):::marriageNode
+            n_hisako["憲仁親王妃 久子&lt;br&gt;(鳥取久子)&lt;br&gt;1953–"]:::civilPrincesses
+            p_tsuguko["承子女王&lt;br&gt;1986–&lt;br&gt;※憲仁親王第一女子"]:::princesses
+            p_noriko["千家典子&lt;br&gt;(典子女王)&lt;br&gt;1988–&lt;br&gt;※憲仁親王第二女子・2014年婚姻により皇族の身分を離れる"]:::princesses
+            p_ayako["守谷絢子&lt;br&gt;(絢子女王)&lt;br&gt;1990–&lt;br&gt;※憲仁親王第三女子・2018年婚姻により皇族の身分を離れる"]:::princesses
+            c_senge_kunimaro["千家国麿&lt;br&gt;※千家典子の夫"]:::princes
+            u_noriko_kunimaro(( )):::marriageNode
+            c_moriya_kei["守谷慧&lt;br&gt;※守谷絢子の夫"]:::princes
+            u_ayako_kei(( )):::marriageNode
+        end
+        style sg_remaining_takamado fill:#e8e8e8,fill-opacity:0.55,stroke:#a8a8a8,stroke-width:1.5px,color:#333333;
+    end
+    style sg_remaining_royal_outer fill:#fff8d9,stroke:#c8ab52,stroke-width:2px,color:#333333;
+    style asaka_001 stroke-dasharray: 6 4
+    style asaka_002 stroke-dasharray: 6 4
+    style asaka_003 stroke-dasharray: 6 4
+    style asaka_004 stroke-dasharray: 6 4
+    style c_ariwara_narihira stroke-dasharray: 6 4
+    style c_fujiwara_akitaka stroke-dasharray: 6 4
+    style c_fujiwara_akiyori stroke-dasharray: 6 4
+    style c_fujiwara_kaneie stroke-dasharray: 6 4
+    style c_fujiwara_kiyotsuna stroke-dasharray: 6 4
+    style c_fujiwara_kiyotsura stroke-dasharray: 6 4
+    style c_fujiwara_kunimasa stroke-dasharray: 6 4
+    style c_fujiwara_kunitsune stroke-dasharray: 6 4
+    style c_fujiwara_morosuke stroke-dasharray: 6 4
+    style c_fujiwara_muneno stroke-dasharray: 6 4
+    style c_fujiwara_munetada stroke-dasharray: 6 4
+    style c_fujiwara_nakamasa stroke-dasharray: 6 4
+    style c_fujiwara_sadayoshi stroke-dasharray: 6 4
+    style c_fujiwara_sueyuki stroke-dasharray: 6 4
+    style c_fujiwara_tadahira stroke-dasharray: 6 4
+    style c_fujiwara_tadakiyo stroke-dasharray: 6 4
+    style c_fujiwara_tamefusa stroke-dasharray: 6 4
+    style c_fujiwara_tsunesuke stroke-dasharray: 6 4
+    style c_fujiwara_yasunori stroke-dasharray: 6 4
+    style c_fujiwara_yasutada stroke-dasharray: 6 4
+    style c_fujiwara_yukifusa stroke-dasharray: 6 4
+    style c_higuchi_motoyasu stroke-dasharray: 6 4
+    style c_higuchi_nobutaka stroke-dasharray: 6 4
+    style c_higuchi_nobuyasu stroke-dasharray: 6 4
+    style c_higuchi_yasuhiro stroke-dasharray: 6 4
+    style c_hirohashi_kanehide stroke-dasharray: 6 4
+    style c_hirohashi_kanekatsu stroke-dasharray: 6 4
+    style c_hirohashi_kanesato stroke-dasharray: 6 4
+    style c_hirohashi_kunimitsu stroke-dasharray: 6 4
+    style c_hirohashi_morimitsu stroke-dasharray: 6 4
+    style c_hirohashi_tsunamitsu stroke-dasharray: 6 4
+    style c_ichijo_yoshiyasu stroke-dasharray: 6 4
+    style c_konoe_fusatsugu stroke-dasharray: 6 4
+    style c_konoe_hisamichi stroke-dasharray: 6 4
+    style c_konoe_iemoto stroke-dasharray: 6 4
+    style c_konoe_kanetsugu stroke-dasharray: 6 4
+    style c_konoe_masaie stroke-dasharray: 6 4
+    style c_konoe_michitsugu stroke-dasharray: 6 4
+    style c_konoe_mototsugu stroke-dasharray: 6 4
+    style c_konoe_sakihisa stroke-dasharray: 6 4
+    style c_konoe_tadatsugu stroke-dasharray: 6 4
+    style c_konoe_taneie stroke-dasharray: 6 4
+    style c_konoe_tsunehira stroke-dasharray: 6 4
+    style c_kujo_hisatada stroke-dasharray: 6 4
+    style c_kujo_michitaka stroke-dasharray: 6 4
+    style c_minamoto_mitsunaka stroke-dasharray: 6 4
+    style c_minamoto_tameyoshi stroke-dasharray: 6 4
+    style c_minamoto_tsunemoto stroke-dasharray: 6 4
+    style c_minamoto_yorikuni stroke-dasharray: 6 4
+    style c_minamoto_yorimitsu stroke-dasharray: 6 4
+    style c_minamoto_yoshiari stroke-dasharray: 6 4
+    style c_minamoto_yoshitomo stroke-dasharray: 6 4
+    style c_mochiie_ieyuki stroke-dasharray: 6 4
+    style c_mochiie_motochika stroke-dasharray: 6 4
+    style c_mochiie_motokane stroke-dasharray: 6 4
+    style c_mochiie_motokiyo stroke-dasharray: 6 4
+    style c_mochiie_motomori stroke-dasharray: 6 4
+    style c_mochiie_motoyo stroke-dasharray: 6 4
+    style c_mochiie_sada stroke-dasharray: 6 4
+    style c_nijo_harutaka stroke-dasharray: 6 4
+    style c_omimifune stroke-dasharray: 6 4
+    style c_saionji_kintsune stroke-dasharray: 6 4
+    style c_saionji_saneuji stroke-dasharray: 6 4
+    style c_shirakawa_akihiro stroke-dasharray: 6 4
+    style c_shirakawa_akikuni stroke-dasharray: 6 4
+    style c_shirakawa_akiyasu stroke-dasharray: 6 4
+    style c_shirakawa_nakasuke stroke-dasharray: 6 4
+    style c_shirakawa_nariaki stroke-dasharray: 6 4
+    style c_shirakawa_narisuke stroke-dasharray: 6 4
+    style c_shirakawa_nobusane stroke-dasharray: 6 4
+    style c_shirakawa_sukehide stroke-dasharray: 6 4
+    style c_shirakawa_sukekiyo stroke-dasharray: 6 4
+    style c_shirakawa_sukekuni stroke-dasharray: 6 4
+    style c_shirakawa_sukemitsu stroke-dasharray: 6 4
+    style c_shirakawa_suketada stroke-dasharray: 6 4
+    style c_shirakawa_yasusuke stroke-dasharray: 6 4
+    style c_tachibana_shimadamaro stroke-dasharray: 6 4
+    style c_tachibana_sumikiyo stroke-dasharray: 6 4
+    style c_tachibana_tsunenushi stroke-dasharray: 6 4
+    style c_tachibana_yasukio stroke-dasharray: 6 4
+    style c_tachibana_yoshimoto stroke-dasharray: 6 4
+    style c_taira_tokinobu stroke-dasharray: 6 4
+    style c_takashina_tameyuki stroke-dasharray: 6 4
+    style c_tokudaiji_kinari stroke-dasharray: 6 4
+    style c_tokudaiji_saneatsu stroke-dasharray: 6 4
+    style c_tokudaiji_sanemori stroke-dasharray: 6 4
+    style fushimi_025 stroke-dasharray: 6 4
+    style higashifushimi_002 stroke-dasharray: 6 4
+    style higashifushimi_003 stroke-dasharray: 6 4
+    style higashifushimi_004 stroke-dasharray: 6 4
+    style higashikuni_001 stroke-dasharray: 6 4
+    style higashikuni_002 stroke-dasharray: 6 4
+    style higashikuni_003 stroke-dasharray: 6 4
+    style higashikuni_004 stroke-dasharray: 6 4
+    style higashikuni_005 stroke-dasharray: 6 4
+    style higashikuni_006 stroke-dasharray: 6 4
+    style higashikuni_007 stroke-dasharray: 6 4
+    style higashikuni_008 stroke-dasharray: 6 4
+    style higashikuni_009 stroke-dasharray: 6 4
+    style higashikuni_010 stroke-dasharray: 6 4
+    style higashikuni_011 stroke-dasharray: 6 4
+    style higashikuni_012 stroke-dasharray: 6 4
+    style higashikuni_014 stroke-dasharray: 6 4
+    style higashikuni_015 stroke-dasharray: 6 4
+    style kanin_007 stroke-dasharray: 6 4
+    style kaya_002 stroke-dasharray: 6 4
+    style kaya_003 stroke-dasharray: 6 4
+    style kaya_004 stroke-dasharray: 6 4
+    style kaya_005 stroke-dasharray: 6 4
+    style kaya_006 stroke-dasharray: 6 4
+    style kaya_007 stroke-dasharray: 6 4
+    style kaya_008 stroke-dasharray: 6 4
+    style kaya_009 stroke-dasharray: 6 4
+    style kitashirakawa_004 stroke-dasharray: 6 4
+    style kuni_004 stroke-dasharray: 6 4
+    style kuni_005 stroke-dasharray: 6 4
+    style kuni_006 stroke-dasharray: 6 4
+    style kuni_007 stroke-dasharray: 6 4
+    style kuni_008 stroke-dasharray: 6 4
+    style kuni_009 stroke-dasharray: 6 4
+    style kuni_010 stroke-dasharray: 6 4
+    style n_ariwara_miko stroke-dasharray: 6 4
+    style n_bomon_hime stroke-dasharray: 6 4
+    style n_fujiwara_kiyotsura_daughter stroke-dasharray: 6 4
+    style n_fujiwara_moriko stroke-dasharray: 6 4
+    style n_fujiwara_muneno_daughter stroke-dasharray: 6 4
+    style n_fujiwara_sadayoshi_daughter stroke-dasharray: 6 4
+    style n_fujiwara_tadakiyo_daughter stroke-dasharray: 6 4
+    style n_fujiwara_tokihime stroke-dasharray: 6 4
+    style n_fujiwara_yukifusa_daughter stroke-dasharray: 6 4
+    style n_fujiwara_yuko stroke-dasharray: 6 4
+    style n_higuchi_nobuko stroke-dasharray: 6 4
+    style n_hirohashi_kanekatsu_daughter stroke-dasharray: 6 4
+    style n_hirohashi_tsunamitsu_daughter stroke-dasharray: 6 4
+    style n_hosokawa_takamoto_daughter stroke-dasharray: 6 4
+    style n_ichijo_masako stroke-dasharray: 6 4
+    style n_minamoto_akiko stroke-dasharray: 6 4
+    style n_minamoto_kiyoto_daughter stroke-dasharray: 6 4
+    style n_minamoto_nin_daughter stroke-dasharray: 6 4
+    style n_minamoto_yorikuni_daughter stroke-dasharray: 6 4
+    style n_mochiie_motochika_daughter stroke-dasharray: 6 4
+    style n_noma_ikuko stroke-dasharray: 6 4
+    style n_omimifune_daughter stroke-dasharray: 6 4
+    style n_shijo_sadako stroke-dasharray: 6 4
+    style n_shirakawa_toyoko stroke-dasharray: 6 4
+    style n_tachibana_sumikiyo_daughter stroke-dasharray: 6 4
+    style n_takakura_nagatoyo_daughter stroke-dasharray: 6 4
+    style n_takashina_tameyuki_daughter stroke-dasharray: 6 4
+    style n_tokudaiji_ishiko stroke-dasharray: 6 4
+    style nashimoto_002 stroke-dasharray: 6 4
+    style p_atsuko stroke-dasharray: 6 4
+    style p_ayako stroke-dasharray: 6 4
+    style p_fusako_meiji stroke-dasharray: 6 4
+    style p_kazuko stroke-dasharray: 6 4
+    style p_mako stroke-dasharray: 6 4
+    style p_masako_mikasa stroke-dasharray: 6 4
+    style p_noriko stroke-dasharray: 6 4
+    style p_sayako stroke-dasharray: 6 4
+    style p_shigeko stroke-dasharray: 6 4
+    style p_takako stroke-dasharray: 6 4
+    style p_toshiko stroke-dasharray: 6 4
+    style p_yasuko_mikasa stroke-dasharray: 6 4
+    style takeda_002 stroke-dasharray: 6 4
+    style takeda_003 stroke-dasharray: 6 4
+    style takeda_004 stroke-dasharray: 6 4
+    style takeda_005 stroke-dasharray: 6 4
+    style takeda_006 stroke-dasharray: 6 4
+    style takeda_007 stroke-dasharray: 6 4
+    style takeda_008 stroke-dasharray: 6 4
+    style takeda_009 stroke-dasharray: 6 4
+    style takeda_010 stroke-dasharray: 6 4
+    style yamashina_003 stroke-dasharray: 6 4
+    p_hikoimasu --&gt; p_yamashiro
+    p_yamashiro --&gt; p_kaname
+    p_kaname --&gt; p_okinaga
+    p_okinaga --&gt; p_jingu
+    t012 --&gt; p_yamatotakeru
+    t012 --&gt; t013
+    t014 --&gt; u_chuai_jingu
+    p_jingu --&gt; u_chuai_jingu
+    u_chuai_jingu --&gt; t015
+    t015 --&gt; p_wakasako
+    p_wakasako --&gt; p_ohoji
+    p_ohoji --&gt; p_oshi
+    p_oshi --&gt; p_hikoushino
+    t016 --&gt; t017
+    t016 --&gt; t018
+    t016 --&gt; t019
+    t017 --&gt; p_ichinobe
+    t019 --&gt; t020
+    t019 --&gt; t021
+    t021 --&gt; t022
+    p_ichinobe --&gt; t023
+    p_ichinobe --&gt; t024
+    t024 --&gt; t025
+    t026 --&gt; u_keitai_tashiraka
+    p_tashiraka --&gt; u_keitai_tashiraka
+    u_keitai_tashiraka --&gt; t029
+    t026 --&gt; t027
+    t026 --&gt; t028
+    t029 --&gt; t031
+    t029 --&gt; t032
+    t029 --&gt; t033
+    t030 --&gt; p_oshisaka
+    p_oshisaka --&gt; p_chinu
+    t034 --&gt; u_jomei_kogyoku
+    t035t037 --&gt; u_jomei_kogyoku
+    u_jomei_kogyoku --&gt; t038
+    u_jomei_kogyoku --&gt; t040
+    t038 --&gt; p_shiki
+    p_shiki --&gt; t049
+    t038 --&gt; t039
+    t038 --&gt; t041
+    t038 --&gt; t043
+    t040 --&gt; u_temmu_jito
+    t041 --&gt; u_temmu_jito
+    u_temmu_jito --&gt; p_kusakabe
+    p_kusakabe --&gt; u_kusakabe_gemmei
+    t043 --&gt; u_kusakabe_gemmei
+    u_kusakabe_gemmei --&gt; t042
+    u_kusakabe_gemmei --&gt; t044
+    t042 --&gt; t045
+    t045 --&gt; t046t048
+    t040 --&gt; p_toneri
+    p_toneri --&gt; t047
+    t049 --&gt; t050
+    t050 --&gt; t052
+    t059 --&gt; t060
+    tn003 --&gt; fushimi_001
+    fushimi_003 --&gt; t102
+    t102 --&gt; t103
+    t103 --&gt; t104
+    t104 --&gt; t105
+    t105 --&gt; t106
+    t108 --&gt; t112
+    t112 --&gt; t113
+    t113 --&gt; kanin_001
+    kanin_001 --&gt; kanin_002
+    kanin_002 --&gt; t119
+    t119 --&gt; t120
+    t120 --&gt; t121
+    t121 --&gt; t122
+    t122 --&gt; t123
+    t123 --&gt; u_taisho_sadako
+    n_sadako --&gt; u_taisho_sadako
+    p_yasuhito --&gt; u_chichibu_setsuko
+    n_setsuko --&gt; u_chichibu_setsuko
+    p_nobuhito --&gt; u_takamatsu_kikuko
+    n_kikuko --&gt; u_takamatsu_kikuko
+    p_takahito --&gt; u_mikasa_yuriko
+    n_yuriko --&gt; u_mikasa_yuriko
+    t124 --&gt; u_showa_nagako
+    kuni_003 --&gt; u_showa_nagako
+    u_showa_nagako --&gt; t125
+    u_showa_nagako --&gt; p_masahito_02
+    u_showa_nagako --&gt; p_shigeko
+    u_showa_nagako --&gt; p_kazuko
+    u_showa_nagako --&gt; p_atsuko
+    u_showa_nagako --&gt; p_takako
+    p_masahito_02 --&gt; u_hitachi_hanako
+    n_hanako --&gt; u_hitachi_hanako
+    t125 --&gt; u_joko_michiko
+    n_michiko --&gt; u_joko_michiko
+    u_joko_michiko --&gt; t126
+    u_joko_michiko --&gt; p_fumihito
+    u_joko_michiko --&gt; p_sayako
+    t126 --&gt; u_naruhito_masako
+    n_masako --&gt; u_naruhito_masako
+    u_naruhito_masako --&gt; p_aiko
+    p_fumihito --&gt; u_akishino_kiko
+    n_kiko --&gt; u_akishino_kiko
+    u_akishino_kiko --&gt; p_hisahito
+    u_akishino_kiko --&gt; p_kako
+    u_akishino_kiko --&gt; p_mako
+    u_mikasa_yuriko --&gt; p_tomohito
+    u_mikasa_yuriko --&gt; p_yoshihito
+    u_mikasa_yuriko --&gt; p_norihito
+    p_tomohito --&gt; u_tomohito_nobuko
+    n_nobuko --&gt; u_tomohito_nobuko
+    u_tomohito_nobuko --&gt; p_akiko
+    u_tomohito_nobuko --&gt; p_yoko
+    p_norihito --&gt; u_norihito_hisako
+    n_hisako --&gt; u_norihito_hisako
+    u_norihito_hisako --&gt; p_tsuguko
+    u_norihito_hisako --&gt; p_noriko
+    u_norihito_hisako --&gt; p_ayako
+    t100 -.-&gt; t102
+    t106 --&gt; p_masahito_01
+    p_masahito_01 --&gt; t107
+    t106 -.-&gt; t107
+    t113 --&gt; t114
+    t114 --&gt; t115
+    t115 --&gt; t116
+    t115 --&gt; t117
+    t116 --&gt; t118
+    t118 -.-&gt; t119
+    fushimi_020 --&gt; kuni_001
+    kuni_001 --&gt; kuni_002
+    kuni_002 --&gt; kuni_003
+    t050 --&gt; t051
+    t050 --&gt; t053
+    t052 --&gt; t054
+    t054 --&gt; t055
+    t054 --&gt; t058
+    t055 --&gt; t056
+    t056 --&gt; t057
+    t060 --&gt; t061
+    t060 --&gt; t062
+    t063 --&gt; t065
+    t063 --&gt; t067
+    t066 --&gt; t068
+    t066 --&gt; t069
+    t069 --&gt; t070
+    t071 --&gt; t072
+    t072 --&gt; t073
+    t073 --&gt; t074
+    t074 --&gt; t075
+    t074 --&gt; t076
+    t074 --&gt; t077
+    t077 --&gt; t078
+    t078 --&gt; t079
+    t080 --&gt; t081
+    t080 --&gt; t082
+    t082 --&gt; t083
+    t082 --&gt; t084
+    t084 --&gt; t085
+    t080 --&gt; p_morisada
+    p_morisada --&gt; t086
+    t086 --&gt; t087
+    t083 --&gt; t088
+    t090 --&gt; t091
+    t089 --&gt; t092
+    t092 --&gt; t093
+    t091 --&gt; t094
+    t092 --&gt; t095
+    t091 --&gt; t096
+    t096 --&gt; t097
+    t097 --&gt; t098
+    t097 --&gt; t099
+    t093 --&gt; tn001
+    t093 --&gt; tn002
+    tn001 --&gt; tn003
+    tn001 --&gt; tn004
+    tn004 --&gt; tn005
+    tn005 --&gt; t100
+    t100 --&gt; t101
+    fushimi_001 --&gt; fushimi_002
+    fushimi_001 --&gt; fushimi_003
+    t108 --&gt; t109
+    t108 --&gt; t110
+    t108 --&gt; t111
+    t001 --&gt; u_jimmu_ahiratsuhime
+    n_ahiratsuhime --&gt; u_jimmu_ahiratsuhime
+    u_jimmu_ahiratsuhime --&gt; p_tagishimimi
+    t001 --&gt; u_jimmu_isuzuhime
+    n_isuzuhime --&gt; u_jimmu_isuzuhime
+    u_jimmu_isuzuhime -- "古事記" --&gt; p_hikoyai
+    u_jimmu_isuzuhime --&gt; p_kamuyai_mimi
+    u_jimmu_isuzuhime --&gt; t002
+    t002 --&gt; u_suizei_isuzuyori
+    n_isuzuyori --&gt; u_suizei_isuzuyori
+    u_suizei_isuzuyori --&gt; t003
+    t003 --&gt; u_annei_nunasoko
+    n_nunasoko --&gt; u_annei_nunasoko
+    u_annei_nunasoko --&gt; p_okisomimi
+    u_annei_nunasoko --&gt; t004
+    u_annei_nunasoko -- "一書" --&gt; p_shikitsuhiko
+    p_okisomimi --&gt; p_amatoyotsuhime
+    t004 --&gt; u_itoku_amatoyotsuhime
+    p_amatoyotsuhime --&gt; u_itoku_amatoyotsuhime
+    u_itoku_amatoyotsuhime --&gt; t005
+    u_itoku_amatoyotsuhime --&gt; p_takeshihiko
+    t005 --&gt; u_kosho_yosotarashi
+    n_yosotarashi --&gt; u_kosho_yosotarashi
+    u_kosho_yosotarashi --&gt; p_ameoshitarashi
+    u_kosho_yosotarashi --&gt; t006
+    p_ameoshitarashi --&gt; p_oshihime
+    t006 --&gt; u_koan_oshihime
+    p_oshihime --&gt; u_koan_oshihime
+    u_koan_oshihime --&gt; p_okibi_morosusume
+    u_koan_oshihime --&gt; t007
+    t007 --&gt; u_korei_hosohime
+    n_hosohime --&gt; u_korei_hosohime
+    u_korei_hosohime --&gt; t008
+    t008 --&gt; u_kogen_utsushikome
+    n_utsushikome --&gt; u_kogen_utsushikome
+    u_kogen_utsushikome --&gt; p_ohiko
+    u_kogen_utsushikome --&gt; t009
+    t009 --&gt; u_kaika_ikagashikome
+    n_ikagashikome --&gt; u_kaika_ikagashikome
+    u_kaika_ikagashikome --&gt; t010
+    t009 --&gt; u_kaika_hahatsuhime
+    n_hahatsuhime --&gt; u_kaika_hahatsuhime
+    u_kaika_hahatsuhime -- "日本書紀系" --&gt; p_hikoimasu
+    kuni_002 --&gt; kuni_004
+    kuni_004 --&gt; kuni_005
+    kuni_005 --&gt; kuni_006
+    kuni_004 --&gt; kuni_007
+    kuni_001 --&gt; higashikuni_001
+    higashikuni_001 --&gt; u_naruhiko_toshiko
+    p_toshiko --&gt; u_naruhiko_toshiko
+    u_naruhiko_toshiko --&gt; higashikuni_002
+    higashikuni_002 --&gt; u_morihiro_shigeko
+    p_shigeko --&gt; u_morihiro_shigeko
+    u_morihiro_shigeko --&gt; higashikuni_003
+    u_morihiro_shigeko --&gt; higashikuni_005
+    higashikuni_003 --&gt; higashikuni_004
+    higashikuni_005 --&gt; higashikuni_006
+    higashikuni_005 --&gt; higashikuni_007
+    t122 --&gt; p_toshiko
+    fushimi_020 --&gt; kitashirakawa_001
+    kitashirakawa_001 --&gt; kitashirakawa_002
+    kitashirakawa_003 --&gt; kitashirakawa_004
+    kitashirakawa_001 --&gt; takeda_001
+    t122 --&gt; p_masako_meiji
+    takeda_001 --&gt; u_tsunehisa_masako
+    p_masako_meiji --&gt; u_tsunehisa_masako
+    u_tsunehisa_masako --&gt; takeda_002
+    takeda_002 --&gt; takeda_003
+    takeda_002 --&gt; takeda_004
+    takeda_002 --&gt; takeda_005
+    takeda_003 --&gt; takeda_006
+    takeda_004 --&gt; takeda_007
+    takeda_004 --&gt; takeda_008
+    takeda_005 --&gt; takeda_009
+    takeda_005 --&gt; takeda_010
+    kuni_001 --&gt; kaya_001
+    kaya_001 --&gt; kaya_002
+    kaya_002 --&gt; kaya_003
+    kaya_002 --&gt; kaya_004
+    kaya_002 --&gt; kaya_005
+    kaya_002 --&gt; kaya_006
+    kaya_002 --&gt; kaya_007
+    kaya_002 --&gt; kaya_008
+    kaya_005 --&gt; kaya_009
+    kuni_001 --&gt; asaka_001
+    t122 --&gt; p_nobuko_meiji
+    asaka_001 --&gt; u_yasuhiko_nobuko
+    p_nobuko_meiji --&gt; u_yasuhiko_nobuko
+    u_yasuhiko_nobuko --&gt; asaka_002
+    asaka_002 --&gt; asaka_003
+    asaka_003 --&gt; asaka_004
+    fushimi_020 --&gt; yamashina_001
+    yamashina_001 --&gt; yamashina_002
+    yamashina_002 --&gt; yamashina_003
+    kuni_001 --&gt; nashimoto_002
+    kanin_002 --&gt; kanin_003
+    kanin_003 --&gt; kanin_004
+    kanin_004 --&gt; kanin_005
+    fushimi_020 --&gt; kanin_006
+    kanin_006 --&gt; kanin_007
+    fushimi_020 --&gt; higashifushimi_001
+    fushimi_003 --&gt; fushimi_004
+    fushimi_004 --&gt; fushimi_005
+    fushimi_005 --&gt; fushimi_006
+    fushimi_006 --&gt; fushimi_007
+    fushimi_007 --&gt; fushimi_008
+    fushimi_008 --&gt; fushimi_009
+    fushimi_009 --&gt; fushimi_010
+    fushimi_010 --&gt; fushimi_011
+    fushimi_010 --&gt; fushimi_012
+    fushimi_010 --&gt; fushimi_013
+    fushimi_013 --&gt; fushimi_014
+    fushimi_015 --&gt; fushimi_016
+    fushimi_015 --&gt; fushimi_018
+    t116 --&gt; fushimi_017
+    fushimi_018 --&gt; fushimi_019
+    fushimi_019 --&gt; fushimi_020
+    fushimi_020 --&gt; fushimi_021
+    fushimi_020 --&gt; fushimi_022
+    fushimi_022 --&gt; fushimi_023
+    fushimi_023 --&gt; fushimi_024
+    fushimi_024 --&gt; fushimi_025
+    fushimi_019 --&gt; nashimoto_001
+    kuni_005 --&gt; kuni_008
+    kuni_007 --&gt; kuni_009
+    kuni_004 --&gt; kuni_010
+    u_morihiro_shigeko --&gt; higashikuni_008
+    higashikuni_008 --&gt; higashikuni_009
+    higashikuni_008 --&gt; higashikuni_010
+    higashikuni_002 --&gt; u_morihiro_yoshiko
+    n_yoshiko_terao --&gt; u_morihiro_yoshiko
+    u_morihiro_yoshiko --&gt; higashikuni_011
+    u_morihiro_yoshiko --&gt; higashikuni_012
+    kuni_001 --&gt; kuni_011
+    kuni_011 --&gt; kuni_012
+    u_naruhiko_toshiko --&gt; higashikuni_013
+    u_naruhiko_toshiko --&gt; higashikuni_014
+    higashikuni_014 --&gt; higashikuni_015
+    fushimi_020 --&gt; kitashirakawa_005
+    t122 --&gt; p_fusako_meiji
+    kitashirakawa_002 --&gt; u_naruhisa_fusako
+    p_fusako_meiji --&gt; u_naruhisa_fusako
+    u_naruhisa_fusako --&gt; kitashirakawa_003
+    fushimi_020 --&gt; shogoin_001
+    fushimi_020 --&gt; komatsu_001
+    fushimi_020 --&gt; kacho_001
+    t029 --&gt; u_kinmei_ishihime
+    p_ishihime --&gt; u_kinmei_ishihime
+    u_kinmei_ishihime --&gt; t030
+    t030 --&gt; p_nukatehime
+    p_oshisaka --&gt; u_oshisaka_nukatehime
+    p_nukatehime --&gt; u_oshisaka_nukatehime
+    u_oshisaka_nukatehime --&gt; t034
+    t050 --&gt; p_nakano
+    p_nakano --&gt; p_hanshi
+    t058 --&gt; u_koko_hanshi
+    p_hanshi --&gt; u_koko_hanshi
+    u_koko_hanshi --&gt; t059
+    t067 --&gt; p_teishi
+    t069 --&gt; u_go_suzaku_teishi
+    p_teishi --&gt; u_go_suzaku_teishi
+    u_go_suzaku_teishi --&gt; t071
+    p_ohiko --&gt; p_mimakihime
+    t010 --&gt; u_sujin_mimakihime
+    p_mimakihime --&gt; u_sujin_mimakihime
+    u_sujin_mimakihime --&gt; t011
+    p_hikoimasu --&gt; p_tanbamichinushi
+    p_tanbamichinushi --&gt; p_hibasuhime
+    t011 --&gt; u_suinin_hibasuhime
+    p_hibasuhime --&gt; u_suinin_hibasuhime
+    u_suinin_hibasuhime --&gt; t012
+    t011 --&gt; p_futajinoirihime
+    p_yamatotakeru --&gt; u_yamatotakeru_futajinoirihime
+    p_futajinoirihime --&gt; u_yamatotakeru_futajinoirihime
+    u_yamatotakeru_futajinoirihime --&gt; t014
+    t021 --&gt; p_kasuga_oiratsume
+    t024 --&gt; u_ninken_kasuga
+    p_kasuga_oiratsume --&gt; u_ninken_kasuga
+    u_ninken_kasuga --&gt; p_tashiraka
+    t011 --&gt; p_iwatsukuwake
+    p_iwatsukuwake --&gt; p_iwakiwake
+    p_iwakiwake --&gt; p_iwakoriwake
+    p_iwakoriwake --&gt; p_mawakake
+    p_mawakake --&gt; p_akahachikimi
+    p_akahachikimi --&gt; p_obachikimi
+    p_obachikimi --&gt; p_furuhime
+    p_hikoushino --&gt; u_hikoushino_furuhime
+    p_furuhime --&gt; u_hikoushino_furuhime
+    u_hikoushino_furuhime --&gt; t026
+    u_ninken_kasuga --&gt; p_tachibana_nakatsuhime
+    t028 --&gt; u_senka_tachibana
+    p_tachibana_nakatsuhime --&gt; u_senka_tachibana
+    u_senka_tachibana --&gt; p_ishihime
+    t029 --&gt; p_sakurai
+    p_sakurai --&gt; p_kibihime
+    p_chinu --&gt; u_chinu_kibihime
+    p_kibihime --&gt; u_chinu_kibihime
+    u_chinu_kibihime --&gt; t035t037
+    u_chinu_kibihime --&gt; t036
+    t010 --&gt; p_yasakairihiko
+    p_yasakairihiko --&gt; p_yasakairihime
+    t012 --&gt; u_keiko_yasakairihime
+    p_yasakairihime --&gt; u_keiko_yasakairihime
+    u_keiko_yasakairihime --&gt; p_iokiirihiko
+    p_iokiirihiko --&gt; p_hondamawaka
+    p_hondamawaka --&gt; p_nakatsuhime
+    t015 --&gt; u_ojin_nakatsuhime
+    p_nakatsuhime --&gt; u_ojin_nakatsuhime
+    u_ojin_nakatsuhime --&gt; t016
+    t112 --&gt; p_fukuko_reigen
+    fushimi_014 --&gt; u_kuninaga_fukuko
+    p_fukuko_reigen --&gt; u_kuninaga_fukuko
+    u_kuninaga_fukuko --&gt; fushimi_015
+    u_taisho_sadako --&gt; t124
+    u_taisho_sadako --&gt; p_yasuhito
+    u_taisho_sadako --&gt; p_nobuhito
+    u_taisho_sadako --&gt; p_takahito
+    fushimi_016 ~~~ fushimi_017
+    shogoin_001 ~~~ kitashirakawa_005
+    kanin_005 ~~~ kanin_006
+    fushimi_017 ~~~ fushimi_018
+    kitashirakawa_005 ~~~ kitashirakawa_001
+    t008 --&gt; u_kogen_ikagashikome
+    n_ikagashikome --&gt; u_kogen_ikagashikome
+    nashimoto_001 -.-&gt; yamashina_002
+    t108 -. "後水尾天皇の猶子" .-&gt; fushimi_013
+    t112 -. "霊元天皇の猶子" .-&gt; fushimi_014
+    t113 -. "東山天皇の猶子" .-&gt; fushimi_015
+    t115 -. "桜町天皇の猶子" .-&gt; fushimi_016
+    t115 -. "桜町天皇の猶子" .-&gt; fushimi_018
+    t118 -. "後桃園天皇の猶子" .-&gt; fushimi_019
+    t119 -. "光格天皇の猶子" .-&gt; fushimi_020
+    t120 -. "仁孝天皇の猶子" .-&gt; fushimi_021
+    t121 -. "孝明天皇の養子" .-&gt; fushimi_022
+    fushimi_021 -. "故貞教親王の猶子" .-&gt; fushimi_022
+    t119 -. "光格天皇の猶子" .-&gt; yamashina_001
+    t121 -. "孝明天皇の猶子" .-&gt; yamashina_001
+    t120 -. "仁孝天皇の養子" .-&gt; kuni_001
+    t120 -. "仁孝天皇の養子" .-&gt; komatsu_001
+    t120 -. "仁孝天皇の養子" .-&gt; kitashirakawa_001
+    t121 -. "孝明天皇の猶子" .-&gt; kacho_001
+    t121 -. "孝明天皇の猶子" .-&gt; kitashirakawa_005
+    t121 -. "孝明天皇の養子" .-&gt; kanin_006
+    t122 -. "明治天皇の猶子" .-&gt; higashifushimi_001
+    yamashina_001 -. "山階宮晃親王の養嗣子" .-&gt; higashifushimi_001
+    komatsu_001 -. "のち小松宮彰仁親王の養嗣子" .-&gt; higashifushimi_001
+    t040 --&gt; u_tenmu_nukata
+    p_nukata --&gt; u_tenmu_nukata
+    u_tenmu_nukata --&gt; p_tochi
+    t039 --&gt; u_kobun_tochi
+    p_tochi --&gt; u_kobun_tochi
+    u_kobun_tochi --&gt; p_kadono
+    p_kadono --&gt; p_ikebe
+    p_ikebe --&gt; c_omimifune
+    c_omimifune --&gt; n_omimifune_daughter
+    n_omimifune_daughter --&gt; u_mifune_daughter_shimadamaro
+    c_tachibana_shimadamaro --&gt; u_mifune_daughter_shimadamaro
+    u_mifune_daughter_shimadamaro --&gt; c_tachibana_tsunenushi
+    c_tachibana_tsunenushi --&gt; c_tachibana_yasukio
+    c_tachibana_yasukio --&gt; c_tachibana_yoshimoto
+    c_tachibana_yoshimoto --&gt; c_tachibana_sumikiyo
+    c_tachibana_sumikiyo --&gt; n_tachibana_sumikiyo_daughter
+    n_tachibana_sumikiyo_daughter --&gt; u_sumikiyo_daughter_nakamasa
+    c_fujiwara_nakamasa --&gt; u_sumikiyo_daughter_nakamasa
+    u_sumikiyo_daughter_nakamasa --&gt; n_fujiwara_tokihime
+    c_fujiwara_kaneie --&gt; u_kaneie_tokihime
+    n_fujiwara_tokihime --&gt; u_kaneie_tokihime
+    u_kaneie_tokihime --&gt; n_fujiwara_senshi
+    t064 --&gt; u_enyu_senshi
+    n_fujiwara_senshi --&gt; u_enyu_senshi
+    u_enyu_senshi --&gt; t066
+    t051 --&gt; u_heizei_kuzui
+    n_kuzui_toshi --&gt; u_heizei_kuzui
+    u_heizei_kuzui --&gt; p_abo
+    t050 --&gt; p_ito
+    p_abo --&gt; u_abo_ito
+    p_ito --&gt; u_abo_ito
+    u_abo_ito --&gt; c_ariwara_narihira
+    c_ariwara_narihira --&gt; n_ariwara_miko
+    n_ariwara_miko --&gt; u_ariwara_miko_yasunori
+    c_fujiwara_yasunori --&gt; u_ariwara_miko_yasunori
+    u_ariwara_miko_yasunori --&gt; c_fujiwara_kiyotsura
+    c_fujiwara_kiyotsura --&gt; n_fujiwara_kiyotsura_daughter
+    n_fujiwara_kiyotsura_daughter --&gt; u_kiyotsura_daughter_tsunesuke
+    c_fujiwara_tsunesuke --&gt; u_kiyotsura_daughter_tsunesuke
+    u_kiyotsura_daughter_tsunesuke --&gt; c_fujiwara_yasutada
+    c_fujiwara_yasutada --&gt; u_yasutada_kiyoto_daughter
+    n_minamoto_kiyoto_daughter --&gt; u_yasutada_kiyoto_daughter
+    u_yasutada_kiyoto_daughter --&gt; c_fujiwara_kunimasa
+    c_fujiwara_kunimasa --&gt; u_kunimasa_minamoto_nin_daughter
+    n_minamoto_nin_daughter --&gt; u_kunimasa_minamoto_nin_daughter
+    u_kunimasa_minamoto_nin_daughter --&gt; c_fujiwara_kunitsune
+    c_fujiwara_kunitsune --&gt; c_fujiwara_yukifusa
+    c_fujiwara_yukifusa --&gt; n_fujiwara_yukifusa_daughter
+    n_fujiwara_yukifusa_daughter --&gt; u_yukifusa_daughter_munetada
+    c_fujiwara_munetada --&gt; u_yukifusa_daughter_munetada
+    u_yukifusa_daughter_munetada --&gt; c_fujiwara_muneno
+    c_fujiwara_muneno --&gt; n_fujiwara_muneno_daughter
+    n_fujiwara_muneno_daughter --&gt; u_muneno_daughter_sueyuki
+    c_fujiwara_sueyuki --&gt; u_muneno_daughter_sueyuki
+    u_muneno_daughter_sueyuki --&gt; c_fujiwara_sadayoshi
+    c_fujiwara_sadayoshi --&gt; n_fujiwara_sadayoshi_daughter
+    n_fujiwara_sadayoshi_daughter --&gt; u_sadayoshi_daughter_ieyuki
+    c_mochiie_ieyuki --&gt; u_sadayoshi_daughter_ieyuki
+    u_sadayoshi_daughter_ieyuki --&gt; c_mochiie_sada
+    c_mochiie_sada --&gt; c_mochiie_motomori
+    c_mochiie_motomori --&gt; c_mochiie_motoyo
+    c_mochiie_motoyo --&gt; c_mochiie_motokane
+    c_mochiie_motokane --&gt; c_mochiie_motokiyo
+    c_mochiie_motokiyo --&gt; c_mochiie_motochika
+    c_mochiie_motochika --&gt; n_mochiie_motochika_daughter
+    n_mochiie_motochika_daughter --&gt; u_motochika_daughter_sanemori
+    c_tokudaiji_sanemori --&gt; u_motochika_daughter_sanemori
+    u_motochika_daughter_sanemori --&gt; c_tokudaiji_kinari
+    c_tokudaiji_kinari --&gt; u_kinari_takakura_daughter
+    n_takakura_nagatoyo_daughter --&gt; u_kinari_takakura_daughter
+    u_kinari_takakura_daughter --&gt; c_tokudaiji_saneatsu
+    c_tokudaiji_saneatsu --&gt; n_tokudaiji_ishiko
+    n_tokudaiji_ishiko --&gt; u_ishiko_hisamichi
+    c_konoe_hisamichi --&gt; u_ishiko_hisamichi
+    u_ishiko_hisamichi --&gt; c_konoe_taneie
+    c_konoe_taneie --&gt; u_taneie_hosokawa
+    n_hosokawa_takamoto_daughter --&gt; u_taneie_hosokawa
+    u_taneie_hosokawa --&gt; c_konoe_sakihisa
+    c_konoe_sakihisa --&gt; n_konoe_sakiko
+    t107 --&gt; u_goyozei_sakiko
+    n_konoe_sakiko --&gt; u_goyozei_sakiko
+    u_goyozei_sakiko --&gt; t108
+    t055 --&gt; c_minamoto_yoshiari
+    c_minamoto_yoshiari --&gt; n_minamoto_akiko
+    n_minamoto_akiko --&gt; u_tadahira_akiko
+    c_fujiwara_tadahira --&gt; u_tadahira_akiko
+    u_tadahira_akiko --&gt; c_fujiwara_morosuke
+    c_fujiwara_morosuke --&gt; u_morosuke_moriko
+    n_fujiwara_moriko --&gt; u_morosuke_moriko
+    u_morosuke_moriko --&gt; n_fujiwara_anshi
+    n_fujiwara_anshi --&gt; u_murakami_anshi
+    t062 --&gt; u_murakami_anshi
+    u_murakami_anshi --&gt; t063
+    u_murakami_anshi --&gt; t064
+    t090 --&gt; p_kameyama_princess
+    p_kameyama_princess --&gt; u_kameyama_princess_iemoto
+    c_konoe_iemoto --&gt; u_kameyama_princess_iemoto
+    u_kameyama_princess_iemoto --&gt; c_konoe_tsunehira
+    c_konoe_tsunehira --&gt; c_konoe_mototsugu
+    c_konoe_mototsugu --&gt; c_konoe_michitsugu
+    c_konoe_michitsugu --&gt; c_konoe_kanetsugu
+    c_konoe_kanetsugu --&gt; c_konoe_tadatsugu
+    c_konoe_tadatsugu --&gt; c_konoe_fusatsugu
+    c_konoe_fusatsugu --&gt; c_konoe_masaie
+    c_konoe_masaie --&gt; c_konoe_hisamichi
+    t065 --&gt; p_kazan_kiyohito
+    p_kazan_kiyohito --&gt; c_shirakawa_nobusane
+    c_shirakawa_nobusane --&gt; c_shirakawa_yasusuke
+    c_shirakawa_yasusuke --&gt; c_shirakawa_akiyasu
+    c_shirakawa_akiyasu --&gt; c_shirakawa_akihiro
+    c_shirakawa_akihiro --&gt; c_shirakawa_nakasuke
+    c_shirakawa_nakasuke --&gt; c_shirakawa_narisuke
+    c_shirakawa_narisuke --&gt; c_shirakawa_sukemitsu
+    c_shirakawa_sukemitsu --&gt; c_shirakawa_sukekuni
+    c_shirakawa_sukekuni --&gt; c_shirakawa_nariaki
+    c_shirakawa_nariaki --&gt; c_shirakawa_sukekiyo
+    c_shirakawa_sukekiyo --&gt; c_shirakawa_sukehide
+    c_shirakawa_sukehide --&gt; c_shirakawa_akikuni
+    c_shirakawa_akikuni --&gt; c_shirakawa_suketada
+    c_shirakawa_suketada --&gt; n_shirakawa_toyoko
+    n_shirakawa_toyoko --&gt; u_toyoko_kanesato
+    c_hirohashi_kanesato --&gt; u_toyoko_kanesato
+    u_toyoko_kanesato --&gt; c_hirohashi_tsunamitsu
+    c_hirohashi_tsunamitsu --&gt; n_hirohashi_tsunamitsu_daughter
+    n_hirohashi_tsunamitsu_daughter --&gt; u_tsunamitsu_daughter_morimitsu
+    c_hirohashi_morimitsu --&gt; u_tsunamitsu_daughter_morimitsu
+    u_tsunamitsu_daughter_morimitsu --&gt; c_hirohashi_kanehide
+    c_hirohashi_kanehide --&gt; c_hirohashi_kunimitsu
+    c_hirohashi_kunimitsu --&gt; c_hirohashi_kanekatsu
+    c_hirohashi_kanekatsu --&gt; n_hirohashi_kanekatsu_daughter
+    n_hirohashi_kanekatsu_daughter --&gt; u_kanekatsu_daughter_nobutaka
+    c_higuchi_nobutaka --&gt; u_kanekatsu_daughter_nobutaka
+    u_kanekatsu_daughter_nobutaka --&gt; c_higuchi_nobuyasu
+    c_higuchi_nobuyasu --&gt; c_higuchi_yasuhiro
+    c_higuchi_yasuhiro --&gt; c_higuchi_motoyasu
+    c_higuchi_motoyasu --&gt; n_higuchi_nobuko
+    n_higuchi_nobuko --&gt; u_nobuko_harutaka
+    c_nijo_harutaka --&gt; u_nobuko_harutaka
+    u_nobuko_harutaka --&gt; c_kujo_hisatada
+    c_kujo_hisatada --&gt; c_kujo_michitaka
+    c_kujo_michitaka --&gt; u_michitaka_ikuko
+    n_noma_ikuko --&gt; u_michitaka_ikuko
+    u_michitaka_ikuko --&gt; n_sadako
+    t056 --&gt; p_sadazumi
+    p_sadazumi --&gt; c_minamoto_tsunemoto
+    c_minamoto_tsunemoto --&gt; c_minamoto_mitsunaka
+    c_minamoto_mitsunaka --&gt; c_minamoto_yorimitsu
+    c_minamoto_yorimitsu --&gt; c_minamoto_yorikuni
+    c_minamoto_yorikuni --&gt; n_minamoto_yorikuni_daughter
+    n_minamoto_yorikuni_daughter --&gt; u_yorikuni_daughter_tamefusa
+    c_fujiwara_tamefusa --&gt; u_yorikuni_daughter_tamefusa
+    u_yorikuni_daughter_tamefusa --&gt; c_fujiwara_akitaka
+    c_fujiwara_akitaka --&gt; c_fujiwara_akiyori
+    c_fujiwara_akiyori --&gt; n_fujiwara_yuko
+    n_fujiwara_yuko --&gt; u_yuko_tokinobu
+    c_taira_tokinobu --&gt; u_yuko_tokinobu
+    u_yuko_tokinobu --&gt; n_taira_shigeko
+    n_taira_shigeko --&gt; u_goshirakawa_shigeko
+    t077 --&gt; u_goshirakawa_shigeko
+    u_goshirakawa_shigeko --&gt; t080
+    t070 --&gt; u_goreizei_masumori_daughter
+    n_sugawara_masumori_daughter --&gt; u_goreizei_masumori_daughter
+    u_goreizei_masumori_daughter --&gt; c_takashina_tameyuki
+    c_takashina_tameie -. "高階氏側で養育・系譜上の父" .-&gt; c_takashina_tameyuki
+    c_takashina_tameyuki --&gt; n_takashina_tameyuki_daughter
+    n_takashina_tameyuki_daughter --&gt; u_tameyuki_daughter_kiyotsuna
+    c_fujiwara_kiyotsuna --&gt; u_tameyuki_daughter_kiyotsuna
+    u_tameyuki_daughter_kiyotsuna --&gt; c_fujiwara_tadakiyo
+    c_fujiwara_tadakiyo --&gt; n_fujiwara_tadakiyo_daughter
+    n_fujiwara_tadakiyo_daughter --&gt; u_tadakiyo_daughter_tameyoshi
+    c_minamoto_tameyoshi --&gt; u_tadakiyo_daughter_tameyoshi
+    u_tadakiyo_daughter_tameyoshi --&gt; c_minamoto_yoshitomo
+    c_minamoto_yoshitomo --&gt; n_bomon_hime
+    n_bomon_hime --&gt; u_bomon_yoshiyasu
+    c_ichijo_yoshiyasu --&gt; u_bomon_yoshiyasu
+    u_bomon_yoshiyasu --&gt; n_ichijo_masako
+    n_ichijo_masako --&gt; u_masako_kintsune
+    c_saionji_kintsune --&gt; u_masako_kintsune
+    u_masako_kintsune --&gt; c_saionji_saneuji
+    c_saionji_saneuji --&gt; u_saneuji_sadako
+    n_shijo_sadako --&gt; u_saneuji_sadako
+    u_saneuji_sadako --&gt; n_saionji_kisshi
+    t088 --&gt; u_gosaga_kisshi
+    n_saionji_kisshi --&gt; u_gosaga_kisshi
+    u_gosaga_kisshi --&gt; t089
+    u_gosaga_kisshi --&gt; t090
+    p_kazuko --&gt; u_kazuko_toshimichi
+    c_takatsukasa_toshimichi --&gt; u_kazuko_toshimichi
+    p_atsuko --&gt; u_atsuko_takamasa
+    c_ikeda_takamasa --&gt; u_atsuko_takamasa
+    p_takako --&gt; u_takako_hisanaga
+    c_shimazu_hisanaga --&gt; u_takako_hisanaga
+    p_sayako --&gt; u_sayako_yoshiki
+    c_kuroda_yoshiki --&gt; u_sayako_yoshiki
+    p_mako --&gt; u_mako_kei
+    c_komuro_kei --&gt; u_mako_kei
+    p_noriko --&gt; u_noriko_kunimaro
+    c_senge_kunimaro --&gt; u_noriko_kunimaro
+    p_ayako --&gt; u_ayako_kei
+    c_moriya_kei --&gt; u_ayako_kei
+    u_mikasa_yuriko --&gt; p_yasuko_mikasa
+    u_mikasa_yuriko --&gt; p_masako_mikasa
+    p_yasuko_mikasa --&gt; u_yasuko_tadateru
+    c_konoe_tadateru --&gt; u_yasuko_tadateru
+    p_masako_mikasa --&gt; u_masako_soshitsu
+    c_sen_soshitsu --&gt; u_masako_soshitsu
+    kuni_002 --&gt; higashifushimi_002
+    higashifushimi_001 -. "実子同然に養育・宮家祭祀継承" .-&gt; higashifushimi_002
+    higashifushimi_002 --&gt; higashifushimi_003
+    higashifushimi_003 --&gt; higashifushimi_004
+    linkStyle 4,6,8,9,10,11,12,23,25,31,33,35,37,38,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,79,81,89,91,115,116,129,131,135,139,141,142,143,146,150,151,157,159,160,167,169,175,182,186,187,189,190,193,196,198,200,203,205,208,209,211,212,215,216,218,325,327,329,331,334,336,338,340,342,344,347,349,351,353,365,367,392,447,449,504,506,516,518,583,584,607,609 stroke:#0055a5,stroke-width:3.5px;
+    linkStyle 0,1,2,3,7,13,16,21,24,27,32,34,80,124,125,126,137,192,195,197,202,204,206,214,219,221,280,281,282,283,284,285,286,289,290,292,294,295,326,328,330,332,333,335,337,339,341,343,345,346,348,350,352,355,357,358,359,360,361,362,363,364,366,369,371,374,376,385,387,389,391,517 stroke:#7a378b,stroke-width:3.5px;
+    linkStyle 15,18,36,39,72,127,130,132,136,140,354,356,368,370,372,373,375,378,379,380,381,382,383,384,386,388,390,425,427,428,429,430,431,432,448,450,452,454,456,505,507,515,519,520,522,530,531,568,569,582,608,610 stroke:#d97706,stroke-width:3.5px;
+    linkStyle 433,434,436,437,438,439,440,441,443,445,446,457,458,460,461,462,464,465,467,468,470,471,472,473,475,476,477,479,480,481,483,484,485,486,487,488,489,490,492,493,495,496,497,498,499,500,502,503,508,509,511,512,514,523,524,525,526,527,528,529,532,533,534,535,536,537,538,539,540,541,542,543,544,545,547,548,549,551,552,553,554,555,557,558,559,560,561,563,564,565,567,570,571,572,573,574,576,577,578,579,581,585,587,589,590,592,593,594,596,597,598,600,601,603,604,606 stroke:#d97706,stroke-width:3.5px,stroke-dasharray:8 4;
+    linkStyle 83,228,229,231,232,233,237,242,244,245,264,266,267,305,314,315,318,320,321 stroke:#2f855a,stroke-width:4px,stroke-dasharray:8 4;
+    linkStyle 114,117,123,403,404,405,406,407,408,409,410,411,412,413,414,415,416,417,418,419,420,421,422,423,424,588,632 stroke:#888888,stroke-width:2px,stroke-dasharray:5 5;
+    linkStyle 5,14,17,19,20,22,26,28,29,30,40,41,42,43,44,45,46,47,48,49,50,51,52,73,74,75,76,77,78,82,84,85,86,87,88,90,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,118,119,120,121,122,128,133,134,138,144,145,147,148,149,152,153,154,155,156,158,161,162,163,164,165,166,168,170,171,172,173,174,176,177,178,179,180,181,183,184,185,188,191,194,199,201,207,210,213,217,220,222,223,224,225,226,227,230,234,235,236,238,239,240,241,243,246,247,248,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,265,268,269,270,271,272,273,274,275,276,277,278,279,287,288,291,293,296,297,298,299,300,301,302,303,304,306,307,308,309,310,311,312,313,316,317,319,322,323,324,377,393,394,395,401,402,426,435,442,444,451,453,455,459,463,466,469,474,478,482,491,494,501,510,513,521,546,550,556,562,566,575,580,586,591,595,599,602,605,611,612,613,614,615,616,617,618,619,620,621,622,623,624,625,626,627,628,629,630,631,633,634 stroke:#666666,stroke-width:1.5px;
+
+    subgraph public_legend["凡例"]
+        direction LR
+        subgraph legend_lines["系譜線"]
+            direction TB
+            lg_blue["━━▶ 青太線：神武天皇から今上天皇に至る男系男子の系譜経路"]
+            lg_purple["━━▶ 紫太線：男系でつながる皇族女性を経由し、現皇統へ至る系譜経路"]
+            lg_orange["━━▶ 橙太実線：青・紫では表れない補完系譜の皇室・皇親側区間"]
+            lg_orange_dash["┅┅▶ 橙太破線：臣籍等を経由する補完系譜区間"]
+            lg_green["┅┅▶ 緑太破線：明治天皇以降の皇女を介して旧宮家へつながる近代系譜"]
+            lg_yushi["┅┅▶ 灰破線：養子・猶子・実親子とは別に扱われた親子関係等"]
+            lg_default["──▶ 灰細線：その他の系譜上の親子関係"]
+        end
+        subgraph legend_symbols["人物・記号"]
+            direction TB
+            lg_union["● 婚姻等関係節点"]
+            lg_postwar["破線枠：臣籍の人物・皇籍離脱後の人物"]
+            lg_purple_border["紫枠：女性天皇・皇族女性など、本図で皇室・皇親側として扱う女性"]
+            lg_red_border["赤枠：皇室外から系譜に入る女性（后妃等）"]
+        end
+    end
+    style public_legend fill:transparent,stroke:#888888,stroke-width:1.5px,rx:12px,ry:12px
+    style legend_lines fill:transparent,stroke:transparent,stroke-width:0px
+    style legend_symbols fill:transparent,stroke:transparent,stroke-width:0px
+    style lg_blue fill:transparent,stroke:transparent,stroke-width:0px,color:#0055a5
+    style lg_purple fill:transparent,stroke:transparent,stroke-width:0px,color:#7a378b
+    style lg_orange fill:transparent,stroke:transparent,stroke-width:0px,color:#d97706
+    style lg_orange_dash fill:transparent,stroke:transparent,stroke-width:0px,color:#d97706
+    style lg_green fill:transparent,stroke:transparent,stroke-width:0px,color:#2f855a
+    style lg_yushi fill:transparent,stroke:transparent,stroke-width:0px,color:#555555
+    style lg_default fill:transparent,stroke:transparent,stroke-width:0px,color:#444444
+    style lg_union fill:transparent,stroke:transparent,stroke-width:0px,color:#222222
+    style lg_postwar fill:transparent,stroke:transparent,stroke-width:0px,color:#222222
+    style lg_purple_border fill:transparent,stroke:transparent,stroke-width:0px,color:#7a378b
+    style lg_red_border fill:transparent,stroke:transparent,stroke-width:0px,color:#d9383a</div>
+      </div>
+    </div>
+  </div>
+  <script type="module">
+    const status = document.getElementById('status');
+    const viewport = document.getElementById('viewport');
+    const stage = document.getElementById('stage');
+    const diagramWrap = document.getElementById('diagramWrap');
+    const zoomLabel = document.getElementById('zoomLabel');
+    const panButton = document.getElementById('panMode');
+    if (!panButton) {
+      throw new Error('パン切替ボタン #panMode がHTMLにありません。');
+    }
+
+    let scale = 1.0;
+    let baseWidth = 0;
+    let baseHeight = 0;
+    let panMode = false;
+        const padding = 48;
+
+    function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
+
+    function updateStageSize() {
+      stage.style.width = Math.ceil(baseWidth * scale + padding) + 'px';
+      stage.style.height = Math.ceil(baseHeight * scale + padding) + 'px';
+      diagramWrap.style.transform = `scale(${scale})`;
+      zoomLabel.textContent = Math.round(scale * 100) + '%';
+    }
+
+    function setScale(nextScale, anchorX = viewport.clientWidth / 2, anchorY = viewport.clientHeight / 2) {
+      if (!baseWidth || !baseHeight) return;
+      nextScale = clamp(nextScale, 0.05, 4.0);
+      const oldScale = scale;
+      const contentX = (viewport.scrollLeft + anchorX) / oldScale;
+      const contentY = (viewport.scrollTop + anchorY) / oldScale;
+      scale = nextScale;
+      updateStageSize();
+      viewport.scrollLeft = contentX * scale - anchorX;
+      viewport.scrollTop = contentY * scale - anchorY;
+    }
+
+    function fitWidth() {
+      const available = Math.max(1, viewport.clientWidth - padding);
+      setScale(Math.min(1, available / baseWidth), 0, 0);
+      viewport.scrollLeft = 0;
+    }
+
+    function fitAll() {
+      const sx = Math.max(0.05, (viewport.clientWidth - padding) / baseWidth);
+      const sy = Math.max(0.05, (viewport.clientHeight - padding) / baseHeight);
+      setScale(Math.min(1, sx, sy), 0, 0);
+      viewport.scrollLeft = 0;
+      viewport.scrollTop = 0;
+    }
+
+    function syncPanCursor() {
+      viewport.classList.toggle('pan-ready', panMode);
+      panButton.classList.toggle('active', panMode);
+      panButton.textContent = panMode ? 'パン: ON' : 'パン: OFF';
+      panButton.setAttribute('aria-pressed', panMode ? 'true' : 'false');
+    }
+
+    panButton.addEventListener('click', () => {
+      panMode = !panMode;
+      syncPanCursor();
+      if (!panMode) window.getSelection()?.removeAllRanges();
+    });
+
+    document.getElementById('zoomIn').addEventListener('click', () => setScale(scale * 1.2));
+    document.getElementById('zoomOut').addEventListener('click', () => setScale(scale / 1.2));
+    document.getElementById('zoom100').addEventListener('click', () => setScale(1.0));
+    document.getElementById('fitWidth').addEventListener('click', fitWidth);
+    document.getElementById('fitAll').addEventListener('click', fitAll);
+
+    viewport.addEventListener('wheel', (e) => {
+      if (e.altKey) {
+        e.preventDefault();
+        const rect = viewport.getBoundingClientRect();
+        const ax = e.clientX - rect.left;
+        const ay = e.clientY - rect.top;
+        setScale(scale * (e.deltaY < 0 ? 1.12 : 1 / 1.12), ax, ay);
+      } else if (e.shiftKey) {
+        e.preventDefault();
+        viewport.scrollLeft += e.deltaY;
+      }
+    }, { passive: false });
+
+    let dragging = false, dragPointerId = null, lastX = 0, lastY = 0;
+    viewport.addEventListener('pointerdown', (e) => {
+      const useMiddleButton = e.button === 1;
+      const useLeftPan = e.button === 0 && (panMode || e.altKey);
+      if (!(useMiddleButton || useLeftPan)) return;
+
+      e.preventDefault();
+      window.getSelection()?.removeAllRanges();
+      dragging = true;
+      dragPointerId = e.pointerId;
+      lastX = e.clientX; lastY = e.clientY;
+      viewport.setPointerCapture(e.pointerId);
+      viewport.classList.add('dragging');
+    });
+    viewport.addEventListener('pointermove', (e) => {
+      if (!dragging || e.pointerId !== dragPointerId) return;
+      e.preventDefault();
+      viewport.scrollLeft -= e.clientX - lastX;
+      viewport.scrollTop -= e.clientY - lastY;
+      lastX = e.clientX; lastY = e.clientY;
+    });
+    function finishDragging(e) {
+      if (!dragging) return;
+      if (e && dragPointerId !== null && e.pointerId !== dragPointerId) return;
+      dragging = false;
+      dragPointerId = null;
+      viewport.classList.remove('dragging');
+      syncPanCursor();
+    }
+    viewport.addEventListener('pointerup', finishDragging);
+    viewport.addEventListener('pointercancel', finishDragging);
+
+    syncPanCursor();
+
+    try {
+      // VS Code標準Markdown Previewと同じMermaid 11.12.0を固定使用する。
+      // theme / themeVariables / flowchart設定はHTML側から上書きせず、
+      // Mermaidソース内の %%{init: ...}%% をそのまま尊重する。
+      // HTML側ではsecure設定である上限値だけを引き上げる。
+      const { default: mermaid } = await import('https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.esm.min.mjs');
+      mermaid.initialize({
+        startOnLoad: false,
+        maxEdges: 1000,
+        maxTextSize: 500000,
+        securityLevel: 'strict'
+      });
+      await mermaid.run({ querySelector: '.mermaid' });
+
+      const svg = document.querySelector('.mermaid svg');
+      if (!svg) throw new Error('Mermaid SVG が生成されませんでした。');
+
+      /* MermaidがVS Code相当条件で算出したviewBoxを使い、表示寸法だけ原寸固定する。 */
+      const vb = svg.viewBox && svg.viewBox.baseVal;
+      if (vb && vb.width > 0 && vb.height > 0) {
+        baseWidth = vb.width;
+        baseHeight = vb.height;
+        svg.setAttribute('width', String(baseWidth));
+        svg.setAttribute('height', String(baseHeight));
+      } else {
+        const box = svg.getBBox();
+        baseWidth = box.width;
+        baseHeight = box.height;
+        svg.setAttribute('width', String(baseWidth));
+        svg.setAttribute('height', String(baseHeight));
+      }
+      svg.style.width = baseWidth + 'px';
+      svg.style.height = baseHeight + 'px';
+      svg.style.maxWidth = 'none';
+
+      updateStageSize();
+      status.textContent = `描画完了 / 原寸 ${Math.round(baseWidth)} × ${Math.round(baseHeight)} px`;
+    } catch (error) {
+      console.error(error);
+      status.textContent = '描画エラー: ' + (error?.message ?? error);
+      status.classList.add('error');
+    }
+  </script>
+</body>
+</html>

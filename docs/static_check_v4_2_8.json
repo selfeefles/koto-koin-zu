@@ -1,0 +1,16 @@
+{
+  "version": "v4.2.8",
+  "nodes": 568,
+  "edges": 635,
+  "duplicate_node_ids": [],
+  "undefined_edge_endpoints": [],
+  "higashifushimi_added_ids": [
+    "higashifushimi_002",
+    "higashifushimi_003",
+    "higashifushimi_004"
+  ],
+  "higashifushimi_special_relation": true,
+  "mainline_subgraph_label": "昭和天皇・上皇・今上天皇系",
+  "higashifushimi_jiko_alias": "邦英王・東伏見邦英",
+  "higashifushimi_jiko_dashed_frame": true
+}
