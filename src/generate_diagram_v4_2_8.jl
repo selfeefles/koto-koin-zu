@@ -3269,10 +3269,12 @@ function emit_public_legend!(io, profile_name::Symbol)
     println(io, "        end")
     println(io, "        subgraph legend_symbols[\"人物・記号\"]")
     println(io, "            direction TB")
-    println(io, "            lg_union[\"● 婚姻等関係節点\"]")
+    println(io, "            lg_union[\"● 婚姻等関係節点：婚姻・后妃・側室等の関係を結節によって示す節点\"]")
     println(io, "            lg_postwar[\"破線枠：臣籍の人物・皇籍離脱後の人物\"]")
     println(io, "            lg_purple_border[\"紫枠：女性天皇・皇族女性など、本図で皇室・皇親側として扱う女性\"]")
     println(io, "            lg_red_border[\"赤枠：皇室外から系譜に入る女性（后妃等）\"]")
+    println(io, "            lg_traditional[\"（伝承紀年）：記紀等に基づく伝承上の年代\"]")
+    println(io, "            lg_unknown[\"?：年代不詳または確定できないもの\"]")
     println(io, "        end")
     println(io, "    end")
 
@@ -3290,6 +3292,8 @@ function emit_public_legend!(io, profile_name::Symbol)
     println(io, "    style lg_postwar fill:transparent,stroke:transparent,stroke-width:0px,color:#222222")
     println(io, "    style lg_purple_border fill:transparent,stroke:transparent,stroke-width:0px,color:#7a378b")
     println(io, "    style lg_red_border fill:transparent,stroke:transparent,stroke-width:0px,color:#d9383a")
+    println(io, "    style lg_traditional fill:transparent,stroke:transparent,stroke-width:0px,color:#444444")
+    println(io, "    style lg_unknown fill:transparent,stroke:transparent,stroke-width:0px,color:#444444")
 end
 
 function generate_profile(
