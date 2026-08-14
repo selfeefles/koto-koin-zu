@@ -15,6 +15,7 @@
 - `docs/sources.html` — 主な情報源・史料の扱い
 - `docs/holds.html` — 保留中の系譜
 - `docs/changelog.html` — 更新履歴
+- `docs/legend.html` — 公開用凡例（Web閲覧用）
 
 ## データ・生成コード
 
